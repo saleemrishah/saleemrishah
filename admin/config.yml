@@ -21,7 +21,7 @@ publish_mode: simple
 collections:
   # ---------- قسم: الهوية (اللوغو والأيقونة) ----------
   - name: "identity"
-    label: "Identität / Logo"
+    label: "Identity / Logo"
     delete: false
     editor:
       preview: false
@@ -30,35 +30,36 @@ collections:
         label: "Logo & Favicon"
         file: "content/site/branding.json"
         fields:
-          - { name: "logo_image", label: "Logo (Wortmarke oben links, optional)", widget: "image", required: false, hint: "Transparentes PNG/SVG. Leer lassen = Text 'Saleem Rishah'." }
-          - { name: "logo_text", label: "Logo-Text (falls kein Bild)", widget: "string", required: false, default: "Saleem Rishah" }
-          - { name: "favicon", label: "Favicon (Browser-Tab-Icon, optional)", widget: "image", required: false, hint: "Quadratisch, PNG/SVG. Leer lassen = aktuelles SR-Icon." }
+          - { name: "logo_image", label: "Logo (wordmark, top left, optional)", widget: "image", required: false, hint: "Transparent PNG/SVG. Leave empty = text 'Saleem Rishah'." }
+          - { name: "logo_text", label: "Logo text (if no image)", widget: "string", required: false, default: "Saleem Rishah" }
+          - { name: "logo_height", label: "Logo height in pixels (e.g. 40)", widget: "number", required: false, default: 40, hint: "Bigger number = bigger logo. Only applies to image logo." }
+          - { name: "favicon", label: "Favicon (browser tab icon, optional)", widget: "image", required: false, hint: "Square, PNG/SVG. Leave empty = current SR icon." }
 
   # ---------- قسم: الصفحة الرئيسية (Home) ----------
   - name: "home"
-    label: "Startseite / Home"
+    label: "Homepage"
     delete: false
     editor:
       preview: false
     files:
       - name: "hero"
-        label: "Hero (oben auf der Startseite)"
+        label: "Hero (top of homepage)"
         file: "content/site/home.json"
         fields:
-          - { name: "portrait", label: "Persönliches Foto (Porträt)", widget: "image", required: false, hint: "Quadratisch empfohlen. Leer lassen = aktuelles Foto." }
-          - { name: "eyebrow_de", label: "Kleiner Titel oben (Deutsch)", widget: "string", required: false, default: "Media Design Specialist & AI Creative" }
-          - { name: "eyebrow_en", label: "Kleiner Titel oben (English)", widget: "string", required: false, default: "Media Design Specialist & AI Creative" }
-          - { name: "headline_de", label: "Hauptüberschrift (Deutsch)", widget: "text", required: false, hint: "HTML erlaubt, z. B. <br> für Zeilenumbruch." }
-          - { name: "headline_en", label: "Hauptüberschrift (English)", widget: "text", required: false }
-          - { name: "lead_de", label: "Einleitungstext (Deutsch)", widget: "text", required: false }
-          - { name: "lead_en", label: "Einleitungstext (English)", widget: "text", required: false }
-          - { name: "status_de", label: "Status-Badge (Deutsch)", widget: "string", required: false, default: "Offen für neue Projekte & Positionen" }
-          - { name: "status_en", label: "Status-Badge (English)", widget: "string", required: false, default: "Open to new projects & opportunities" }
+          - { name: "portrait", label: "Personal photo (portrait)", widget: "image", required: false, hint: "Square recommended. Leave empty = current photo." }
+          - { name: "eyebrow_de", label: "Eyebrow / small title (German)", widget: "string", required: false, default: "Media Design Specialist & AI Creative" }
+          - { name: "eyebrow_en", label: "Eyebrow / small title (English)", widget: "string", required: false, default: "Media Design Specialist & AI Creative" }
+          - { name: "headline_de", label: "Main headline (German)", widget: "text", required: false, hint: "HTML allowed, e.g. <br> for a line break." }
+          - { name: "headline_en", label: "Main headline (English)", widget: "text", required: false }
+          - { name: "lead_de", label: "Intro text (German)", widget: "text", required: false }
+          - { name: "lead_en", label: "Intro text (English)", widget: "text", required: false }
+          - { name: "status_de", label: "Status badge (German)", widget: "string", required: false, default: "Offen für neue Projekte & Positionen" }
+          - { name: "status_en", label: "Status badge (English)", widget: "string", required: false, default: "Open to new projects & opportunities" }
 
   # ---------- قسم: AI & Generative ----------
   - name: "ai"
     label: "AI & Generative"
-    label_singular: "AI-Projekt"
+    label_singular: "AI project"
     folder: "content/ai"
     create: true
     delete: true
@@ -67,35 +68,35 @@ collections:
     slug: "{{slug}}"
     summary: "{{title_de}}"
     fields:
-      - { name: "order", label: "Reihenfolge (Zahl, kleiner = zuerst)", widget: "number", default: 10, required: false }
-      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
-      - { name: "title_en", label: "Titel (English)", widget: "string" }
-      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
-      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
-      - { name: "cover", label: "Coverbild", widget: "image", required: false }
-      - { name: "chips", label: "Tools / Tags", widget: "list", required: false, hint: "Werkzeuge, z. B. Premiere Pro, Midjourney" }
-      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
-      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
-      - { name: "video", label: "Video-Link (YouTube embed oder MP4, optional)", widget: "string", required: false, hint: "z. B. https://www.youtube.com/embed/VIDEO_ID" }
-      - { name: "gallery", label: "Weitere Bilder (Galerie, optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
-      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
-      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+      - { name: "order", label: "Order (number, smaller = first)", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Title (German)", widget: "string" }
+      - { name: "title_en", label: "Title (English)", widget: "string" }
+      - { name: "summary_de", label: "Short description (German)", widget: "text" }
+      - { name: "summary_en", label: "Short description (English)", widget: "text" }
+      - { name: "cover", label: "Cover image", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false, hint: "Tools, e.g. Premiere Pro, Midjourney" }
+      - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video link (YouTube embed or MP4, optional)", widget: "string", required: false, hint: "e.g. https://www.youtube.com/embed/VIDEO_ID" }
+      - { name: "gallery", label: "More images (gallery, optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
       - name: "tracks"
-        label: "Pipeline-Schritte (optional, z. B. für Julia)"
+        label: "Pipeline steps (optional, e.g. for Julia)"
         widget: "list"
         required: false
         fields:
-          - { name: "id", label: "Schritt-Label", widget: "string", hint: "z. B. Track 01 · Concept" }
-          - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
-          - { name: "title_en", label: "Titel (English)", widget: "string" }
-          - { name: "text_de", label: "Text (Deutsch)", widget: "text", required: false }
+          - { name: "id", label: "Step label", widget: "string", hint: "e.g. Track 01 · Concept" }
+          - { name: "title_de", label: "Title (German)", widget: "string" }
+          - { name: "title_en", label: "Title (English)", widget: "string" }
+          - { name: "text_de", label: "Text (German)", widget: "text", required: false }
           - { name: "text_en", label: "Text (English)", widget: "text", required: false }
           - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
 
   # ---------- قسم: Motion & Video ----------
   - name: "motion"
     label: "Motion & Video"
-    label_singular: "Motion-Projekt"
+    label_singular: "Motion project"
     folder: "content/motion"
     create: true
     delete: true
@@ -104,24 +105,24 @@ collections:
     slug: "{{slug}}"
     summary: "{{title_de}}"
     fields:
-      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
-      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
-      - { name: "title_en", label: "Titel (English)", widget: "string" }
-      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
-      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
-      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "order", label: "Order", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Title (German)", widget: "string" }
+      - { name: "title_en", label: "Title (English)", widget: "string" }
+      - { name: "summary_de", label: "Short description (German)", widget: "text" }
+      - { name: "summary_en", label: "Short description (English)", widget: "text" }
+      - { name: "cover", label: "Cover image", widget: "image", required: false }
       - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
-      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
-      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
-      - { name: "video", label: "Video-Link (YouTube embed oder MP4, optional)", widget: "string", required: false }
-      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
-      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
-      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+      - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video link (YouTube embed or MP4, optional)", widget: "string", required: false }
+      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
   # ---------- قسم: Brand & Social ----------
   - name: "brand"
     label: "Brand & Social"
-    label_singular: "Brand-Projekt"
+    label_singular: "Brand project"
     folder: "content/brand"
     create: true
     delete: true
@@ -130,24 +131,24 @@ collections:
     slug: "{{slug}}"
     summary: "{{title_de}}"
     fields:
-      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
-      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
-      - { name: "title_en", label: "Titel (English)", widget: "string" }
-      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
-      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
-      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "order", label: "Order", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Title (German)", widget: "string" }
+      - { name: "title_en", label: "Title (English)", widget: "string" }
+      - { name: "summary_de", label: "Short description (German)", widget: "text" }
+      - { name: "summary_en", label: "Short description (English)", widget: "text" }
+      - { name: "cover", label: "Cover image", widget: "image", required: false }
       - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
-      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
-      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
-      - { name: "video", label: "Video-Link (optional)", widget: "string", required: false }
-      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
-      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
-      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+      - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video link (optional)", widget: "string", required: false }
+      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
   # ---------- قسم: Football / Arabic ----------
   - name: "football"
     label: "Football / Arabic"
-    label_singular: "Football-Projekt"
+    label_singular: "Football project"
     folder: "content/football"
     create: true
     delete: true
@@ -156,16 +157,16 @@ collections:
     slug: "{{slug}}"
     summary: "{{title_de}}"
     fields:
-      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
-      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
-      - { name: "title_en", label: "Titel (English)", widget: "string" }
-      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
-      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
-      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "order", label: "Order", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Title (German)", widget: "string" }
+      - { name: "title_en", label: "Title (English)", widget: "string" }
+      - { name: "summary_de", label: "Short description (German)", widget: "text" }
+      - { name: "summary_en", label: "Short description (English)", widget: "text" }
+      - { name: "cover", label: "Cover image", widget: "image", required: false }
       - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
-      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
-      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
-      - { name: "video", label: "Video-Link (optional)", widget: "string", required: false }
-      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
-      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
-      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+      - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video link (optional)", widget: "string", required: false }
+      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }

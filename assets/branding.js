@@ -15,6 +15,10 @@
         if (b.logo_image) {
           /* صورة لوغو: نستبدل النص بصورة، ونخفي النقطة */
           brand.innerHTML = '<img src="' + b.logo_image + '" alt="Saleem Rishah" class="brand-img">';
+          /* ارتفاع اللوغو من اللوحة (logo_height) */
+          if (b.logo_height) {
+            document.documentElement.style.setProperty('--logo-h', b.logo_height + 'px');
+          }
         } else if (b.logo_text) {
           /* نص: نحدّث الاسم مع إبقاء النقطة */
           var dot = brand.querySelector('.dot');

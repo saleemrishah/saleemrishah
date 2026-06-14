@@ -243,4 +243,4 @@ textarea{min-height:140px;resize:vertical}
 .reveal.in{opacity:1;transform:none}
 
 /* ---------- logo image (from CMS) ---------- */
-.brand-img{height:30px;width:auto;display:block}
+.brand-img{height:var(--logo-h,40px);width:auto;display:block}
