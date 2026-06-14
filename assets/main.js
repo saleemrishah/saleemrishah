@@ -81,4 +81,10 @@
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
+
+  /* خطاف للسكربتات الأخرى (home.js) لإعادة تطبيق اللغة بعد تحديث المحتوى */
+  window.__applyLangAgain = function () {
+    setLang(root.classList.contains('en') ? 'en' : 'de');
+  };
+
 })();
