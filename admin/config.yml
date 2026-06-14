@@ -13,7 +13,7 @@ media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
 # لغة واجهة اللوحة
-locale: "de"
+locale: "en"
 
 # رسالة الحفظ التلقائية
 publish_mode: simple
