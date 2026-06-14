@@ -1,0 +1,230 @@
+/* ============================================================
+   Saleem Rishah — Work data (single source of truth)
+   ------------------------------------------------------------
+   هذا هو ملف الأعمال. هون بتعيش كل أعمالك.
+   لاحقاً لوحة التحكم (CMS) رح تكتب جوّا هاد الملف لحالها،
+   بس لهلأ منقدر نعدّل عليه يدوياً.
+
+   كل قسم (section) إلو: id, عنوان DE/EN, eyebrow (التايم كود).
+   كل عمل (item) إلو:
+     id        : اسم تقني فريد بدون مسافات (مثلاً "julia-kallas")
+     title     : { de: "...", en: "..." }
+     summary   : وصف قصير يبيّن على الكرت  { de, en }
+     cover     : اسم صورة الغلاف داخل مجلد assets (مثلاً "julia.jpg")
+     chips     : وسوم أدوات تبيّن تحت العنوان  ["Premiere", "AE", ...]
+     body      : وصف أطول يبيّن جوّا النافذة  { de, en }   (اختياري)
+     video     : رابط يوتيوب embed أو ملف mp4 محلي         (اختياري)
+                 مثال يوتيوب: "https://www.youtube.com/embed/VIDEO_ID"
+     gallery   : أسماء صور إضافية تبيّن جوّا النافذة  ["a.jpg","b.jpg"]  (اختياري)
+     tracks    : خطوات pipeline (مستخدمة لجوليا فقط، لكن متاحة لأي عمل) (اختياري)
+     link      : رابط خارجي + نصه  { url, label_de, label_en }          (اختياري)
+   ============================================================ */
+
+window.WORK_DATA = {
+
+  sections: [
+
+    /* ===================== 1) AI & GENERATIVE ===================== */
+    {
+      id: "ai",
+      eyebrow: { de: "01 · KI &amp; Generative", en: "01 · AI &amp; Generative" },
+      title:   { de: "KI &amp; Generative Produktion", en: "AI &amp; Generative Production" },
+      intro:   {
+        de: "Markenfiguren und visuelle Konzepte der nächsten Generation, gebaut mit KI-Pipelines und Prompt Engineering.",
+        en: "Next-generation brand characters and visual concepts, built with AI pipelines and prompt engineering."
+      },
+      items: [
+
+        /* --- Julia: عمل ضمن AI، مو spotlight متصدّر --- */
+        {
+          id: "julia-kallas",
+          title:   { de: "Julia Kallas — KI-Persona", en: "Julia Kallas — AI Persona" },
+          summary: {
+            de: "Eine vollständig KI-produzierte Persona mit eigenem Podcast-Format auf Instagram. Kein Studio, keine Kamera: jeder Frame, jedes Wort, jeder Ton aus einer generativen Pipeline.",
+            en: "A fully AI-produced persona with her own podcast format on Instagram. No studio, no camera: every frame, every word, every sound from a generative pipeline."
+          },
+          cover: "julia.jpg",
+          chips: ["ComfyUI", "Nano Banana", "Kling AI", "ElevenLabs", "Premiere Pro"],
+          body: {
+            de: "<strong>Das Ziel:</strong> ein wiederholbarer Workflow, der beweist, dass eine konsistente, markenfähige Figur komplett mit KI produziert und kontinuierlich bespielt werden kann, übertragbar auf jede Marke, jedes Produkt und jede Sprache. Die folgende Pipeline zeigt jeden Schritt von der Idee bis zur Veröffentlichung.",
+            en: "<strong>The goal:</strong> a repeatable workflow proving that a consistent, brand-ready character can be produced and published entirely with AI, transferable to any brand, product or language. The pipeline below shows every step from idea to publishing."
+          },
+          link: {
+            url: "https://www.instagram.com/juliakallas.de/",
+            label_de: "@juliakallas.de · Instagram ↗",
+            label_en: "@juliakallas.de · Instagram ↗"
+          },
+          tracks: [
+            {
+              id: "Track 01 · Concept",
+              title: { de: "Themen &amp; Content-Strategie", en: "Topics &amp; content strategy" },
+              text:  { de: "Themenrecherche, Hook-Entwicklung und Skripte im Podcast-Format, abgestimmt auf Plattform-Algorithmen und Zielgruppe.", en: "Topic research, hook development and podcast-format scripts, tuned to platform algorithms and audience." },
+              chips: ["Claude", "Content-Strategie"]
+            },
+            {
+              id: "Track 02 · Identity",
+              title: { de: "Charakter-Design &amp; Identitäts-Training", en: "Character design &amp; identity training" },
+              text:  { de: "Aufbau eines kuratierten Referenz-Datensatzes für eine konsistente Identität über hunderte Generierungen hinweg, inklusive LoRA-Trainingsexperimenten und referenzbasierter Generierung.", en: "Building a curated reference dataset for a consistent identity across hundreds of generations, including LoRA training experiments and reference-based generation." },
+              chips: ["Reference Dataset", "LoRA", "ComfyUI"]
+            },
+            {
+              id: "Track 03 · Image",
+              title: { de: "Bildgenerierung", en: "Image generation" },
+              text:  { de: "Szenen im Podcast-Setting mit kontrollierten Kamerawinkeln, Licht und Skin-Realismus, durch präzises Prompt Engineering.", en: "Scenes in the podcast setting with controlled camera angles, lighting and skin realism, through precise prompt engineering." },
+              chips: ["Nano Banana", "Seedream", "Midjourney"]
+            },
+            {
+              id: "Track 04 · Motion",
+              title: { de: "Videogenerierung &amp; Lipsync", en: "Video generation &amp; lipsync" },
+              text:  { de: "Animation der Stills zu sprechenden Videosequenzen mit natürlicher Mimik, Lipsync und Motion Control.", en: "Animating stills into talking video sequences with natural expression, lipsync and motion control." },
+              chips: ["Kling AI", "HeyGen", "Runway"]
+            },
+            {
+              id: "Track 05 · Voice",
+              title: { de: "Stimm-Design", en: "Voice design" },
+              text:  { de: "Eine eigens entwickelte, wiedererkennbare Stimme mit konsistentem Tonfall, Tempo und Persönlichkeit.", en: "A custom, recognizable voice with consistent tone, pacing and personality." },
+              chips: ["ElevenLabs"]
+            },
+            {
+              id: "Track 06 · Post",
+              title: { de: "Sound Engineering &amp; Schnitt", en: "Sound engineering &amp; edit" },
+              text:  { de: "Finaler Schnitt, Sound Design, Mischung und Farbkorrektur, das klassische Postproduktions-Handwerk macht den Unterschied zwischen KI-Demo und publikationsreifem Content.", en: "Final edit, sound design, mix and color: classic post-production craft is what separates an AI demo from publish-ready content." },
+              chips: ["Premiere Pro", "Audition"]
+            },
+            {
+              id: "Track 07 · Publish",
+              title: { de: "Publishing &amp; Wachstum", en: "Publishing &amp; growth" },
+              text:  { de: "Kontinuierliches Publishing auf Instagram, Format-Tests und datenbasierte Optimierung von Hooks, Längen und Themen.", en: "Continuous publishing on Instagram, format testing and data-driven optimization of hooks, lengths and topics." },
+              chips: ["Instagram Reels", "Analytics"]
+            }
+          ]
+        },
+
+        /* --- عمل AI ثاني (placeholder، عبّيه أو احذفه لاحقاً) --- */
+        {
+          id: "ai-generative-design",
+          title:   { de: "Generatives Design &amp; Konzepte", en: "Generative Design &amp; Concepts" },
+          summary: {
+            de: "Visuelle Konzepte, Keyvisuals und Markenfiguren, erstellt mit fortgeschrittener KI und präzisem Prompt Engineering.",
+            en: "Visual concepts, key visuals and brand characters, created with advanced AI and precise prompt engineering."
+          },
+          cover: "work-ai.jpg",
+          chips: ["Midjourney", "Firefly", "Nano Banana"],
+          body: {
+            de: "Platzhalter-Projekt. Ersetze Bild, Titel und Beschreibung über die Inhalts-Verwaltung, oder lösche diesen Eintrag.",
+            en: "Placeholder project. Replace image, title and description via the content manager, or delete this entry."
+          }
+        }
+
+      ]
+    },
+
+    /* ===================== 2) MOTION & VIDEO ===================== */
+    {
+      id: "motion",
+      eyebrow: { de: "02 · Motion &amp; Video", en: "02 · Motion &amp; Video" },
+      title:   { de: "Motion &amp; Videoproduktion", en: "Motion &amp; Video Production" },
+      intro:   {
+        de: "Strategisches Visual Storytelling, vom Schnitt über Motion Graphics bis zum Color Grading, gebaut für Aufmerksamkeit und Reichweite.",
+        en: "Strategic visual storytelling, from edit through motion graphics to color grading, built for attention and reach."
+      },
+      items: [
+        {
+          id: "motion-showcase",
+          title:   { de: "Schnitt, Motion &amp; Color Grading", en: "Edit, Motion &amp; Color Grading" },
+          summary: {
+            de: "Dokumentarischer Schnitt, Motion Graphics und filmisches Color Grading, das klassische Postproduktions-Handwerk hinter jeder Produktion.",
+            en: "Documentary editing, motion graphics and cinematic color grading, the classic post-production craft behind every production."
+          },
+          cover: "work-motion.jpg",
+          chips: ["Premiere Pro", "After Effects", "DaVinci-Stil Grade"],
+          body: {
+            de: "Platzhalter-Projekt. Hier kommen Showreel-Videos, Vorher-Nachher-Grades und Motion-Beispiele hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
+            en: "Placeholder project. Showreel videos, before/after grades and motion examples go here. Replace or extend via the content manager."
+          }
+          /* video: "https://www.youtube.com/embed/VIDEO_ID"  ← الصق رابط يوتيوب هون */
+        }
+      ]
+    },
+
+    /* ===================== 3) BRAND & SOCIAL ===================== */
+    {
+      id: "brand",
+      eyebrow: { de: "03 · Brand &amp; Social", en: "03 · Brand &amp; Social" },
+      title:   { de: "Social Media &amp; Brand Identity", en: "Social Media &amp; Brand Identity" },
+      intro:   {
+        de: "Markenidentitäten, Logos und maßgeschneiderte visuelle Systeme für Social-Media-Kanäle, von Start-ups bis Content Creators.",
+        en: "Brand identities, logos and tailored visual systems for social media channels, from start-ups to content creators."
+      },
+      items: [
+        {
+          id: "brand-systems",
+          title:   { de: "Markenidentität &amp; visuelle Systeme", en: "Brand Identity &amp; Visual Systems" },
+          summary: {
+            de: "Logos, Farbwelten und Content-Templates, die eine Marke über alle Plattformen hinweg wiedererkennbar machen.",
+            en: "Logos, color worlds and content templates that make a brand recognizable across every platform."
+          },
+          cover: "work-brand.jpg",
+          chips: ["Illustrator", "Photoshop", "InDesign"],
+          body: {
+            de: "Platzhalter-Projekt. Hier kommen Logos, Brand Guidelines und Social-Templates hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
+            en: "Placeholder project. Logos, brand guidelines and social templates go here. Replace or extend via the content manager."
+          }
+        }
+      ]
+    },
+
+    /* ===================== 4) FOOTBALL / ARABIC ===================== */
+    {
+      id: "football",
+      eyebrow: { de: "04 · <span class='amber'>Proof</span> · Reichweite", en: "04 · <span class='amber'>Proof</span> · Reach" },
+      title:   { de: "Arabische Fußball-Kanäle", en: "Arabic Football Channels" },
+      intro:   {
+        de: "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
+        en: "For years I have produced Arabic-language football content in documentary quality: script, edit, thumbnails, animations and publishing, all from one pair of hands. My ongoing real-world proof of full-stack production with reach in the millions."
+      },
+      items: [
+        {
+          id: "football-youtube",
+          title:   { de: "Fußball-Dokumentationen (YouTube)", en: "Football Documentaries (YouTube)" },
+          summary: {
+            de: "Langform-Fußballinhalte in dokumentarischer Qualität: recherchiert, geschrieben, geschnitten und veröffentlicht.",
+            en: "Long-form football content in documentary quality: researched, written, edited and published."
+          },
+          cover: "work-motion.jpg",
+          chips: ["YouTube", "Premiere Pro", "After Effects"],
+          body: {
+            de: "Platzhalter. Bette hier deine besten YouTube-Videos ein (Video-Link unten einfügen). Ersetze das Coverbild über die Inhalts-Verwaltung.",
+            en: "Placeholder. Embed your best YouTube videos here (add a video link below). Replace the cover image via the content manager."
+          },
+          /* video: "https://www.youtube.com/embed/VIDEO_ID", */
+          link: {
+            url: "https://www.youtube.com/@saleem.rishah",
+            label_de: "YouTube @saleem.rishah ↗",
+            label_en: "YouTube @saleem.rishah ↗"
+          }
+        },
+        {
+          id: "football-social",
+          title:   { de: "Kurzform: TikTok &amp; Facebook", en: "Short-form: TikTok &amp; Facebook" },
+          summary: {
+            de: "Vertikale Kurzclips und Match-Reaktionen mit hoher Reichweite auf TikTok und Facebook.",
+            en: "Vertical short clips and match reactions with high reach on TikTok and Facebook."
+          },
+          cover: "work-brand.jpg",
+          chips: ["TikTok", "Facebook", "Reels"],
+          body: {
+            de: "Platzhalter. Hier kommen deine reichweitenstärksten Kurzclips hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
+            en: "Placeholder. Your highest-reach short clips go here. Replace or extend via the content manager."
+          },
+          link: {
+            url: "https://www.tiktok.com/@saleemrisheh",
+            label_de: "TikTok @saleemrisheh ↗",
+            label_en: "TikTok @saleemrisheh ↗"
+          }
+        }
+      ]
+    }
+
+  ]
+};

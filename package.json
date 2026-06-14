@@ -1,0 +1,9 @@
+{
+  "name": "saleemrishah-website",
+  "version": "1.0.0",
+  "description": "Saleem Rishah portfolio",
+  "scripts": {
+    "build": "node build-work.js"
+  },
+  "private": true
+}

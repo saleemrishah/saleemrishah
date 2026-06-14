@@ -1,0 +1,19 @@
+{
+  "order": 10,
+  "title_de": "Schnitt, Motion & Color Grading",
+  "title_en": "Edit, Motion & Color Grading",
+  "summary_de": "Dokumentarischer Schnitt, Motion Graphics und filmisches Color Grading, das klassische Postproduktions-Handwerk hinter jeder Produktion.",
+  "summary_en": "Documentary editing, motion graphics and cinematic color grading, the classic post-production craft behind every production.",
+  "cover": "assets/work-motion.jpg",
+  "chips": [
+    "Premiere Pro",
+    "After Effects",
+    "DaVinci-Stil Grade"
+  ],
+  "body_de": "Platzhalter-Projekt. Hier kommen Showreel-Videos, Vorher-Nachher-Grades und Motion-Beispiele hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
+  "body_en": "Placeholder project. Showreel videos, before/after grades and motion examples go here. Replace or extend via the content manager.",
+  "video": "",
+  "gallery": [],
+  "link_url": "",
+  "link_label": ""
+}

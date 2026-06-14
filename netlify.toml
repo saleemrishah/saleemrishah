@@ -1,0 +1,12 @@
+# إعدادات نشر Netlify لموقع Saleem Rishah
+# عند كل نشر: شغّل build-work.js (يجمّع content/ في data/work.json) ثم انشر الموقع.
+
+[build]
+  command = "node build-work.js"
+  publish = "."
+
+# لوحة التحكم تحتاج هذا لتسجيل الدخول عبر Netlify Identity
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"

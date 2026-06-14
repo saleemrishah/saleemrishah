@@ -1,0 +1,19 @@
+{
+  "order": 10,
+  "title_de": "Fußball-Dokumentationen (YouTube)",
+  "title_en": "Football Documentaries (YouTube)",
+  "summary_de": "Langform-Fußballinhalte in dokumentarischer Qualität: recherchiert, geschrieben, geschnitten und veröffentlicht.",
+  "summary_en": "Long-form football content in documentary quality: researched, written, edited and published.",
+  "cover": "assets/work-motion.jpg",
+  "chips": [
+    "YouTube",
+    "Premiere Pro",
+    "After Effects"
+  ],
+  "body_de": "Platzhalter. Bette hier deine besten YouTube-Videos ein (Video-Link unten einfügen). Ersetze das Coverbild über die Inhalts-Verwaltung.",
+  "body_en": "Placeholder. Embed your best YouTube videos here (add a video link below). Replace the cover image via the content manager.",
+  "video": "",
+  "gallery": [],
+  "link_url": "https://www.youtube.com/@saleem.rishah",
+  "link_label": "YouTube @saleem.rishah ↗"
+}

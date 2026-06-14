@@ -1,0 +1,135 @@
+# ============================================================
+# لوحة تحكم Saleem Rishah — إعدادات Decap CMS
+# هون معرّفة كل الحقول اللي رح تظهرلك بلوحة التحكم.
+# ما بتحتاج تعدّل هالملف، اللوحة بتكتب لحالها بمجلد content/.
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+# مجلد رفع الصور من اللوحة
+media_folder: "saleemrishah/assets/uploads"
+public_folder: "assets/uploads"
+
+# لغة واجهة اللوحة
+locale: "de"
+
+# رسالة الحفظ التلقائية
+publish_mode: simple
+
+collections:
+  # ---------- قسم: AI & Generative ----------
+  - name: "ai"
+    label: "AI & Generative"
+    label_singular: "AI-Projekt"
+    folder: "saleemrishah/content/ai"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title_de}}"
+    fields:
+      - { name: "order", label: "Reihenfolge (Zahl, kleiner = zuerst)", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
+      - { name: "title_en", label: "Titel (English)", widget: "string" }
+      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
+      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
+      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false, hint: "Werkzeuge, z. B. Premiere Pro, Midjourney" }
+      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video-Link (YouTube embed oder MP4, optional)", widget: "string", required: false, hint: "z. B. https://www.youtube.com/embed/VIDEO_ID" }
+      - { name: "gallery", label: "Weitere Bilder (Galerie, optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
+      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+      - name: "tracks"
+        label: "Pipeline-Schritte (optional, z. B. für Julia)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "id", label: "Schritt-Label", widget: "string", hint: "z. B. Track 01 · Concept" }
+          - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
+          - { name: "title_en", label: "Titel (English)", widget: "string" }
+          - { name: "text_de", label: "Text (Deutsch)", widget: "text", required: false }
+          - { name: "text_en", label: "Text (English)", widget: "text", required: false }
+          - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
+
+  # ---------- قسم: Motion & Video ----------
+  - name: "motion"
+    label: "Motion & Video"
+    label_singular: "Motion-Projekt"
+    folder: "saleemrishah/content/motion"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title_de}}"
+    fields:
+      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
+      - { name: "title_en", label: "Titel (English)", widget: "string" }
+      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
+      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
+      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
+      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video-Link (YouTube embed oder MP4, optional)", widget: "string", required: false }
+      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
+      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+
+  # ---------- قسم: Brand & Social ----------
+  - name: "brand"
+    label: "Brand & Social"
+    label_singular: "Brand-Projekt"
+    folder: "saleemrishah/content/brand"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title_de}}"
+    fields:
+      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
+      - { name: "title_en", label: "Titel (English)", widget: "string" }
+      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
+      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
+      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
+      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video-Link (optional)", widget: "string", required: false }
+      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
+      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }
+
+  # ---------- قسم: Football / Arabic ----------
+  - name: "football"
+    label: "Football / Arabic"
+    label_singular: "Football-Projekt"
+    folder: "saleemrishah/content/football"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title_de}}"
+    fields:
+      - { name: "order", label: "Reihenfolge", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Titel (Deutsch)", widget: "string" }
+      - { name: "title_en", label: "Titel (English)", widget: "string" }
+      - { name: "summary_de", label: "Kurzbeschreibung (Deutsch)", widget: "text" }
+      - { name: "summary_en", label: "Kurzbeschreibung (English)", widget: "text" }
+      - { name: "cover", label: "Coverbild", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
+      - { name: "body_de", label: "Langtext (Deutsch, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Langtext (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video-Link (optional)", widget: "string", required: false }
+      - { name: "gallery", label: "Weitere Bilder (optional)", widget: "list", field: { name: "image", label: "Bild", widget: "image" }, required: false }
+      - { name: "link_url", label: "Externer Link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "Externer Link — Beschriftung (optional)", widget: "string", required: false }

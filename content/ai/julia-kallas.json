@@ -1,0 +1,102 @@
+{
+  "order": 10,
+  "title_de": "Julia Kallas — KI-Persona",
+  "title_en": "Julia Kallas — AI Persona",
+  "summary_de": "Eine vollständig KI-produzierte Persona mit eigenem Podcast-Format auf Instagram. Kein Studio, keine Kamera: jeder Frame, jedes Wort, jeder Ton aus einer generativen Pipeline.",
+  "summary_en": "A fully AI-produced persona with her own podcast format on Instagram. No studio, no camera: every frame, every word, every sound from a generative pipeline.",
+  "cover": "assets/julia.jpg",
+  "chips": [
+    "ComfyUI",
+    "Nano Banana",
+    "Kling AI",
+    "ElevenLabs",
+    "Premiere Pro"
+  ],
+  "body_de": "<strong>Das Ziel:</strong> ein wiederholbarer Workflow, der beweist, dass eine konsistente, markenfähige Figur komplett mit KI produziert und kontinuierlich bespielt werden kann, übertragbar auf jede Marke, jedes Produkt und jede Sprache. Die folgende Pipeline zeigt jeden Schritt von der Idee bis zur Veröffentlichung.",
+  "body_en": "<strong>The goal:</strong> a repeatable workflow proving that a consistent, brand-ready character can be produced and published entirely with AI, transferable to any brand, product or language. The pipeline below shows every step from idea to publishing.",
+  "video": "",
+  "gallery": [],
+  "link_url": "https://www.instagram.com/juliakallas.de/",
+  "link_label": "@juliakallas.de · Instagram ↗",
+  "tracks": [
+    {
+      "id": "Track 01 · Concept",
+      "title_de": "Themen & Content-Strategie",
+      "title_en": "Topics & content strategy",
+      "text_de": "Themenrecherche, Hook-Entwicklung und Skripte im Podcast-Format, abgestimmt auf Plattform-Algorithmen und Zielgruppe.",
+      "text_en": "Topic research, hook development and podcast-format scripts, tuned to platform algorithms and audience.",
+      "chips": [
+        "Claude",
+        "Content-Strategie"
+      ]
+    },
+    {
+      "id": "Track 02 · Identity",
+      "title_de": "Charakter-Design & Identitäts-Training",
+      "title_en": "Character design & identity training",
+      "text_de": "Aufbau eines kuratierten Referenz-Datensatzes für eine konsistente Identität über hunderte Generierungen hinweg, inklusive LoRA-Trainingsexperimenten und referenzbasierter Generierung.",
+      "text_en": "Building a curated reference dataset for a consistent identity across hundreds of generations, including LoRA training experiments and reference-based generation.",
+      "chips": [
+        "Reference Dataset",
+        "LoRA",
+        "ComfyUI"
+      ]
+    },
+    {
+      "id": "Track 03 · Image",
+      "title_de": "Bildgenerierung",
+      "title_en": "Image generation",
+      "text_de": "Szenen im Podcast-Setting mit kontrollierten Kamerawinkeln, Licht und Skin-Realismus, durch präzises Prompt Engineering.",
+      "text_en": "Scenes in the podcast setting with controlled camera angles, lighting and skin realism, through precise prompt engineering.",
+      "chips": [
+        "Nano Banana",
+        "Seedream",
+        "Midjourney"
+      ]
+    },
+    {
+      "id": "Track 04 · Motion",
+      "title_de": "Videogenerierung & Lipsync",
+      "title_en": "Video generation & lipsync",
+      "text_de": "Animation der Stills zu sprechenden Videosequenzen mit natürlicher Mimik, Lipsync und Motion Control.",
+      "text_en": "Animating stills into talking video sequences with natural expression, lipsync and motion control.",
+      "chips": [
+        "Kling AI",
+        "HeyGen",
+        "Runway"
+      ]
+    },
+    {
+      "id": "Track 05 · Voice",
+      "title_de": "Stimm-Design",
+      "title_en": "Voice design",
+      "text_de": "Eine eigens entwickelte, wiedererkennbare Stimme mit konsistentem Tonfall, Tempo und Persönlichkeit.",
+      "text_en": "A custom, recognizable voice with consistent tone, pacing and personality.",
+      "chips": [
+        "ElevenLabs"
+      ]
+    },
+    {
+      "id": "Track 06 · Post",
+      "title_de": "Sound Engineering & Schnitt",
+      "title_en": "Sound engineering & edit",
+      "text_de": "Finaler Schnitt, Sound Design, Mischung und Farbkorrektur, das klassische Postproduktions-Handwerk macht den Unterschied zwischen KI-Demo und publikationsreifem Content.",
+      "text_en": "Final edit, sound design, mix and color: classic post-production craft is what separates an AI demo from publish-ready content.",
+      "chips": [
+        "Premiere Pro",
+        "Audition"
+      ]
+    },
+    {
+      "id": "Track 07 · Publish",
+      "title_de": "Publishing & Wachstum",
+      "title_en": "Publishing & growth",
+      "text_de": "Kontinuierliches Publishing auf Instagram, Format-Tests und datenbasierte Optimierung von Hooks, Längen und Themen.",
+      "text_en": "Continuous publishing on Instagram, format testing and data-driven optimization of hooks, lengths and topics.",
+      "chips": [
+        "Instagram Reels",
+        "Analytics"
+      ]
+    }
+  ]
+}
