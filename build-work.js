@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 /* ============================================================
-   build-work.js — يجمع ملفات مجلدات content في ملف واحد
-   data/work.json يقرأه الموقع. Netlify يشغّله تلقائياً عند كل
-   نشر (build command)، فما بتحتاج تشغّله يدوياً.
+   build-work.js — collects content folder files into one file
+   data/work.json read by the site. Netlify runs it automatically on every
+   deploy (build command), so no manual run needed.
    ------------------------------------------------------------
-   تشغيل يدوي (اختياري، للتجربة محلياً): node build-work.js
+   Manual run (optional, local testing): node build-work.js
    ============================================================ */
 'use strict';
 const fs = require('fs');
@@ -15,8 +15,8 @@ const CONTENT = path.join(ROOT, 'content');
 const OUT_DIR = path.join(ROOT, 'data');
 const OUT = path.join(OUT_DIR, 'work.json');
 
-/* بيانات الأقسام الثابتة (العناوين والمقدمات).
-   لو لقينا content/sections.json منستخدمه، وإلا منستخدم هاد. */
+/* Static section data (titles and intros).
+   Used to rebuild content/sections.json. */
 const SECTION_META = {
   ai: {
     eyebrow_de: "01 · KI & Generative", eyebrow_en: "01 · AI & Generative",
@@ -51,7 +51,7 @@ function readJSON(p) {
   catch (e) { console.warn('skip (invalid JSON):', p, e.message); return null; }
 }
 
-/* حقول CMS المسطّحة → الشكل اللي بيفهمه work.js */
+/* Flat CMS fields -> shape work.js understands */
 function shape(raw, slug) {
   const it = { id: slug };
   it.title = { de: raw.title_de || '', en: raw.title_en || raw.title_de || '' };
@@ -61,7 +61,7 @@ function shape(raw, slug) {
   if (raw.body_de || raw.body_en) it.body = { de: raw.body_de || '', en: raw.body_en || raw.body_de || '' };
   if (raw.video) it.video = raw.video;
   if (Array.isArray(raw.gallery) && raw.gallery.length) {
-    /* الـ CMS قد يحفظ الجاليري كقائمة كائنات {image:..} أو نصوص */
+    /* CMS may store gallery as list of {image:..} objects or strings */
     it.gallery = raw.gallery.map(g => (typeof g === 'string' ? g : (g && g.image) || '')).filter(Boolean);
   }
   if (raw.link_url) it.link = { url: raw.link_url, label_de: raw.link_label || raw.link_url, label_en: raw.link_label || raw.link_url };
@@ -104,5 +104,27 @@ ORDER.forEach(secId => {
 
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify({ sections }, null, 2));
+
+/* Update content/sections.json too, so the site (which reads content/ directly)
+   finds an up-to-date item list even if the CMS added an item without updating the manifest. */
+var manifest = {};
+ORDER.forEach(function (secId) {
+  var dir = path.join(CONTENT, secId);
+  if (!fs.existsSync(dir)) return;
+  var meta = SECTION_META[secId] || {};
+  var slugs = fs.readdirSync(dir).filter(function (f) { return f.endsWith('.json'); })
+    .map(function (f) { return { slug: f.replace(/\.json$/, ''), order: (readJSON(path.join(dir, f)) || {}).order }; })
+    .sort(function (a, b) { return (a.order == null ? 999 : a.order) - (b.order == null ? 999 : b.order); })
+    .map(function (x) { return x.slug; });
+  manifest[secId] = {
+    id: secId,
+    eyebrow_de: meta.eyebrow_de || '', eyebrow_en: meta.eyebrow_en || '',
+    title_de: meta.title_de || '', title_en: meta.title_en || '',
+    intro_de: meta.intro_de || '', intro_en: meta.intro_en || '',
+    items: slugs
+  };
+});
+fs.writeFileSync(path.join(CONTENT, 'sections.json'), JSON.stringify(manifest, null, 2));
+
 var totalItems = sections.reduce(function (n, s) { return n + s.items.length; }, 0);
-console.log('build-work: wrote ' + OUT + ' with ' + sections.length + ' sections, ' + totalItems + ' items');
+console.log('build-work: wrote ' + OUT + ' + content/sections.json with ' + sections.length + ' sections, ' + totalItems + ' items');

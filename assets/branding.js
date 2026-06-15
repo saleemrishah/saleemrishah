@@ -1,6 +1,6 @@
 /* ============================================================
-   branding.js — يطبّق اللوغو والأيقونة من content/site/branding.json
-   اللي بتعدّلهن من لوحة التحكم. لو الملف فاضي، يبقى النص/الأيقونة الحالية.
+   branding.js — Applies logo and favicon from content/site/branding.json
+   edited from the CMS. If empty, keeps current text/icon.
    ============================================================ */
 (function () {
   if (!window.fetch) return;
@@ -9,18 +9,18 @@
     .then(function (b) {
       if (!b) return;
 
-      /* ----- اللوغو (الوردمارك فوق يسار) ----- */
+      /* ----- Logo (wordmark top-left) ----- */
       var brand = document.querySelector('.brand');
       if (brand) {
         if (b.logo_image) {
-          /* صورة لوغو: نستبدل النص بصورة، ونخفي النقطة */
+          /* Image logo: replace text with image */
           brand.innerHTML = '<img src="' + b.logo_image + '" alt="Saleem Rishah" class="brand-img">';
-          /* ارتفاع اللوغو من اللوحة (logo_height) */
+          /* Logo height from CMS (logo_height) */
           if (b.logo_height) {
             document.documentElement.style.setProperty('--logo-h', b.logo_height + 'px');
           }
         } else if (b.logo_text) {
-          /* نص: نحدّث الاسم مع إبقاء النقطة */
+          /* Text: update name keeping the dot */
           var dot = brand.querySelector('.dot');
           brand.innerHTML = '';
           if (dot) brand.appendChild(dot);
@@ -28,7 +28,7 @@
         }
       }
 
-      /* ----- الأيقونة (favicon) ----- */
+      /* ----- Favicon ----- */
       if (b.favicon) {
         var link = document.querySelector('link[rel="icon"]');
         if (!link) {
@@ -36,10 +36,10 @@
           link.rel = 'icon';
           document.head.appendChild(link);
         }
-        /* نحدّد النوع حسب الامتداد */
+        /* Set type by extension */
         link.type = /\.svg($|\?)/i.test(b.favicon) ? 'image/svg+xml' : 'image/png';
         link.href = b.favicon;
       }
     })
-    .catch(function () { /* تجاهل: يبقى الافتراضي */ });
+    .catch(function () { /* ignore: keep default */ });
 })();

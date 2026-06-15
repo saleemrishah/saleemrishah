@@ -1,29 +1,102 @@
 /* ============================================================
    Saleem Rishah — Work renderer + project modal
-   يبني الأقسام والكروت من window.WORK_DATA ويفتح نافذة التفاصيل.
-   لا حاجة لتعديل هذا الملف عند إضافة عمل، عدّل work-data.js فقط.
+   Builds sections and cards, opens the project detail modal.
+   No need to edit this file when adding a project; the CMS handles content.
    ============================================================ */
 (function () {
   var mount = document.getElementById('work-sections');
   if (!mount) return;
 
-  /* نجلب البيانات من data/work.json (يبنيه Netlify من لوحة التحكم).
-     لو فشل الجلب (مثلاً فتح الملف محلياً بدون سيرفر)، نرجع لـ window.WORK_DATA. */
-  function boot() {
-    if (window.fetch) {
-      fetch('data/work.json', { cache: 'no-store' })
-        .then(function (r) { if (!r.ok) throw new Error('no json'); return r.json(); })
-        .then(function (d) { init(d && d.sections ? d : window.WORK_DATA); })
-        .catch(function () { init(window.WORK_DATA); });
-    } else {
-      init(window.WORK_DATA);
+  /* ============================================================
+     Read content directly from content/ files (written by the CMS).
+     Any CMS edit shows immediately, with no build step and no cache.
+     Order: content/sections.json (sections + item list) then each item file.
+     On failure (e.g. local open without a server) fall back to
+     data/work.json then window.WORK_DATA.
+     ============================================================ */
+  var SECTION_ORDER = ['ai', 'motion', 'brand', 'football'];
+
+  /* Converts a CMS item (flat fields) into the shape init expects */
+  function shapeItem(raw, slug) {
+    var it = { id: slug };
+    it.title = { de: raw.title_de || '', en: raw.title_en || raw.title_de || '' };
+    it.summary = { de: raw.summary_de || '', en: raw.summary_en || raw.summary_de || '' };
+    it.cover = raw.cover || '';
+    it.chips = Array.isArray(raw.chips) ? raw.chips : [];
+    if (raw.body_de || raw.body_en) it.body = { de: raw.body_de || '', en: raw.body_en || raw.body_de || '' };
+    if (raw.video) it.video = raw.video;
+    if (Array.isArray(raw.gallery) && raw.gallery.length) {
+      it.gallery = raw.gallery.map(function (g) { return typeof g === 'string' ? g : (g && g.image) || ''; })
+        .filter(function (x) { return x; });
     }
+    if (raw.link_url) it.link = { url: raw.link_url, label_de: raw.link_label || raw.link_url, label_en: raw.link_label || raw.link_url };
+    if (Array.isArray(raw.tracks) && raw.tracks.length) {
+      it.tracks = raw.tracks.map(function (t) {
+        return {
+          id: t.id || '',
+          title: { de: t.title_de || '', en: t.title_en || t.title_de || '' },
+          text: { de: t.text_de || '', en: t.text_en || t.text_de || '' },
+          chips: Array.isArray(t.chips) ? t.chips : []
+        };
+      });
+    }
+    it._order = typeof raw.order === 'number' ? raw.order : 999;
+    return it;
+  }
+
+  function getJSON(path) {
+    return fetch(path, { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('fetch failed: ' + path);
+      return r.json();
+    });
+  }
+
+  /* Builds data directly from content/ */
+  function buildFromContent() {
+    return getJSON('content/sections.json').then(function (manifest) {
+      var sectionPromises = SECTION_ORDER.filter(function (id) { return manifest[id]; }).map(function (id) {
+        var sec = manifest[id];
+        var itemIds = Array.isArray(sec.items) ? sec.items : [];
+        var itemPromises = itemIds.map(function (slug) {
+          return getJSON('content/' + id + '/' + slug + '.json')
+            .then(function (raw) { return shapeItem(raw, slug); })
+            .catch(function () { return null; });
+        });
+        return Promise.all(itemPromises).then(function (items) {
+          items = items.filter(function (x) { return x; });
+          items.sort(function (a, b) { return a._order - b._order; });
+          items.forEach(function (i) { delete i._order; });
+          return {
+            id: id,
+            eyebrow: { de: sec.eyebrow_de || '', en: sec.eyebrow_en || '' },
+            title: { de: sec.title_de || '', en: sec.title_en || '' },
+            intro: { de: sec.intro_de || '', en: sec.intro_en || '' },
+            items: items
+          };
+        });
+      });
+      return Promise.all(sectionPromises).then(function (sections) {
+        return { sections: sections.filter(function (s) { return s.items.length; }) };
+      });
+    });
+  }
+
+  function boot() {
+    if (!window.fetch) { init(window.WORK_DATA); return; }
+    buildFromContent()
+      .then(function (d) { init(d && d.sections && d.sections.length ? d : window.WORK_DATA); })
+      .catch(function () {
+        /* fallback: data/work.json then window.WORK_DATA */
+        getJSON('data/work.json')
+          .then(function (d) { init(d && d.sections ? d : window.WORK_DATA); })
+          .catch(function () { init(window.WORK_DATA); });
+      });
   }
 
   function init(DATA) {
     if (!DATA || !DATA.sections) return;
 
-  /* نص ثنائي اللغة: نطبع النسختين والـ CSS يخفي وحدة حسب html.de/.en */
+  /* Bilingual text: print both, CSS hides one based on html.de/.en */
   function bi(obj) {
     if (obj == null) return '';
     if (typeof obj === 'string') return obj;
@@ -39,17 +112,17 @@
       '</div>';
   }
 
-  /* رابط الصورة: لو فيه "/" أو "http" نستخدمه كما هو، وإلا نضيف assets/ */
+  /* Image path: if it has a slash or http use as-is, else prefix assets/ */
   function img(src) {
     if (!src) return 'assets/og-cover.jpg';
     if (src.indexOf('http') === 0 || src.indexOf('/') !== -1) return src;
     return 'assets/' + src;
   }
 
-  /* فهرس لكل الأعمال حسب id حتى نفتح النافذة بسرعة */
+  /* Index of all items by id for quick modal open */
   var byId = {};
 
-  /* ---------- بناء الأقسام والكروت ---------- */
+  /* ---------- Build sections and cards ---------- */
   var html = '';
   DATA.sections.forEach(function (sec, si) {
     if (!sec.items || !sec.items.length) return;
@@ -81,17 +154,17 @@
   });
   mount.innerHTML = html;
 
-  /* ---------- محتوى النافذة لعمل واحد ---------- */
+  /* ---------- Modal content for one item ---------- */
   function videoHTML(it) {
     if (!it.video) return '';
     var src = it.video;
     var vertical = it.vertical ? ' wm-video--vertical' : '';
     if (/\.mp4($|\?)/i.test(src) || src.indexOf('http') !== 0 || src.indexOf('/') === 0) {
-      /* ملف محلي */
+      /* local file */
       return '<div class="wm-video' + vertical + '"><video controls preload="metadata"' +
         (it.cover ? ' poster="' + img(it.cover) + '"' : '') + ' src="' + src + '"></video></div>';
     }
-    /* iframe (يوتيوب/فيميو embed) */
+    /* iframe (YouTube/Vimeo embed) */
     return '<div class="wm-video' + vertical + '"><iframe src="' + src +
       '" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
   }
@@ -144,13 +217,13 @@
     return h;
   }
 
-  /* ---------- فتح/إغلاق النافذة ---------- */
+  /* ---------- open/close modal ---------- */
   var modal = document.getElementById('work-modal');
   var modalBody = document.getElementById('wm-body');
   var lastFocus = null;
 
   function syncLang() {
-    /* بعد ملء النافذة، خبّر main.js (لو موجود) ليطبّق اللغة على data-en الجديدة */
+    /* After filling modal, re-apply language to new data-en elements */
     var lang = document.documentElement.classList.contains('en') ? 'en' : 'de';
     modalBody.querySelectorAll('[data-en]').forEach(function (el) {
       if (!el.hasAttribute('data-de')) el.setAttribute('data-de', el.innerHTML);
@@ -193,7 +266,7 @@
     if (e.key === 'Escape' && !modal.hidden) closeWork();
   });
 
-  /* لو بدّل المستخدم اللغة والنافذة مفتوحة، نعيد المزامنة */
+  /* If user switches language while modal open, re-sync */
   document.querySelectorAll('.lang-switch button').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (!modal.hidden) setTimeout(syncLang, 0);

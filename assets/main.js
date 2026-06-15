@@ -82,7 +82,7 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* خطاف للسكربتات الأخرى (home.js) لإعادة تطبيق اللغة بعد تحديث المحتوى */
+  /* Hook for other scripts (home.js) to re-apply language after content update */
   window.__applyLangAgain = function () {
     setLang(root.classList.contains('en') ? 'en' : 'de');
   };

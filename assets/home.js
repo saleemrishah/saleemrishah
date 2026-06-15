@@ -1,7 +1,7 @@
 /* ============================================================
-   home.js — يطبّق محتوى الـ Hero من content/site/home.json
-   (الصورة الشخصية، العناوين، النص، الستيتس) لو معبّاة من اللوحة.
-   كل حقل فاضي = يبقى المحتوى الأصلي بالصفحة.
+   home.js — Applies Hero content from content/site/home.json
+   (portrait, titles, text, status) if filled from the CMS.
+   Empty field = keep original page content.
    ============================================================ */
 (function () {
   if (!window.fetch) return;
@@ -13,13 +13,13 @@
     .then(function (h) {
       if (!h) return;
 
-      /* الصورة الشخصية */
+      /* Portrait */
       if (h.portrait) {
         var img = hero.querySelector('.portrait-frame img');
         if (img) img.src = h.portrait;
       }
 
-      /* حقل ثنائي اللغة: يحدّث عنصر فيه only-de / only-en */
+      /* Bilingual field: updates an element with only-de / only-en */
       function setBi(sel, de, en) {
         if (!de && !en) return;
         var box = hero.querySelector(sel);
@@ -30,7 +30,7 @@
         if (e && en) e.innerHTML = en;
       }
 
-      /* حقل data-en (سطر واحد): يحدّث النص الألماني + سمة data-en/data-de */
+      /* data-en field: updates German text + data-en/data-de attrs */
       function setDataEn(sel, de, en) {
         if (!de && !en) return;
         var el = hero.querySelector(sel);
@@ -44,8 +44,8 @@
       setBi('.hero .lead', h.lead_de, h.lead_en);
       setDataEn('.hero .status span[data-en]', h.status_de, h.status_en);
 
-      /* لو اللغة الحالية إنكليزي، نعيد تطبيقها بعد التحديث */
+      /* If current language is English, re-apply after update */
       if (window.__applyLangAgain) window.__applyLangAgain();
     })
-    .catch(function () { /* تجاهل */ });
+    .catch(function () { /* ignore */ });
 })();

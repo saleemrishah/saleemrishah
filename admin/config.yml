@@ -1,25 +1,25 @@
 # ============================================================
-# لوحة تحكم Saleem Rishah — إعدادات Decap CMS
-# هون معرّفة كل الحقول اللي رح تظهرلك بلوحة التحكم.
-# ما بتحتاج تعدّل هالملف، اللوحة بتكتب لحالها بمجلد content/.
+# Saleem Rishah CMS — Decap config
+# All fields shown in the admin panel are defined here.
+# The CMS writes into the content/ folder automatically.
 # ============================================================
 
 backend:
   name: git-gateway
   branch: main
 
-# مجلد رفع الصور من اللوحة
+# Image upload folder used by the CMS
 media_folder: "assets/uploads"
 public_folder: "assets/uploads"
 
-# لغة واجهة اللوحة
+# Admin UI language
 locale: "en"
 
-# رسالة الحفظ التلقائية
+# Publish mode
 publish_mode: simple
 
 collections:
-  # ---------- قسم: الهوية (اللوغو والأيقونة) ----------
+  # ---- Section: Identity (logo + favicon) ----
   - name: "identity"
     label: "Identity / Logo"
     delete: false
@@ -35,7 +35,7 @@ collections:
           - { name: "logo_height", label: "Logo height in pixels (e.g. 40)", widget: "number", required: false, default: 40, hint: "Bigger number = bigger logo. Only applies to image logo." }
           - { name: "favicon", label: "Favicon (browser tab icon, optional)", widget: "image", required: false, hint: "Square, PNG/SVG. Leave empty = current SR icon." }
 
-  # ---------- قسم: الصفحة الرئيسية (Home) ----------
+  # ---- Section: Homepage ----
   - name: "home"
     label: "Homepage"
     delete: false
@@ -56,7 +56,7 @@ collections:
           - { name: "status_de", label: "Status badge (German)", widget: "string", required: false, default: "Offen für neue Projekte & Positionen" }
           - { name: "status_en", label: "Status badge (English)", widget: "string", required: false, default: "Open to new projects & opportunities" }
 
-  # ---------- قسم: AI & Generative ----------
+  # ---- Section: AI & Generative ----
   - name: "ai"
     label: "AI & Generative"
     label_singular: "AI project"
@@ -93,7 +93,7 @@ collections:
           - { name: "text_en", label: "Text (English)", widget: "text", required: false }
           - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
 
-  # ---------- قسم: Motion & Video ----------
+  # ---- Section: Motion & Video ----
   - name: "motion"
     label: "Motion & Video"
     label_singular: "Motion project"
@@ -119,7 +119,7 @@ collections:
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
-  # ---------- قسم: Brand & Social ----------
+  # ---- Section: Brand & Social ----
   - name: "brand"
     label: "Brand & Social"
     label_singular: "Brand project"
@@ -145,7 +145,7 @@ collections:
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
-  # ---------- قسم: Football / Arabic ----------
+  # ---- Section: Football / Arabic ----
   - name: "football"
     label: "Football / Arabic"
     label_singular: "Football project"
