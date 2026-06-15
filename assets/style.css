@@ -127,8 +127,8 @@ em.hl{font-style:italic;color:var(--teal)}
 @keyframes pulse{70%{box-shadow:0 0 0 9px rgba(70,213,194,0)}100%{box-shadow:0 0 0 0 rgba(70,213,194,0)}}
 
 .portrait-frame{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);max-width:420px;margin-left:auto}
-.portrait-frame img{filter:grayscale(1) contrast(1.06) brightness(.92);width:100%}
-.portrait-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(70,213,194,.22),rgba(11,14,18,.1) 55%,rgba(230,161,92,.20));mix-blend-mode:overlay}
+.portrait-frame img{width:100%;height:auto;display:block}
+/* الغريدينت انشال — الصورة تطلع طبيعية */
 .portrait-frame .tag{position:absolute;left:14px;bottom:12px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.12em;color:var(--ink-soft);background:rgba(11,14,18,.72);border:1px solid var(--line);border-radius:6px;padding:5px 10px;z-index:1}
 @media (max-width:900px){.portrait-frame{margin:0 auto}}
 
@@ -249,3 +249,66 @@ textarea{min-height:140px;resize:vertical}
 .work-intro{padding:80px 0 28px}
 @media (max-width:720px){.work-intro{padding:54px 0 20px}}
 .work-intro .lead{max-width:64ch}
+
+/* ============================================================
+   Work sections — clickable cards + project modal (re-added)
+   ============================================================ */
+.work-section{padding:88px 0}
+@media (max-width:720px){.work-section{padding:58px 0}}
+.work-section .lead{margin-bottom:0}
+
+button.work-card{
+  display:flex;flex-direction:column;text-align:inherit;width:100%;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;cursor:pointer;font:inherit;color:inherit;padding:0;
+  transition:border-color .2s ease,transform .2s ease;
+}
+button.work-card:hover{border-color:var(--teal-dim);transform:translateY(-3px)}
+button.work-card:hover .wc-media img{transform:scale(1.04)}
+.wc-media{position:relative;display:block;overflow:hidden;aspect-ratio:4/3}
+.wc-media img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.wc-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(11,14,18,.62);border:1px solid var(--teal);color:var(--teal);
+  font-size:1.05rem;padding-left:4px;backdrop-filter:blur(3px)}
+button.work-card .pad{padding:24px;display:flex;flex-direction:column;gap:9px}
+.wc-title{font-family:var(--font-disp);font-weight:600;font-size:1.18rem;line-height:1.2;color:var(--ink)}
+.wc-sum{color:var(--ink-soft);font-size:.95rem}
+.wc-more{margin-top:4px;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;color:var(--teal)}
+button.work-card:hover .wc-more{color:#5FE3D1}
+
+/* ---------- modal ---------- */
+body.modal-open{overflow:hidden}
+.work-modal{position:fixed;inset:0;z-index:80;display:flex;align-items:flex-start;justify-content:center}
+.work-modal[hidden]{display:none}
+.wm-backdrop{position:absolute;inset:0;background:rgba(6,9,13,.78);backdrop-filter:blur(6px)}
+.wm-panel{position:relative;z-index:1;width:min(880px,calc(100% - 32px));
+  margin:48px 0;max-height:calc(100vh - 96px);overflow:auto;
+  background:var(--bg-2);border:1px solid var(--line);border-radius:18px;
+  box-shadow:0 30px 80px rgba(0,0,0,.5);animation:wm-in .28s ease}
+@keyframes wm-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.wm-panel{animation:none}}
+.wm-close{position:sticky;top:14px;float:right;margin:14px 14px 0 0;z-index:2;
+  width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
+  background:rgba(11,14,18,.8);color:var(--ink);cursor:pointer;font-size:1rem;
+  display:flex;align-items:center;justify-content:center}
+.wm-close:hover{border-color:var(--teal-dim);color:var(--teal)}
+.wm-body{padding:30px 38px 42px}
+@media (max-width:600px){.wm-body{padding:24px 20px 32px}.wm-panel{margin:20px 0;max-height:calc(100vh - 40px)}}
+.wm-body h2{margin:6px 0 18px}
+.wm-body .lead{max-width:none;margin-bottom:14px}
+.wm-text{color:var(--ink-soft);margin:0 0 16px;max-width:66ch}
+.wm-cover{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:0 0 20px}
+.wm-cover img{width:100%;display:block}
+.wm-video{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:0 0 20px;aspect-ratio:16/9}
+.wm-video--vertical{aspect-ratio:9/16;max-width:360px}
+.wm-video iframe,.wm-video video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+
+/* المعرض: تخطيط ذكي تلقائي — الكتل تترتّب وتتوازن لحالها */
+.wm-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:18px 0;grid-auto-flow:dense}
+.wm-gallery img{width:100%;border-radius:10px;border:1px solid var(--line);object-fit:cover;aspect-ratio:4/3}
+/* أول صورة بالمعرض تاخد عرض أكبر تلقائياً لو فيه 3+ صور (توازن بصري) */
+.wm-gallery img:first-child:nth-last-child(n+3){grid-column:span 2;aspect-ratio:16/9}
+@media (max-width:520px){.wm-gallery img:first-child:nth-last-child(n+3){grid-column:span 1;aspect-ratio:4/3}}
+.wm-pipeline{margin-top:24px}
+.wm-body .chips{margin-top:14px}
