@@ -1,11 +1,11 @@
 {
-  "portrait": "",
-  "eyebrow_de": "",
-  "eyebrow_en": "",
-  "headline_de": "",
-  "headline_en": "",
   "lead_de": "",
   "lead_en": "",
+  "headline_de": "",
   "status_de": "",
-  "status_en": ""
+  "headline_en": "",
+  "status_en": "",
+  "eyebrow_de": "",
+  "portrait": "assets/uploads/me.linkedin.jpg",
+  "eyebrow_en": ""
 }
