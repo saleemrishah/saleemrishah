@@ -244,3 +244,8 @@ textarea{min-height:140px;resize:vertical}
 
 /* ---------- logo image (from CMS) ---------- */
 .brand-img{height:var(--logo-h,40px);width:auto;display:block}
+
+/* ---------- work intro (lighter than section headers) ---------- */
+.work-intro{padding:80px 0 28px}
+@media (max-width:720px){.work-intro{padding:54px 0 20px}}
+.work-intro .lead{max-width:64ch}
