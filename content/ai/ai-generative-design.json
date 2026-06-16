@@ -1,19 +1,19 @@
 {
-  "order": 20,
-  "title_de": "Generatives Design & Konzepte",
-  "title_en": "Generative Design & Concepts",
-  "summary_de": "Visuelle Konzepte, Keyvisuals und Markenfiguren, erstellt mit fortgeschrittener KI und präzisem Prompt Engineering.",
   "summary_en": "Visual concepts, key visuals and brand characters, created with advanced AI and precise prompt engineering.",
-  "cover": "assets/work-ai.jpg",
+  "body_en": "Placeholder project. Replace image, title and description via the content manager, or delete this entry.",
   "chips": [
     "Midjourney",
     "Firefly",
     "Nano Banana"
   ],
-  "body_de": "Platzhalter-Projekt. Ersetze Bild, Titel und Beschreibung über die Inhalts-Verwaltung, oder lösche diesen Eintrag.",
-  "body_en": "Placeholder project. Replace image, title and description via the content manager, or delete this entry.",
-  "video": "",
-  "gallery": [],
+  "title_de": "Generatives Design & Konzepte",
   "link_url": "",
-  "link_label": ""
+  "order": 20,
+  "link_label": "",
+  "title_en": "Generative Design & Concepts",
+  "gallery": [],
+  "cover": "assets/uploads/work-ai.jpg",
+  "summary_de": "Visuelle Konzepte, Keyvisuals und Markenfiguren, erstellt mit fortgeschrittener KI und präzisem Prompt Engineering.",
+  "video": "",
+  "body_de": "Platzhalter-Projekt. Ersetze Bild, Titel und Beschreibung über die Inhalts-Verwaltung, oder lösche diesen Eintrag."
 }
