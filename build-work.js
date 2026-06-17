@@ -37,7 +37,7 @@ const SECTION_META = {
     intro_en: "Brand identities, logos and tailored visual systems for social media channels, from start-ups to content creators."
   },
   football: {
-    eyebrow_de: "04 · <span class='amber'>Proof</span> · Reichweite", eyebrow_en: "04 · <span class='amber'>Proof</span> · Reach",
+    eyebrow_de: "04 · Proof · Reichweite", eyebrow_en: "04 · Proof · Reach",
     title_de: "Arabische Fußball-Kanäle", title_en: "Arabic Football Channels",
     intro_de: "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
     intro_en: "For years I have produced Arabic-language football content in documentary quality: script, edit, thumbnails, animations and publishing, all from one pair of hands. My ongoing real-world proof of full-stack production with reach in the millions."
@@ -61,8 +61,12 @@ function shape(raw, slug) {
   if (raw.body_de || raw.body_en) it.body = { de: raw.body_de || '', en: raw.body_en || raw.body_de || '' };
   if (raw.video) it.video = raw.video;
   if (Array.isArray(raw.gallery) && raw.gallery.length) {
-    /* CMS may store gallery as list of {image:..} objects or strings */
-    it.gallery = raw.gallery.map(g => (typeof g === 'string' ? g : (g && g.image) || '')).filter(Boolean);
+    it.gallery = raw.gallery.map(g => {
+      if (typeof g === 'string') return { src: g, ar: 'auto', size: '1' };
+      const src = (g && g.image) || '';
+      if (!src) return null;
+      return { src, ar: g.aspect_ratio || 'auto', size: g.size || '1' };
+    }).filter(Boolean);
   }
   if (raw.link_url) it.link = { url: raw.link_url, label_de: raw.link_label || raw.link_url, label_en: raw.link_label || raw.link_url };
   if (Array.isArray(raw.tracks) && raw.tracks.length) {

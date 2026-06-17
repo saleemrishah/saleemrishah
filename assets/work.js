@@ -26,8 +26,12 @@
     if (raw.body_de || raw.body_en) it.body = { de: raw.body_de || '', en: raw.body_en || raw.body_de || '' };
     if (raw.video) it.video = raw.video;
     if (Array.isArray(raw.gallery) && raw.gallery.length) {
-      it.gallery = raw.gallery.map(function (g) { return typeof g === 'string' ? g : (g && g.image) || ''; })
-        .filter(function (x) { return x; });
+      it.gallery = raw.gallery.map(function (g) {
+        if (typeof g === 'string') return { src: g, ar: 'auto', size: '1' };
+        var src = (g && g.image) || '';
+        if (!src) return null;
+        return { src: src, ar: g.aspect_ratio || 'auto', size: g.size || '1' };
+      }).filter(function (x) { return x && x.src; });
     }
     if (raw.link_url) it.link = { url: raw.link_url, label_de: raw.link_label || raw.link_url, label_en: raw.link_label || raw.link_url };
     if (Array.isArray(raw.tracks) && raw.tracks.length) {
@@ -55,7 +59,19 @@
 
   /* Builds data directly from content/ */
   function buildFromContent() {
-    return getJSON('content/sections.json').then(function (manifest) {
+    var visualFetches = SECTION_ORDER.map(function (id) {
+      return getJSON('content/site/section-visual-' + id + '.json').catch(function () { return {}; });
+    });
+    return Promise.all([getJSON('content/sections.json'), Promise.all(visualFetches)])
+      .then(function (results) {
+        var manifest = results[0];
+        var visuals = results[1];
+        SECTION_ORDER.forEach(function (id, i) {
+          if (manifest[id]) manifest[id].feature_image = (visuals[i] && visuals[i].feature_image) || '';
+        });
+        return manifest;
+      })
+      .then(function (manifest) {
       var sectionPromises = SECTION_ORDER.filter(function (id) { return manifest[id]; }).map(function (id) {
         var sec = manifest[id];
         var itemIds = Array.isArray(sec.items) ? sec.items : [];
@@ -70,6 +86,7 @@
           items.forEach(function (i) { delete i._order; });
           return {
             id: id,
+            feature_image: sec.feature_image || '',
             eyebrow: { de: sec.eyebrow_de || '', en: sec.eyebrow_en || '' },
             title: { de: sec.title_de || '', en: sec.title_en || '' },
             intro: { de: sec.intro_de || '', en: sec.intro_en || '' },
@@ -136,6 +153,11 @@
     if (sec.intro) html += '<p class="lead" style="margin-bottom:8px">' + bi(sec.intro) + '</p>';
 
     html += '<div class="work-grid">';
+    if (sec.feature_image) {
+      html += '<div class="work-card work-card--feature reveal">';
+      html += '<img src="' + img(sec.feature_image) + '" alt="" loading="lazy">';
+      html += '</div>';
+    }
     sec.items.forEach(function (it) {
       byId[it.id] = it;
       var hasVideo = !!it.video;
@@ -183,7 +205,12 @@
     if (!it.gallery || !it.gallery.length) return '';
     return '<div class="wm-gallery">' +
       it.gallery.map(function (g) {
-        return '<img src="' + img(g) + '" alt="" loading="lazy">';
+        var src = typeof g === 'string' ? g : g.src;
+        var ar  = typeof g === 'object' ? (g.ar || 'auto') : 'auto';
+        var sz  = typeof g === 'object' ? (g.size || '1') : '1';
+        return '<div class="wm-gi" data-ar="' + ar + '" data-size="' + sz + '">' +
+          '<img src="' + img(src) + '" alt="" loading="lazy">' +
+          '</div>';
       }).join('') + '</div>';
   }
 

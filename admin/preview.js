@@ -91,9 +91,23 @@
       // --- Gallery ---
       var galleryEl = null;
       if (gallery && gallery.size) {
+        var arMap = {'4:3':'4/3','16:9':'16/9','1:1':'1','3:4':'3/4','9:16':'9/16'};
         var imgs = gallery.map(function(g, i) {
-          var src = assetSrc(getAsset, typeof g === 'string' ? g : (g && g.get ? g.get('image') : ''));
-          return src ? h('img', { key:i, src:src, style:S.gimg }) : null;
+          var src, ar, sz;
+          if (typeof g === 'string') {
+            src = assetSrc(getAsset, g); ar = 'auto'; sz = '1';
+          } else if (g && g.get) {
+            src = assetSrc(getAsset, g.get('image') || '');
+            ar  = g.get('aspect_ratio') || 'auto';
+            sz  = g.get('size') || '1';
+          }
+          if (!src) return null;
+          var imgSt = { width:'100%', display:'block', objectFit:'cover' };
+          if (ar !== 'auto' && arMap[ar]) imgSt.aspectRatio = arMap[ar];
+          return h('div', { key:i, style:{
+            borderRadius:'8px', overflow:'hidden', border:'1px solid #1e2128',
+            gridColumn: sz === '2' ? 'span 2' : 'auto'
+          }}, h('img', { src:src, style:imgSt }));
         }).toArray().filter(Boolean);
         if (imgs.length) galleryEl = h('div', { style: S.gallery }, imgs);
       }

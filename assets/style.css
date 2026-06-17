@@ -257,6 +257,11 @@ textarea{min-height:140px;resize:vertical}
 @media (max-width:720px){.work-section{padding:58px 0}}
 .work-section .lead{margin-bottom:0}
 
+/* Section feature card */
+.work-card--feature{cursor:default;aspect-ratio:1/1;overflow:hidden}
+.work-card--feature:hover{transform:none;border-color:var(--line)}
+.work-card--feature img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.work-card--feature:hover img{transform:scale(1.04)}
 button.work-card{
   display:flex;flex-direction:column;text-align:inherit;width:100%;
   background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
@@ -316,9 +321,16 @@ body.modal-open{overflow:hidden}
 .wm-w-medium{max-width:560px}
 .wm-w-large{max-width:760px}
 .wm-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:18px 0;grid-auto-flow:dense}
-.wm-gallery img{width:100%;border-radius:10px;border:1px solid var(--line);object-fit:cover;aspect-ratio:4/3}
-/* أول صورة بالمعرض تاخد عرض أكبر تلقائياً لو فيه 3+ صور (توازن بصري) */
-.wm-gallery img:first-child:nth-last-child(n+3){grid-column:span 2;aspect-ratio:16/9}
-@media (max-width:520px){.wm-gallery img:first-child:nth-last-child(n+3){grid-column:span 1;aspect-ratio:4/3}}
+.wm-gi{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.wm-gi[data-size="2"]{grid-column:span 2}
+.wm-gi img{width:100%;display:block;object-fit:cover}
+/* Per-item aspect ratios */
+.wm-gi[data-ar="4:3"] img{aspect-ratio:4/3}
+.wm-gi[data-ar="16:9"] img{aspect-ratio:16/9}
+.wm-gi[data-ar="1:1"] img{aspect-ratio:1/1}
+.wm-gi[data-ar="3:4"] img{aspect-ratio:3/4}
+.wm-gi[data-ar="9:16"] img{aspect-ratio:9/16}
+/* auto = natural image height, no forcing */
+@media (max-width:520px){.wm-gi[data-size="2"]{grid-column:span 1}}
 .wm-pipeline{margin-top:24px}
 .wm-body .chips{margin-top:14px}

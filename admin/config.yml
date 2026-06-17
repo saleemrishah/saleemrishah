@@ -19,6 +19,34 @@ locale: "en"
 publish_mode: editorial_workflow
 
 collections:
+  # ---- Section Visuals (feature card per section) ----
+  - name: "section_visuals"
+    label: "Section Feature Cards"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "section_visual_ai"
+        label: "AI & Generative — Feature Card"
+        file: "content/site/section-visual-ai.json"
+        fields:
+          - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended (1:1). Appears as the first visual card in the AI section grid." }
+      - name: "section_visual_motion"
+        label: "Motion & Video — Feature Card"
+        file: "content/site/section-visual-motion.json"
+        fields:
+          - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended. Appears as the first card in the Motion section." }
+      - name: "section_visual_brand"
+        label: "Brand & Social — Feature Card"
+        file: "content/site/section-visual-brand.json"
+        fields:
+          - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended. Appears as the first card in the Brand section." }
+      - name: "section_visual_football"
+        label: "Football / Arabic — Feature Card"
+        file: "content/site/section-visual-football.json"
+        fields:
+          - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended. Appears as the first card in the Football section." }
+
   # ---- Section: Identity (logo + favicon) ----
   - name: "identity"
     label: "Identity / Logo"
@@ -92,7 +120,26 @@ collections:
         default: "full"
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
-      - { name: "gallery", label: "More images (gallery, optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - name: "gallery"
+        label: "More images (gallery, optional)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "image", label: "Image", widget: "image" }
+          - name: "aspect_ratio"
+            label: "Shape"
+            widget: "select"
+            required: false
+            default: "auto"
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
+            hint: "auto = natural image shape."
+          - name: "size"
+            label: "Width in grid"
+            widget: "select"
+            required: false
+            default: "1"
+            options: ["1", "2"]
+            hint: "2 = double width (good for wide/landscape images)."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
       - name: "tracks"
@@ -143,7 +190,26 @@ collections:
         default: "full"
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
-      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - name: "gallery"
+        label: "More images (gallery, optional)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "image", label: "Image", widget: "image" }
+          - name: "aspect_ratio"
+            label: "Shape"
+            widget: "select"
+            required: false
+            default: "auto"
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
+            hint: "auto = natural image shape."
+          - name: "size"
+            label: "Width in grid"
+            widget: "select"
+            required: false
+            default: "1"
+            options: ["1", "2"]
+            hint: "2 = double width (good for wide/landscape images)."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
@@ -183,7 +249,26 @@ collections:
         default: "full"
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
-      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - name: "gallery"
+        label: "More images (gallery, optional)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "image", label: "Image", widget: "image" }
+          - name: "aspect_ratio"
+            label: "Shape"
+            widget: "select"
+            required: false
+            default: "auto"
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
+            hint: "auto = natural image shape."
+          - name: "size"
+            label: "Width in grid"
+            widget: "select"
+            required: false
+            default: "1"
+            options: ["1", "2"]
+            hint: "2 = double width (good for wide/landscape images)."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
@@ -223,6 +308,25 @@ collections:
         default: "full"
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
-      - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
+      - name: "gallery"
+        label: "More images (gallery, optional)"
+        widget: "list"
+        required: false
+        fields:
+          - { name: "image", label: "Image", widget: "image" }
+          - name: "aspect_ratio"
+            label: "Shape"
+            widget: "select"
+            required: false
+            default: "auto"
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
+            hint: "auto = natural image shape."
+          - name: "size"
+            label: "Width in grid"
+            widget: "select"
+            required: false
+            default: "1"
+            options: ["1", "2"]
+            hint: "2 = double width (good for wide/landscape images)."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
