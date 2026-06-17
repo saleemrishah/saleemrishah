@@ -18,6 +18,9 @@ locale: "en"
 # Publish mode
 publish_mode: editorial_workflow
 
+# Local backend: use npx decap-server on localhost (no deploy needed)
+local_backend: true
+
 collections:
   # ---- Section Visuals (feature card per section) ----
   - name: "section_visuals"
@@ -121,25 +124,27 @@ collections:
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
       - name: "gallery"
-        label: "More images (gallery, optional)"
+        label: "More images (gallery)"
         widget: "list"
         required: false
+        minimize_collapsed: false
+        summary: "Image {{i}} — {{fields.aspect_ratio}}"
         fields:
           - { name: "image", label: "Image", widget: "image" }
           - name: "aspect_ratio"
-            label: "Shape"
+            label: "Shape (aspect ratio)"
             widget: "select"
             required: false
             default: "auto"
             options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape."
+            hint: "auto = natural image shape (recommended for mixed content)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
             required: false
             default: "1"
             options: ["1", "2"]
-            hint: "2 = double width (good for wide/landscape images)."
+            hint: "2 = takes double width. Good for landscape/panoramic images."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
       - name: "tracks"
@@ -191,25 +196,27 @@ collections:
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
       - name: "gallery"
-        label: "More images (gallery, optional)"
+        label: "More images (gallery)"
         widget: "list"
         required: false
+        minimize_collapsed: false
+        summary: "Image {{i}} — {{fields.aspect_ratio}}"
         fields:
           - { name: "image", label: "Image", widget: "image" }
           - name: "aspect_ratio"
-            label: "Shape"
+            label: "Shape (aspect ratio)"
             widget: "select"
             required: false
             default: "auto"
             options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape."
+            hint: "auto = natural image shape (recommended for mixed content)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
             required: false
             default: "1"
             options: ["1", "2"]
-            hint: "2 = double width (good for wide/landscape images)."
+            hint: "2 = takes double width. Good for landscape/panoramic images."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
@@ -250,25 +257,27 @@ collections:
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
       - name: "gallery"
-        label: "More images (gallery, optional)"
+        label: "More images (gallery)"
         widget: "list"
         required: false
+        minimize_collapsed: false
+        summary: "Image {{i}} — {{fields.aspect_ratio}}"
         fields:
           - { name: "image", label: "Image", widget: "image" }
           - name: "aspect_ratio"
-            label: "Shape"
+            label: "Shape (aspect ratio)"
             widget: "select"
             required: false
             default: "auto"
             options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape."
+            hint: "auto = natural image shape (recommended for mixed content)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
             required: false
             default: "1"
             options: ["1", "2"]
-            hint: "2 = double width (good for wide/landscape images)."
+            hint: "2 = takes double width. Good for landscape/panoramic images."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
 
@@ -309,24 +318,26 @@ collections:
         options: ["full", "large", "medium", "small"]
         hint: "full = edge to edge (default). medium/small = centred with max-width."
       - name: "gallery"
-        label: "More images (gallery, optional)"
+        label: "More images (gallery)"
         widget: "list"
         required: false
+        minimize_collapsed: false
+        summary: "Image {{i}} — {{fields.aspect_ratio}}"
         fields:
           - { name: "image", label: "Image", widget: "image" }
           - name: "aspect_ratio"
-            label: "Shape"
+            label: "Shape (aspect ratio)"
             widget: "select"
             required: false
             default: "auto"
             options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape."
+            hint: "auto = natural image shape (recommended for mixed content)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
             required: false
             default: "1"
             options: ["1", "2"]
-            hint: "2 = double width (good for wide/landscape images)."
+            hint: "2 = takes double width. Good for landscape/panoramic images."
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }

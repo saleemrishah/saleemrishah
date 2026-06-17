@@ -1,150 +1,147 @@
-// Decap CMS preview templates — full project modal preview
-// Loaded after decap-cms.js, before CMS.init()
+// Decap CMS preview — mirrors the live site exactly
+// Uses the real site CSS so what you see = what visitors see.
+
+CMS.registerPreviewStyle('/assets/style.css');
+
+// Small overrides for the preview iframe context
+CMS.registerPreviewStyle([
+  'body { background: #0B0E12; padding: 28px 24px; }',
+  '.only-de { display: inline !important }',
+  '.only-en { display: none !important }',
+  '.wm-text { white-space: pre-wrap }',
+  '.wm-body { max-width: 720px }',
+  'h2 { margin-top: 0 }'
+].join(' '), { raw: true });
+
 (function () {
-  var h = window.h;
 
-  var S = {
-    wrap:    { background:'#0B0E12', color:'#E8EAF0', padding:'32px 28px', fontFamily:'system-ui,sans-serif', minHeight:'100vh', boxSizing:'border-box' },
-    h2:      { color:'#fff', margin:'0 0 4px', fontSize:'1.35rem', lineHeight:1.25 },
-    sub:     { color:'#6b7585', margin:'0 0 18px', fontSize:'0.85em' },
-    lead:    { color:'#b8c0cc', lineHeight:1.7, margin:'0 0 18px' },
-    body:    { color:'#a0a8b4', lineHeight:1.75, whiteSpace:'pre-wrap', margin:'0 0 18px', fontSize:'0.93rem' },
-    chips:   { display:'flex', flexWrap:'wrap', gap:'7px', margin:'0 0 20px' },
-    chip:    { background:'rgba(70,213,194,0.1)', color:'#46D5C2', border:'1px solid rgba(70,213,194,0.22)', borderRadius:'20px', padding:'3px 11px', fontSize:'0.78em' },
-    divider: { border:'none', borderTop:'1px solid #1e2128', margin:'20px 0' },
-    gallery: { display:'grid', gridTemplateColumns:'repeat(auto-fill,minmax(160px,1fr))', gap:'10px', margin:'0 0 20px' },
-    gimg:    { width:'100%', borderRadius:'8px', border:'1px solid #1e2128', objectFit:'cover', aspectRatio:'4/3', display:'block' },
-    trackId: { color:'#46D5C2', fontSize:'0.72em', letterSpacing:'0.08em', textTransform:'uppercase', margin:'0 0 4px' },
-    trackH:  { color:'#fff', fontSize:'1rem', margin:'0 0 6px' },
-    trackP:  { color:'#9098a4', fontSize:'0.88rem', lineHeight:1.6, margin:'0 0 8px' },
-    track:   { background:'#12151a', border:'1px solid #1e2128', borderRadius:'10px', padding:'16px', marginBottom:'10px' },
-    btn:     { display:'inline-block', background:'transparent', color:'#46D5C2', border:'1px solid #46D5C2', borderRadius:'8px', padding:'9px 20px', textDecoration:'none', fontSize:'0.9rem', marginTop:'4px' },
-    label:   { color:'#46D5C2', fontSize:'0.7em', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', display:'block', marginBottom:'14px' }
-  };
-
-  function assetSrc(getAsset, path) {
-    if (!path) return '';
-    if (path.indexOf('http') === 0) return path;
-    try { var a = getAsset(path); return a ? a.toString() : path; } catch (e) { return path; }
+  function imgPath(src, getAsset) {
+    if (!src) return 'assets/og-cover.jpg';
+    try { var a = getAsset(src); if (a) return a.toString(); } catch (e) {}
+    return src;
   }
 
-  function mediaBoxStyle(ar, mw) {
-    var base = { position:'relative', borderRadius:'12px', overflow:'hidden', border:'1px solid #1e2128', marginBottom:'22px', background:'#000' };
-    if (ar === '9:16') { base.aspectRatio = '9/16'; base.maxWidth = '340px'; }
-    else if (ar === '4:3') { base.aspectRatio = '4/3'; }
-    else if (ar === '1:1') { base.aspectRatio = '1/1'; }
-    else if (ar !== 'auto') { base.aspectRatio = '16/9'; }
-    if (mw === 'small')  base.maxWidth = '380px';
-    if (mw === 'medium') base.maxWidth = '560px';
-    if (mw === 'large')  base.maxWidth = '760px';
-    return base;
+  function bi(de, en) {
+    return '<span class="only-de">' + (de || '') + '</span><span class="only-en">' + (en || de || '') + '</span>';
+  }
+
+  function arClass(ar) {
+    if (!ar || ar === '16:9') return '';
+    return ' wm-ar-' + ar.replace(':', '-');
+  }
+  function wClass(w) {
+    if (!w || w === 'full') return '';
+    return ' wm-w-' + w;
+  }
+
+  function buildHTML(d, getAsset) {
+    var title_de   = d.get('title_de')   || '';
+    var title_en   = d.get('title_en')   || '';
+    var summary_de = d.get('summary_de') || '';
+    var summary_en = d.get('summary_en') || '';
+    var body_de    = d.get('body_de')    || '';
+    var body_en    = d.get('body_en')    || '';
+    var cover      = d.get('cover')      || '';
+    var video      = d.get('video')      || '';
+    var chips      = d.get('chips');
+    var gallery    = d.get('gallery');
+    var tracks     = d.get('tracks');
+    var link_url   = d.get('link_url')   || '';
+    var link_label = d.get('link_label') || link_url;
+    var ar         = d.get('aspect_ratio') || '16:9';
+    var mw         = d.get('media_width')  || 'full';
+    var coverSrc   = imgPath(cover, getAsset);
+    var extra      = arClass(ar) + wClass(mw);
+
+    var html = '';
+
+    // Header
+    html += '<p class="tc">' + bi(title_de, title_en) + '</p>';
+    html += '<h2>' + bi(title_de, title_en) + '</h2>';
+
+    // Video or cover image
+    if (video) {
+      var cls = 'wm-video' + extra;
+      if (/\.mp4($|\?)/i.test(video) || video.indexOf('http') !== 0 || video.indexOf('/') === 0) {
+        html += '<div class="' + cls + '"><video controls preload="metadata"' +
+          (coverSrc ? ' poster="' + coverSrc + '"' : '') + ' src="' + video + '"></video></div>';
+      } else {
+        html += '<div class="' + cls + '"><iframe src="' + video +
+          '" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+      }
+    } else if (cover) {
+      html += '<div class="wm-cover' + extra + '"><img src="' + coverSrc + '" alt=""></div>';
+    }
+
+    // Summary
+    if (summary_de || summary_en) html += '<p class="lead">' + bi(summary_de, summary_en) + '</p>';
+
+    // Body text
+    if (body_de || body_en) html += '<div class="wm-text">' + bi(body_de, body_en) + '</div>';
+
+    // Chips
+    if (chips && chips.size) {
+      html += '<div class="chips">';
+      chips.forEach(function (c) { html += '<span class="chip">' + (c || '') + '</span>'; });
+      html += '</div>';
+    }
+
+    // Gallery
+    if (gallery && gallery.size) {
+      html += '<div class="wm-gallery">';
+      gallery.forEach(function (g) {
+        var gSrc, gAr, gSz;
+        if (typeof g === 'string') {
+          gSrc = imgPath(g, getAsset); gAr = 'auto'; gSz = '1';
+        } else if (g && g.get) {
+          gSrc = imgPath(g.get('image') || '', getAsset);
+          gAr  = g.get('aspect_ratio') || 'auto';
+          gSz  = g.get('size') || '1';
+        }
+        if (!gSrc) return;
+        html += '<div class="wm-gi" data-ar="' + gAr + '" data-size="' + gSz + '">';
+        html += '<img src="' + gSrc + '" alt="" loading="lazy">';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    // Link
+    if (link_url) {
+      html += '<div class="btn-row"><a class="btn btn-primary" href="' + link_url +
+        '" target="_blank" rel="noopener">' + (link_label || link_url) + '</a></div>';
+    }
+
+    // Tracks / pipeline
+    if (tracks && tracks.size) {
+      html += '<div class="pipeline wm-pipeline">';
+      tracks.forEach(function (tr) {
+        if (!tr || !tr.get) return;
+        var trChips = tr.get('chips');
+        var txtDe = tr.get('text_de') || '';
+        var txtEn = tr.get('text_en') || '';
+        html += '<div class="track">';
+        html += '<p class="t-id">' + (tr.get('id') || '') + '</p>';
+        html += '<h3>' + bi(tr.get('title_de') || '', tr.get('title_en') || '') + '</h3>';
+        if (txtDe || txtEn) html += '<p>' + bi(txtDe, txtEn) + '</p>';
+        if (trChips && trChips.size) {
+          html += '<div class="chips">';
+          trChips.forEach(function (c) { html += '<span class="chip">' + (c || '') + '</span>'; });
+          html += '</div>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    return html;
   }
 
   var ProjectPreview = createClass({
     render: function () {
-      var entry    = this.props.entry;
-      var getAsset = this.props.getAsset;
-      var d        = entry.get('data');
-
-      var title_de   = d.get('title_de')   || '';
-      var title_en   = d.get('title_en')   || '';
-      var summary_de = d.get('summary_de') || '';
-      var body_de    = d.get('body_de')    || '';
-      var cover      = d.get('cover')      || '';
-      var video      = d.get('video')      || '';
-      var chips      = d.get('chips');
-      var gallery    = d.get('gallery');
-      var tracks     = d.get('tracks');
-      var link_url   = d.get('link_url')   || '';
-      var link_label = d.get('link_label') || link_url;
-      var ar         = d.get('aspect_ratio') || '16:9';
-      var mw         = d.get('media_width')  || 'full';
-
-      var coverSrc  = assetSrc(getAsset, cover);
-      var boxStyle  = mediaBoxStyle(ar, mw);
-      var fillStyle = { position:'absolute', inset:0, width:'100%', height:'100%', border:0, objectFit:'cover' };
-      var autoStyle = { width:'100%', display:'block' };
-
-      // --- Media (video or cover) ---
-      var mediaEl = null;
-      if (video) {
-        mediaEl = h('div', { style: boxStyle },
-          h('iframe', { src: video, frameBorder:'0', allowFullScreen:true, style: fillStyle })
-        );
-      } else if (coverSrc) {
-        var wrapS = ar === 'auto'
-          ? { borderRadius:'12px', overflow:'hidden', marginBottom:'22px', maxWidth: mw === 'full' ? '100%' : boxStyle.maxWidth }
-          : boxStyle;
-        mediaEl = h('div', { style: wrapS },
-          h('img', { src: coverSrc, style: ar === 'auto' ? autoStyle : fillStyle })
-        );
-      }
-
-      // --- Chips ---
-      var chipsEl = (chips && chips.size)
-        ? h('div', { style: S.chips }, chips.map(function(c,i){ return h('span',{key:i,style:S.chip},c); }).toArray())
-        : null;
-
-      // --- Body text ---
-      var bodyEl = body_de ? h('div', { style: S.body }, body_de) : null;
-
-      // --- Gallery ---
-      var galleryEl = null;
-      if (gallery && gallery.size) {
-        var arMap = {'4:3':'4/3','16:9':'16/9','1:1':'1','3:4':'3/4','9:16':'9/16'};
-        var imgs = gallery.map(function(g, i) {
-          var src, ar, sz;
-          if (typeof g === 'string') {
-            src = assetSrc(getAsset, g); ar = 'auto'; sz = '1';
-          } else if (g && g.get) {
-            src = assetSrc(getAsset, g.get('image') || '');
-            ar  = g.get('aspect_ratio') || 'auto';
-            sz  = g.get('size') || '1';
-          }
-          if (!src) return null;
-          var imgSt = { width:'100%', display:'block', objectFit:'cover' };
-          if (ar !== 'auto' && arMap[ar]) imgSt.aspectRatio = arMap[ar];
-          return h('div', { key:i, style:{
-            borderRadius:'8px', overflow:'hidden', border:'1px solid #1e2128',
-            gridColumn: sz === '2' ? 'span 2' : 'auto'
-          }}, h('img', { src:src, style:imgSt }));
-        }).toArray().filter(Boolean);
-        if (imgs.length) galleryEl = h('div', { style: S.gallery }, imgs);
-      }
-
-      // --- Tracks ---
-      var tracksEl = null;
-      if (tracks && tracks.size) {
-        var tEls = tracks.map(function(t, i) {
-          var tChips = t.get ? t.get('chips') : null;
-          return h('div', { key:i, style: S.track },
-            h('p', { style: S.trackId }, t.get ? t.get('id') : ''),
-            h('h3', { style: S.trackH }, t.get ? (t.get('title_de') || '') : ''),
-            (t.get && t.get('text_de')) ? h('p', { style: S.trackP }, t.get('text_de')) : null,
-            (tChips && tChips.size) ? h('div', { style: S.chips },
-              tChips.map(function(c,j){ return h('span',{key:j,style:S.chip},c); }).toArray()
-            ) : null
-          );
-        }).toArray();
-        tracksEl = h('div', null, h('hr', {style:S.divider}), h('span', {style:S.label}, 'Pipeline'), h('div',null,tEls));
-      }
-
-      // --- Link ---
-      var linkEl = link_url
-        ? h('div', { style:{marginTop:'18px'} }, h('a', { href:link_url, style:S.btn }, link_label || link_url))
-        : null;
-
-      return h('div', { style: S.wrap },
-        mediaEl,
-        h('h2', { style: S.h2 }, title_de),
-        title_en ? h('p', { style: S.sub }, title_en) : null,
-        h('p', { style: S.lead }, summary_de),
-        chipsEl,
-        bodyEl,
-        galleryEl,
-        tracksEl,
-        linkEl
-      );
+      var d  = this.props.entry.get('data');
+      var ga = this.props.getAsset;
+      return h('div', { className: 'wm-body', dangerouslySetInnerHTML: { __html: buildHTML(d, ga) } });
     }
   });
 
