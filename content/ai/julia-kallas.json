@@ -92,7 +92,7 @@
   "link_label": "@juliakallas.de · Instagram ↗",
   "title_en": "Julia Kallas: Building a Micro-Influencer From Zero",
   "gallery": [
-    { "image": "assets/uploads/comfyui_00002_.png", "aspect_ratio": "auto", "size": "1" }
+    { "image": "assets/uploads/julia-9-.jpg", "aspect_ratio": "auto", "size": "1" }
   ],
   "cover": "assets/uploads/notegpt_image_20260607041247.png",
   "summary_de": "Eine vollständig KI-generierte Persona, in drei Monaten von Null auf 12.000 echte, aktive Follower aufgebaut. Kein Stockfilter, sondern ein eigener LoRA, ein lokaler ComfyUI-Workflow und eine n8n-Automatisierung, die wie ein Mensch antwortet.",
