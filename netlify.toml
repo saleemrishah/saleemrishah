@@ -5,6 +5,9 @@
   command = "node build-work.js"
   publish = "."
 
+[build.environment]
+  NODE_VERSION = "20"
+
 # Admin panel needs this for Netlify Identity login
 [[headers]]
   for = "/admin/*"

@@ -16,7 +16,7 @@ public_folder: "assets/uploads"
 locale: "en"
 
 # Publish mode
-publish_mode: simple
+publish_mode: editorial_workflow
 
 collections:
   # ---- Section: Identity (logo + favicon) ----
@@ -78,6 +78,20 @@ collections:
       - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
       - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
       - { name: "video", label: "Video link (YouTube embed or MP4, optional)", widget: "string", required: false, hint: "e.g. https://www.youtube.com/embed/VIDEO_ID" }
+      - name: "aspect_ratio"
+        label: "Media shape (aspect ratio)"
+        widget: "select"
+        required: false
+        default: "16:9"
+        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
+        hint: "16:9 = landscape video (default). 9:16 = portrait/vertical. auto = image keeps its natural shape."
+      - name: "media_width"
+        label: "Media width in detail view"
+        widget: "select"
+        required: false
+        default: "full"
+        options: ["full", "large", "medium", "small"]
+        hint: "full = edge to edge (default). medium/small = centred with max-width."
       - { name: "gallery", label: "More images (gallery, optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
@@ -115,6 +129,20 @@ collections:
       - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
       - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
       - { name: "video", label: "Video link (YouTube embed or MP4, optional)", widget: "string", required: false }
+      - name: "aspect_ratio"
+        label: "Media shape (aspect ratio)"
+        widget: "select"
+        required: false
+        default: "16:9"
+        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+      - name: "media_width"
+        label: "Media width in detail view"
+        widget: "select"
+        required: false
+        default: "full"
+        options: ["full", "large", "medium", "small"]
+        hint: "full = edge to edge (default). medium/small = centred with max-width."
       - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
@@ -141,6 +169,20 @@ collections:
       - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
       - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
       - { name: "video", label: "Video link (optional)", widget: "string", required: false }
+      - name: "aspect_ratio"
+        label: "Media shape (aspect ratio)"
+        widget: "select"
+        required: false
+        default: "16:9"
+        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+      - name: "media_width"
+        label: "Media width in detail view"
+        widget: "select"
+        required: false
+        default: "full"
+        options: ["full", "large", "medium", "small"]
+        hint: "full = edge to edge (default). medium/small = centred with max-width."
       - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
@@ -167,6 +209,20 @@ collections:
       - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
       - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
       - { name: "video", label: "Video link (optional)", widget: "string", required: false }
+      - name: "aspect_ratio"
+        label: "Media shape (aspect ratio)"
+        widget: "select"
+        required: false
+        default: "16:9"
+        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+      - name: "media_width"
+        label: "Media width in detail view"
+        widget: "select"
+        required: false
+        default: "full"
+        options: ["full", "large", "medium", "small"]
+        hint: "full = edge to edge (default). medium/small = centred with max-width."
       - { name: "gallery", label: "More images (optional)", widget: "list", field: { name: "image", label: "Image", widget: "image" }, required: false }
       - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
       - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }

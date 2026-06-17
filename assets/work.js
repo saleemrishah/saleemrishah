@@ -40,6 +40,8 @@
         };
       });
     }
+    if (raw.aspect_ratio) it.aspect_ratio = raw.aspect_ratio;
+    if (raw.media_width) it.media_width = raw.media_width;
     it._order = typeof raw.order === 'number' ? raw.order : 999;
     return it;
   }
@@ -154,18 +156,26 @@
   });
   mount.innerHTML = html;
 
+  /* ---------- Aspect-ratio / width helpers ---------- */
+  function arClass(ar) {
+    if (!ar || ar === '16:9') return '';
+    return ' wm-ar-' + ar.replace(':', '-');
+  }
+  function wClass(w) {
+    if (!w || w === 'full') return '';
+    return ' wm-w-' + w;
+  }
+
   /* ---------- Modal content for one item ---------- */
   function videoHTML(it) {
     if (!it.video) return '';
     var src = it.video;
-    var vertical = it.vertical ? ' wm-video--vertical' : '';
+    var cls = 'wm-video' + arClass(it.aspect_ratio) + wClass(it.media_width);
     if (/\.mp4($|\?)/i.test(src) || src.indexOf('http') !== 0 || src.indexOf('/') === 0) {
-      /* local file */
-      return '<div class="wm-video' + vertical + '"><video controls preload="metadata"' +
+      return '<div class="' + cls + '"><video controls preload="metadata"' +
         (it.cover ? ' poster="' + img(it.cover) + '"' : '') + ' src="' + src + '"></video></div>';
     }
-    /* iframe (YouTube/Vimeo embed) */
-    return '<div class="wm-video' + vertical + '"><iframe src="' + src +
+    return '<div class="' + cls + '"><iframe src="' + src +
       '" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
   }
 
@@ -206,7 +216,8 @@
     h += '<h2 id="wm-title-inner">' + bi(it.title) + '</h2>';
     h += videoHTML(it);
     if (!it.video && it.cover) {
-      h += '<div class="wm-cover"><img src="' + img(it.cover) + '" alt=""></div>';
+      var coverCls = 'wm-cover' + arClass(it.aspect_ratio) + wClass(it.media_width);
+      h += '<div class="' + coverCls + '"><img src="' + img(it.cover) + '" alt=""></div>';
     }
     if (it.summary) h += '<p class="lead">' + bi(it.summary) + '</p>';
     if (it.body) h += '<div class="wm-text">' + bi(it.body) + '</div>';

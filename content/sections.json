@@ -8,8 +8,7 @@
     "intro_de": "Markenfiguren und visuelle Konzepte der nächsten Generation, gebaut mit KI-Pipelines und Prompt Engineering.",
     "intro_en": "Next-generation brand characters and visual concepts, built with AI pipelines and prompt engineering.",
     "items": [
-      "julia-kallas",
-      "ai-generative-design"
+      "julia-kallas"
     ]
   },
   "motion": {
@@ -38,8 +37,8 @@
   },
   "football": {
     "id": "football",
-    "eyebrow_de": "04 · <span class='amber'>Proof</span> · Reichweite",
-    "eyebrow_en": "04 · <span class='amber'>Proof</span> · Reach",
+    "eyebrow_de": "04 · Proof · Reichweite",
+    "eyebrow_en": "04 · Proof · Reach",
     "title_de": "Arabische Fußball-Kanäle",
     "title_en": "Arabic Football Channels",
     "intro_de": "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
