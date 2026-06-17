@@ -1,0 +1,5 @@
+body { background: #0B0E12; padding: 28px 24px; }
+.only-de { display: inline !important }
+.only-en { display: none !important }
+.wm-text { white-space: pre-wrap }
+h2 { margin-top: 0 }

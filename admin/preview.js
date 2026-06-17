@@ -2,16 +2,7 @@
 // Uses the real site CSS so what you see = what visitors see.
 
 CMS.registerPreviewStyle('/assets/style.css');
-
-// Small overrides for the preview iframe context
-CMS.registerPreviewStyle([
-  'body { background: #0B0E12; padding: 28px 24px; }',
-  '.only-de { display: inline !important }',
-  '.only-en { display: none !important }',
-  '.wm-text { white-space: pre-wrap }',
-  '.wm-body { max-width: 720px }',
-  'h2 { margin-top: 0 }'
-].join(' '), { raw: true });
+CMS.registerPreviewStyle('/admin/preview-overrides.css');
 
 (function () {
 
