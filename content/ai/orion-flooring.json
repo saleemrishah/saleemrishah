@@ -1,0 +1,59 @@
+{
+  "order": 20,
+  "title_de": "Orion Flooring: Vertikale Vinyl-Kampagne mit KI-Stimme",
+  "title_en": "Orion Flooring: A Vertical Vinyl Campaign With an AI Voice",
+  "summary_de": "Eine Vinylboden-Werbung im vertikalen 9:16-Format für Orion Flooring, Kalifornien, beauftragt über eine Werbeagentur. Eine KI-Persona mit amerikanischem Vibe und akzentfreier amerikanischer Stimme trägt die Botschaft, bewusst reduziert auf Wunsch des Kunden.",
+  "summary_en": "A vertical 9:16 vinyl flooring ad for Orion Flooring, California, commissioned through an advertising agency. An AI persona with an American vibe and an accent-free American voice carries the message, deliberately stripped back at the client's request.",
+  "cover": "assets/uploads/orion-flooring-cover.png",
+  "video": "https://player.vimeo.com/video/1202644495?h=d287b78fd6&title=0&byline=0&portrait=0&dnt=1",
+  "aspect_ratio": "9:16",
+  "media_width": "medium",
+  "chips": ["Higgsfield", "Nano Banana", "ElevenLabs", "Adobe Audition", "Premiere Pro", "After Effects"],
+  "body_de": "Orion Flooring ist ein Bodenbelagsunternehmen in Kalifornien mit Standorten in Rialto, Anaheim und Hesperia. Der Auftrag kam über eine Werbeagentur, gedacht für ein vollständig amerikanisches Publikum.",
+  "body_en": "Orion Flooring is a flooring company based in California with locations in Rialto, Anaheim and Hesperia. The job came through an advertising agency, built for a fully American audience.",
+  "gallery": [],
+  "link_url": "https://orionflooring.com",
+  "link_label": "orionflooring.com ↗",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Zielgruppe",
+      "title_en": "Brief and audience",
+      "text_de": "Vinylboden-Werbung über eine Werbeagentur für Orion Flooring, Kalifornien, im vertikalen 9:16-Format. Diese Zielgruppe war der entscheidende Ausgangspunkt für jede kreative Entscheidung im Projekt.",
+      "text_en": "A vinyl flooring ad commissioned through an advertising agency for Orion Flooring, California, in a vertical 9:16 format. That audience was the deciding factor behind every creative choice on the project.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Persona & Stimme",
+      "title_de": "Persona-Entwicklung",
+      "title_en": "Persona development",
+      "text_de": "Statt eines neutralen Sprechers oder eines generischen KI-Gesichts: eine Figur mit klar amerikanischem Vibe, getragen von einer akzentfreien amerikanischen Stimme über ElevenLabs. Bei einem rein amerikanischen Publikum entscheidet genau dieses Detail, ob eine Werbung wie \"von hier\" wirkt oder wie ein importiertes Stockvideo.",
+      "text_en": "Instead of a neutral voiceover or a generic AI face: a character with a distinctly American vibe, carried by an accent-free American voice through ElevenLabs. For an audience that is entirely American, that single detail decides whether an ad feels like it belongs there or like an imported stock clip.",
+      "chips": ["ElevenLabs"]
+    },
+    {
+      "id": "Track 03 · Bild & Bewegtbild",
+      "title_de": "Visuelle Grundlage",
+      "title_en": "Visual foundation",
+      "text_de": "Higgsfield und Nano Banana für Bild- und Bewegtbild-Generierung der Persona. Die zweite prägende Entscheidung kam direkt vom Kunden: maximale Einfachheit, ohne überflüssige Bewegung oder Effekte, die vom Produkt ablenken.",
+      "text_en": "Higgsfield and Nano Banana for image and motion generation of the persona. The second defining decision came straight from the client: maximum simplicity, with no unnecessary movement or effects pulling attention away from the product.",
+      "chips": ["Higgsfield", "Nano Banana"]
+    },
+    {
+      "id": "Track 04 · Audio",
+      "title_de": "Audiobearbeitung",
+      "title_en": "Audio engineering",
+      "text_de": "Saubere Sprachqualität und Tonmischung in Adobe Audition als Basis für eine glaubwürdige, ruhige Stimme, ohne dabei leblos zu wirken.",
+      "text_en": "Clean speech quality and audio mixing in Adobe Audition as the basis for a credible, calm voice that never feels lifeless.",
+      "chips": ["Adobe Audition"]
+    },
+    {
+      "id": "Track 05 · Schnitt",
+      "title_de": "Schnitt und Finishing",
+      "title_en": "Edit and finishing",
+      "text_de": "Montage in Premiere Pro, gezielte Bewegtbild-Akzente in After Effects. Das Ergebnis: eine vertikale Werbung, ruhig, glaubwürdig amerikanisch, ganz auf das Produkt fokussiert statt auf Inszenierung.",
+      "text_en": "Assembly in Premiere Pro, targeted motion accents in After Effects. The result: a vertical ad that's calm, credibly American, and entirely focused on the product rather than the staging.",
+      "chips": ["Premiere Pro", "After Effects"]
+    }
+  ]
+}

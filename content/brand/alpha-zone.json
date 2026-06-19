@@ -1,0 +1,48 @@
+{
+  "order": 40,
+  "title_de": "Logo-Design für Alpha Zone General Trading and Contracting Co",
+  "title_en": "Logo Design for Alpha Zone General Trading and Contracting Co",
+  "summary_de": "Ein Wortmarken-Logo für ein Handels- und Bauunternehmen, das zwei Geschäftsfelder gleichzeitig abbilden musste: gewerblichen Hochbau und privaten Wohnungsbau.",
+  "summary_en": "A wordmark logo for a trading and construction company that needed to represent two business lines at once: commercial high-rise construction and private home building.",
+  "cover": "assets/uploads/alphazone-brand-cover.png",
+  "chips": ["Illustrator", "Photoshop", "Logo Design"],
+  "body_de": "Alpha Zone General Trading and Contracting Co braucht ein einziges, kohärentes Markenzeichen für zwei sehr unterschiedliche Geschäftsfelder.",
+  "body_en": "Alpha Zone General Trading and Contracting Co needed a single, coherent mark for two quite different business lines.",
+  "gallery": [],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Herausforderung",
+      "title_en": "Brief and challenge",
+      "text_de": "Ein einziges Markenzeichen für zwei Geschäftsfelder: gewerblicher Hochbau und privater Wohnungsbau, ohne dass eines der beiden visuell untergeht.",
+      "text_en": "One single mark for two business lines: commercial high-rise construction and private home building, without either field disappearing visually.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Konzept",
+      "title_de": "Verschachtelte Silhouette",
+      "title_en": "Nested silhouette",
+      "text_de": "Ein Gewerbegebäude und ein Wohnhaus mit Satteldach werden ineinander verschachtelt zu einer einzigen, eindeutigen Bildmarke. Die metallisch-dunkle, reliefartige Oberfläche signalisiert die Solidität, die ein Bauunternehmen im B2B-Kontext braucht.",
+      "text_en": "A commercial building and a gable-roofed house are nested together into a single, unmistakable mark. The dark, metallic relief-style surface signals the solidity a construction company needs in a B2B context.",
+      "chips": ["Illustrator"]
+    },
+    {
+      "id": "Track 03 · Material & Typografie",
+      "title_de": "Oberfläche und Schrift",
+      "title_en": "Finish and type",
+      "text_de": "Metallisch-dunkle, reliefartige 3D-Oberfläche für Solidität, kombiniert mit kräftiger serifenloser Blockschrift für Lesbarkeit auf Baustellenschildern und Fahrzeugen.",
+      "text_en": "A dark, metallic relief-style 3D surface for solidity, paired with bold sans-serif block type for legibility on job-site signs and vehicle livery.",
+      "chips": ["Photoshop"]
+    },
+    {
+      "id": "Track 04 · Skalierung",
+      "title_de": "Vom Favicon zur Fassade",
+      "title_en": "From favicon to facade",
+      "text_de": "Test des Logos über den gesamten Größenbereich, vom winzigen Favicon bis zur großformatigen Anwendung auf einer Gebäudefassade. Das Ergebnis ist eine klare, unternehmerisch ernste Bildmarke, die ein diversifiziertes Bauunternehmen in einem Zeichen zusammenfasst.",
+      "text_en": "Testing the logo across the full size range, from a tiny favicon up to large-format application on a building facade. The result is a clear, business-serious mark that summarizes a diversified construction company in a single sign.",
+      "chips": []
+    }
+  ]
+}

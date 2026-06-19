@@ -1,0 +1,50 @@
+{
+  "order": 60,
+  "title_de": "Datenvisualisierung und Layout-Design für ein Infoblatt",
+  "title_en": "Data Visualization and Layout Design for an Infosheet",
+  "summary_de": "Ein mehrseitiges Infoblatt für die fiktive Marktforschungsfirma \"Zahlen GmbH\": komplexe Umfragedaten in ein klares, durchgehendes Layout-System übersetzt. Abgeschlossen mit Bestnote (100%).",
+  "summary_en": "A multi-page infosheet for the fictional market research firm \"Zahlen GmbH\": translating complex survey data into a clear, consistent layout system. Completed with a top grade (100%).",
+  "cover": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-mockup.cover.jpg",
+  "chips": ["InDesign", "Illustrator", "Editorial Layout", "Data Visualization"],
+  "body_de": "Ein umfassendes, mehrseitiges Infoblatt für die Statistikfirma \"Zahlen GmbH\": komplexe Umfragedaten in ein klares, strukturiertes Layout übersetzt. Studienprojekt, abgeschlossen mit Bestnote (100%).",
+  "body_en": "A comprehensive, multi-page infosheet for the fictional statistics firm \"Zahlen GmbH\": translating complex survey data into a clear, structured layout. A case study completed with a top grade (100%).",
+  "gallery": [
+    {"image": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-mockup.png", "aspect_ratio": "16:9", "size": "full"}
+  ],
+  "link_url": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-infoblatt.pdf",
+  "link_label": "PDF ansehen",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Zielsetzung",
+      "title_en": "Brief and objective",
+      "text_de": "Mehrseitiges Infoblatt für die fiktive \"Zahlen GmbH\", gedacht als Marktanalyse-Broschüre mit eigenem Inhaltsverzeichnis und durchgehendem Layout-System.",
+      "text_en": "A multi-page infosheet for the fictional \"Zahlen GmbH,\" conceived as a market analysis brochure with its own table of contents and a consistent layout system throughout.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Struktur",
+      "title_de": "Navigation und Inhaltsverzeichnis",
+      "title_en": "Navigation and table of contents",
+      "text_de": "Ein detailliertes Inhaltsverzeichnis zu Beginn sorgt für intuitive Navigation durch das mehrseitige Dokument, begleitet von kuratierter Bildauswahl, die den analytischen Charakter visuell unterstützt.",
+      "text_en": "A detailed table of contents at the start ensures intuitive navigation through the multi-page document, paired with curated imagery that visually supports the analytical character.",
+      "chips": ["InDesign"]
+    },
+    {
+      "id": "Track 03 · Datenvisualisierung",
+      "title_de": "Von Zahlen zu Diagrammen",
+      "title_en": "From numbers to charts",
+      "text_de": "Umfangreiche Datensätze zur Demografie, zum Konsumverhalten und zur Kundenzufriedenheit transformiert in klar lesbare Kreis-, Balken- und Liniendiagramme.",
+      "text_en": "Extensive datasets on demographics, consumer behavior and customer satisfaction transformed into clearly legible pie, bar and line charts.",
+      "chips": ["Illustrator"]
+    },
+    {
+      "id": "Track 04 · Ergebnis",
+      "title_de": "Bestnote 100%",
+      "title_en": "Top grade 100%",
+      "text_de": "Sauberes Rastersystem und klare visuelle Hierarchie für schnell erfassbare Ergebnisse. Im Rahmen meiner Ausbildung mit voller gestalterischer Freiheit umgesetzt und mit Bestnote (100%) bewertet.",
+      "text_en": "A clean grid system and clear visual hierarchy for quickly graspable results. Completed during my training with full creative freedom and graded at the top mark (100%).",
+      "chips": []
+    }
+  ]
+}

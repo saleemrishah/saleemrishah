@@ -1,0 +1,48 @@
+{
+  "order": 10,
+  "title_de": "Visuelle Identität für eine Spezialitätenrösterei",
+  "title_en": "Visual Identity for a Specialty Coffee Roastery",
+  "summary_de": "Eine maßgeschneiderte visuelle Identität für Passion Cafe, eine Destination für Kaffeekenner und Liebhaber der Röstkunst. Zentrales Element: ein meisterhaft konstruiertes Monogramm, das den Buchstaben P mit der Silhouette einer dampfenden Kaffeetasse verbindet.",
+  "summary_en": "A tailored visual identity for Passion Cafe, a destination for coffee connoisseurs and lovers of the roasting craft. Central element: a masterfully constructed monogram that fuses the letter P with the silhouette of a steaming coffee cup.",
+  "cover": "assets/uploads/passioncafe-brand-cover.png",
+  "chips": ["Illustrator", "Photoshop", "Brand Identity", "Packaging"],
+  "body_de": "Passion Cafe ist eine exklusive Destination für Kaffeekenner. Die Aufgabe war eine vollständige visuelle Identität, die handwerkliche Wärme transportiert, ohne in Kaffeehaus-Klischees zu verfallen.",
+  "body_en": "Passion Cafe is an exclusive destination for coffee connoisseurs. The brief called for a complete visual identity that carries craft warmth without falling into coffee-house cliches.",
+  "gallery": [],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Zielsetzung",
+      "title_en": "Brief and objective",
+      "text_de": "Vollständige visuelle Identität für eine Spezialitätenrösterei, gedacht für Kaffeekenner statt Massenpublikum, mit Anspruch auf handwerkliche Glaubwürdigkeit statt Kaffeehaus-Klischee.",
+      "text_en": "A complete visual identity for a specialty coffee roastery, built for connoisseurs rather than a mass audience, aiming for craft credibility instead of coffee-house cliche.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Konzept",
+      "title_de": "Monogramm-Entwicklung",
+      "title_en": "Monogram development",
+      "text_de": "Das P verschmilzt auf raffinierte Weise mit der Silhouette einer dampfenden Tasse und organischen Bohnenformen zu einem einzigen, eindeutigen Bildzeichen.",
+      "text_en": "The P fuses, in a refined way, with the silhouette of a steaming cup and organic bean shapes into a single, unmistakable mark.",
+      "chips": ["Illustrator"]
+    },
+    {
+      "id": "Track 03 · Farbe & Typografie",
+      "title_de": "Palette und Schriftsystem",
+      "title_en": "Palette and type system",
+      "text_de": "Bewusst reduzierte, monochrome braune Palette für die Röststufen, kombiniert mit einer eleganten Serifenschrift für Wärme und Verwurzelung in der Kaffeekultur.",
+      "text_en": "A deliberately restrained, monochrome brown palette for the roast levels, paired with an elegant serif typeface for warmth and roots in coffee culture.",
+      "chips": []
+    },
+    {
+      "id": "Track 04 · Anwendung",
+      "title_de": "Skalierung auf Produkten",
+      "title_en": "Scaling across products",
+      "text_de": "Test und Feinschliff des Logos auf Tassen, Verpackungen und Ladenfronten, damit Linienführung im Kleinen und Wiedererkennung im Großen gleichzeitig funktionieren. Das Ergebnis: eine organische, zugleich anspruchsvolle visuelle Sprache.",
+      "text_en": "Testing and refining the logo across cups, packaging and storefronts so linework holds up small and recognition holds up large, at the same time. The result: an organic yet sophisticated visual language.",
+      "chips": ["Photoshop"]
+    }
+  ]
+}

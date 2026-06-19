@@ -1,0 +1,31 @@
+{
+  "order": 30,
+  "title_de": "Chunky Rhino: KI-Charakter für Edutainment",
+  "title_en": "Chunky Rhino: An AI Character for Edutainment",
+  "summary_de": "Ein KI-Charakter, entwickelt für einen EdTech-Kunden. Ein liebenswert grobschlächtiges Nashorn, das komplexe KI-Themen in verständliche Tutorials übersetzt. Konzipiert, trainiert und produziert als fertiges Deliverable.",
+  "summary_en": "An AI character built for an EdTech client. A lovably rough rhino that turns complex AI topics into approachable tutorials. Conceived, trained and produced as a finished deliverable.",
+  "cover": "assets/uploads/chunky-rhino-cover.png",
+  "video": "https://www.instagram.com/reel/DUD-ZtEDUcY/embed/",
+  "aspect_ratio": "9:16",
+  "media_width": "medium",
+  "chips": ["ComfyUI (local)", "Custom LoRA", "Stable Diffusion", "Kling", "Runway", "ElevenLabs", "Premiere Pro", "After Effects", "Adobe Audition"],
+  "body_de": "Chunky Rhino ist ein KI-Charakter für einen EdTech-Kunden: eine Figur, die technisches KI-Wissen vermittelt, ohne die Zielgruppe von der Komplexität des Themas abzuschrecken.",
+  "body_en": "Chunky Rhino is an AI character built for an EdTech client: a figure that teaches technical AI knowledge without putting the audience off with the complexity of the subject.",
+  "gallery": [
+    { "image": "assets/uploads/chunky-rhino-cover.png", "aspect_ratio": "auto", "size": "1" },
+    { "image": "assets/uploads/Rhinoceros_wearing_tactical_gear_airport_202606182330.jpeg", "aspect_ratio": "auto", "size": "1" },
+    { "image": "assets/uploads/Rhino_wearing_tactical_vest_holding_202606182330.jpeg", "aspect_ratio": "auto", "size": "1" },
+    { "image": "assets/uploads/Rhino_and_woman_camping_202606182333.jpeg", "aspect_ratio": "auto", "size": "1" }
+  ],
+  "link_url": "https://www.instagram.com/reel/DUD-ZtEDUcY/",
+  "link_label": "Watch Reel · Instagram ↗",
+  "tracks": [
+    { "id": "Track 01 · Concept", "title_de": "Charakterkonzept & Brief", "title_en": "Character concept & brief", "text_de": "Chunky ist bewusst als Kontrast angelegt: optisch ein massiges, fast einschüchterndes Nashorn, im Wesen eine humorvolle, nahbare Persönlichkeit. Genau dieser Widerspruch macht ihn sympathisch und senkt die Einstiegshürde zu einem sonst sperrigen Thema.", "title_en_unused": "", "text_en": "Chunky is deliberately built on contrast: visually a massive, almost intimidating rhino, but in temperament a humorous, approachable personality. It is exactly this contradiction that makes him likeable and lowers the barrier to an otherwise heavy topic.", "chips": ["Character Design", "Brief"] },
+    { "id": "Track 02 · Identity", "title_de": "Identität & LoRA-Training", "title_en": "Identity & LoRA training", "text_de": "Aufbau eines eigenen LoRA für Chunky als Fundament für stabile, wiedererkennbare Konsistenz, gelöst über die größte Hürde generativer KI: Charaktertreue über jede Szene hinweg.", "text_en": "Building a custom LoRA for Chunky as the foundation for stable, recognizable consistency, solving the biggest hurdle in generative AI: character fidelity across every scene.", "chips": ["Custom LoRA", "ComfyUI"] },
+    { "id": "Track 03 · Image", "title_de": "Referenzgesteuerter ComfyUI-Workflow", "title_en": "Reference-driven ComfyUI workflow", "text_de": "Ein lokaler Workflow mit Referenzbild hält die Figur über Szenen, Winkel und Kontexte hinweg konstant, größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.", "text_en": "A local workflow with a reference image keeps the figure constant across scenes, angles and contexts, mostly run locally for cost, privacy and creative control.", "chips": ["ComfyUI (local)", "Stable Diffusion"] },
+    { "id": "Track 04 · Motion", "title_de": "Hybride Video-Generierung", "title_en": "Hybrid video generation", "text_de": "Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway, je nach Anforderung an Bewegung und Qualität.", "text_en": "Motion produced from local models in ComfyUI combined with online models such as Kling and Runway, depending on the motion and quality each shot requires.", "chips": ["Kling", "Runway", "ComfyUI"] },
+    { "id": "Track 05 · Voice", "title_de": "Stimme & Lippensynchronisation", "title_en": "Voice & lip-sync", "text_de": "Eigenes Voice-Model mit ElevenLabs für eine konstante vokale Identität über alle Inhalte hinweg, ergänzt durch Lip-Sync.", "text_en": "A dedicated voice model with ElevenLabs for a constant vocal identity across all content, complemented by lip-sync.", "chips": ["ElevenLabs"] },
+    { "id": "Track 06 · Post", "title_de": "Schnitt & Motion Design", "title_en": "Edit & motion design", "text_de": "Postproduktion in Premiere Pro und Motion Design in After Effects für ein klares, didaktisches Tempo. Entscheidend: das Projekt ist nicht \"nur KI\", die Postproduktion ruht auf klassischem Handwerk.", "text_en": "Post-production in Premiere Pro and motion design in After Effects for a clear, didactic pace. What matters: this project is not \"just AI\", post-production rests on traditional craft.", "chips": ["Premiere Pro", "After Effects"] },
+    { "id": "Track 07 · Audio", "title_de": "Audio Engineering", "title_en": "Audio engineering", "text_de": "Vollständige Audiobearbeitung in Adobe Audition für sauberen, studioreifen Klang. Das Ergebnis: ein charismatischer Avatar, der schwierige Inhalte trägt und die Lernbarriere spürbar senkt.", "text_en": "Full audio processing in Adobe Audition for clean, studio-grade sound. The result: a charismatic avatar that carries difficult content and noticeably lowers the barrier to learning.", "chips": ["Adobe Audition"] }
+  ]
+}

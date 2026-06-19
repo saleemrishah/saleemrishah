@@ -1,0 +1,52 @@
+{
+  "order": 5,
+  "title_de": "Markenidentität und Verpackungsdesign für eine Chips-Linie",
+  "title_en": "Brand Identity and Packaging Design for a Chips Line",
+  "summary_de": "Master-Logo, eigenständige Sub-Logos für drei Geschmacksrichtungen und vollständiges Verpackungsdesign für eine Chips-Marke, inszeniert in fotorealistischen Social-Media-Postings.",
+  "summary_en": "A master logo, standalone sub-logos for three flavors, and full packaging design for a chips brand, staged in photorealistic social media posts.",
+  "cover": "assets/uploads/gallery/cheetos-chips/Pizza.png",
+  "chips": ["Illustrator", "Photoshop", "Brand Identity", "Packaging", "Social Media"],
+  "body_de": "Für diese Chips-Marke war der Auftrag mehrstufig: ein Master-Logo für die Dachmarke, eigenständige Sub-Logos für drei Geschmacksrichtungen, und das komplette Verpackungsdesign jeder Tüte.",
+  "body_en": "This chips brand needed a layered system: a master logo for the umbrella brand, standalone sub-logos for three flavors, and the full packaging design for every bag.",
+  "gallery": [
+    {"image": "assets/uploads/gallery/cheetos-chips/Cheetos_package_Preview.jpg", "aspect_ratio": "4:3", "size": "full"},
+    {"image": "assets/uploads/gallery/cheetos-chips/TeuflischScharf.png", "aspect_ratio": "1:1", "size": "1"},
+    {"image": "assets/uploads/gallery/cheetos-chips/Zwiebel.png", "aspect_ratio": "1:1", "size": "1"}
+  ],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Struktur",
+      "title_en": "Brief and structure",
+      "text_de": "Master-Logo für die Dachmarke plus eigenständige Sub-Logos für drei Geschmacksrichtungen, jede mit eigener visueller Persönlichkeit innerhalb derselben Markenfamilie, ohne die Wiedererkennung der Hauptmarke zu verlieren.",
+      "text_en": "A master logo for the umbrella brand plus standalone sub-logos for three flavors, each with its own visual personality within the same brand family, without losing recognition of the main brand.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Sub-Logos",
+      "title_de": "Drei Geschmackswelten",
+      "title_en": "Three flavor worlds",
+      "text_de": "Pizza bekam ein freches Mashup-Maskottchen in Rot und Gold, verspielt und einladend. Teuflisch Scharf nutzt ein Teufel-Charakter in Blau-Schwarz mit Feuerrot, klar als Schärfe-Warnung lesbar. Zwiebel bricht bewusst mit dem Comic-Stil: ein Samurai-Zwiebel-Charakter in Gelb-Grün, ernster im Ton.",
+      "text_en": "Pizza got a playful mashup mascot in red and gold, fun and inviting. Teuflisch Scharf (Devilishly Hot) uses a devil character in blue-black with fiery red, reading clearly as a heat warning. Zwiebel (Onion) deliberately breaks from the comic style: a samurai onion character in yellow-green, more serious in tone.",
+      "chips": ["Illustrator"]
+    },
+    {
+      "id": "Track 03 · Verpackung",
+      "title_de": "Tüten-Design",
+      "title_en": "Bag packaging",
+      "text_de": "Vollständiges Verpackungsdesign jeder Tüte inklusive Markenführung, Geschmacksangabe und Produktillustration, abgestimmt auf die jeweilige Geschmackswelt.",
+      "text_en": "Full packaging design for each bag including brand lockup, flavor callout and product illustration, matched to its flavor world.",
+      "chips": ["Illustrator", "Photoshop"]
+    },
+    {
+      "id": "Track 04 · Inszenierung",
+      "title_de": "Social-Media-Composings",
+      "title_en": "Social media composites",
+      "text_de": "Freistellen der fertigen Tüten und Compositing in realistische, zur Geschmacksrichtung passende Umgebungen (Pizzeria-Holzofen, Flammen und Chili, Zwiebelschneidebrett), fertig zum direkten Posten.",
+      "text_en": "Cutting out the finished bags and compositing them into realistic, flavor-matched environments (a wood-fired pizzeria, flames and chili, an onion cutting board), ready to post directly.",
+      "chips": ["Photoshop"]
+    }
+  ]
+}

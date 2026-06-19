@@ -1,0 +1,40 @@
+{
+  "order": 50,
+  "title_de": "Print & Editorial Design: Studienprojekte",
+  "title_en": "Print & Editorial Design: Case Studies",
+  "summary_de": "Drei eigenständig konzipierte Studienprojekte zu Print-Layout, Editorial Design und Datenvisualisierung, jedes mit Bestnote (100%) abgeschlossen.",
+  "summary_en": "Three independently conceived case studies in print layout, editorial design and data visualization, each completed with a top grade (100%).",
+  "cover": "assets/uploads/print-exercises-cover.png",
+  "chips": ["InDesign", "Illustrator", "Photoshop", "Typography", "Editorial Layout"],
+  "body_de": "Drei eigenständig konzipierte Studienprojekte aus meiner Ausbildung zu Print-Layout, Editorial Design und Datenvisualisierung, jedes mit voller gestalterischer Freiheit umgesetzt und mit Bestnote (100%) bewertet.",
+  "body_en": "Three independently conceived case studies from my training in print layout, editorial design and data visualization, each executed with full creative freedom and graded at the top mark (100%).",
+  "gallery": [],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Studie 01 · Nike Magazin",
+      "title_de": "Magazin-Cover-Nachbau · Bestnote 100%",
+      "title_en": "Magazine cover recreation · Top grade 100%",
+      "text_de": "Nachbau einer Magazinseite für ein fiktives Nike-Sports-Cover im DIN-A4-Format. Fokus auf präziser Typografie-Nachbildung, korrektem CMYK-Farbmanagement für den Druck und exaktem Treffen einer bestehenden Bildsprache anhand einer niedrig aufgelösten Quelle. Abgeschlossen mit Bestnote (100%).",
+      "text_en": "Recreating a magazine page for a fictional Nike Sports cover in DIN A4 format. Focus on precise typography matching, correct CMYK color management for print, and accurately hitting an existing visual language based on a low-resolution source. Completed with a top grade (100%).",
+      "chips": ["InDesign", "Photoshop"]
+    },
+    {
+      "id": "Studie 02 · InDesign-Lehrmagazin",
+      "title_de": "Editorial-Rastersystem · Bestnote 100%",
+      "title_en": "Editorial grid system · Top grade 100%",
+      "text_de": "Editorial-Layout für ein fiktives Fachmagazin, das Einsteiger in InDesign unterrichtet. Aufbau eines konsistenten Rastersystems über ein-, zwei- und dreispaltige Layouts, klare typografische Hierarchie, bewusster Einsatz von Weißraum. Abgeschlossen mit Bestnote (100%).",
+      "text_en": "An editorial layout for a fictional trade magazine teaching InDesign beginners. Building a consistent grid system across one, two and three column layouts, a clear typographic hierarchy, and deliberate use of whitespace. Completed with a top grade (100%).",
+      "chips": ["InDesign", "Typography"]
+    },
+    {
+      "id": "Studie 03 · Zahlen GmbH",
+      "title_de": "Daten-Infoblatt · Bestnote 100%",
+      "title_en": "Data infosheet · Top grade 100%",
+      "text_de": "Mehrseitiges Infoblatt für die fiktive \"Zahlen GmbH\": eine Marktanalyse-Broschüre mit Kreis-, Balken- und Liniendiagrammen, eigenem Inhaltsverzeichnis und durchgehendem Layout-System. Schwerpunkt: abstrakte Zahlen in klar lesbare, visuell konsistente Grafiken übersetzen. Abgeschlossen mit Bestnote (100%).",
+      "text_en": "A multi-page infosheet for the fictional \"Zahlen GmbH\": a market analysis brochure with pie, bar and line charts, its own table of contents, and a consistent layout system throughout. Focus: translating abstract numbers into clearly legible, visually consistent graphics. Completed with a top grade (100%).",
+      "chips": ["InDesign", "Illustrator"]
+    }
+  ]
+}

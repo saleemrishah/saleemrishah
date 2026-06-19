@@ -38,7 +38,7 @@ const SECTION_META = {
   },
   football: {
     eyebrow_de: "04 · Proof · Reichweite", eyebrow_en: "04 · Proof · Reach",
-    title_de: "Arabische Fußball-Kanäle", title_en: "Arabic Football Channels",
+    title_de: "Eigenprojekte · Football Content", title_en: "Personal Projects · Football Content",
     intro_de: "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
     intro_en: "For years I have produced Arabic-language football content in documentary quality: script, edit, thumbnails, animations and publishing, all from one pair of hands. My ongoing real-world proof of full-stack production with reach in the millions."
   }

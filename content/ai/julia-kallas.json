@@ -1,12 +1,46 @@
 {
   "summary_en": "A fully AI-generated persona, grown from zero to 12,000 real, active followers in three months. Not a stock filter, but a custom LoRA, a local ComfyUI workflow and an n8n automation that replies like a human.",
-  "body_en": "Julia Kallas is a 100 percent AI-generated persona in a podcast format on Instagram (@juliakallas.de). The project answers a specific question: can you build a believable influencer from zero and grow her into a micro-influencer in three months without the identity ever breaking? The audience is the international \"cat community\" across the USA, Canada and Europe. English was a deliberate choice, used to reach the largest possible slice of that same audience. The commercial goal is clearly tiered: first, marketing cat products, and second, fashion, worn by Julia herself.\n\nThe decisive point is the method. Julia is not a \"Nano Banana\" output like a casual user would produce. Consistency, the biggest hurdle in generative AI, is solved through a custom-trained LoRA for Julia's facial features, combined with a reference-image-driven ComfyUI workflow that holds her identity stable across lighting, angles and outfits. I deliberately ran most of the work locally in ComfyUI: for cost, for data privacy and above all for the far greater creative control a local stack offers over cloud-only tools.\n\nThe motion content runs through a hybrid pipeline. Animation comes partly from local models in ComfyUI and partly from online models such as Kling and Runway, depending on the motion and quality the shot requires. The voice is built on a dedicated voice model paired with ElevenLabs, so tone and personality stay identical across every clip. Lip-sync is handled through HeyGen. The result is a character that does not just look right, but performs consistently.\n\nReach on its own is not enough, it has to be held. For that I built an automation on n8n with custom scripts and Claude. A trained agent fully adopts Julia's personality and answers comments in real time, not robotically, but as if Julia were replying herself. The single strongest effect: a jump of 110,000 in 24 hours. In total, the persona reached 1.5 million.\n\nWhat matters is that this project is not \"just AI\". It rests on traditional craft: the logo in Illustrator, lower thirds and animation in After Effects, the edit in Premiere Pro, a dedicated color identity with a signature gradient for Julia's vibe, and a deliberate, non-random publishing strategy. AI delivers the scale, the handwork delivers the quality.\n",
+  "body_en": "Julia Kallas is a 100 percent AI-generated persona in a podcast format on Instagram (@juliakallas.de), built to answer one question: can you grow a believable influencer from zero to micro-influencer in three months without the identity ever breaking.",
   "chips": [
-    "ComfyUI (local) · Custom LoRA · Stable Diffusion · Kling · Runway · ElevenLabs · HeyGen · n8n · Claude · Photoshop · After Effects · Premiere Pro · Illustrator"
+    "ComfyUI (local)", "Custom LoRA", "Stable Diffusion", "Kling", "Runway",
+    "ElevenLabs", "HeyGen", "n8n", "Claude", "Photoshop",
+    "After Effects", "Premiere Pro", "Illustrator"
   ],
   "tracks": [
     {
-      "id": "Track 01 · Concept",
+      "id": "Track 01 · Brief",
+      "title_de": "Zielgruppe & kommerzielles Ziel",
+      "title_en": "Audience & commercial goal",
+      "text_de": "Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
+      "text_en": "The audience is the international \"cat community\" across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Methode",
+      "title_de": "Konsistenz statt Zufallstreffer",
+      "title_en": "Consistency, not a lucky roll",
+      "text_de": "Julia ist kein \"Nano Banana\"-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
+      "text_en": "Julia is not a \"Nano Banana\" output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control.",
+      "chips": ["ComfyUI", "Custom LoRA"]
+    },
+    {
+      "id": "Track 03 · Bewegtbild",
+      "title_de": "Hybride Pipeline für Stimme & Bewegung",
+      "title_en": "Hybrid pipeline for voice & motion",
+      "text_de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent \"performt\".",
+      "text_en": "Animation drawn from local ComfyUI models and online models like Kling and Runway, depending on the shot. Voice built on a dedicated model with ElevenLabs, lip-sync through HeyGen. The result performs consistently, not just looks right.",
+      "chips": ["Kling", "Runway", "ElevenLabs", "HeyGen"]
+    },
+    {
+      "id": "Track 04 · Wachstum",
+      "title_de": "Automatisierung & Community",
+      "title_en": "Automation & community",
+      "text_de": "n8n-Automatisierung mit eigenen Skripten und Claude: ein trainierter Agent antwortet in Echtzeit als Julia. Stärkster Effekt: plus 110.000 Follower in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
+      "text_en": "An n8n automation with custom scripts and Claude runs a trained agent that replies in real time as Julia. Strongest single effect: plus 110,000 followers in 24 hours, total reach 1.5 million.",
+      "chips": ["n8n", "Claude"]
+    },
+    {
+      "id": "Track 05 · Concept",
       "title_de": "Themen & Content-Strategie",
       "title_en": "Topics & content strategy",
       "text_de": "Identität und LoRA-Training. Aufbau eines eigenen LoRA für Julias Gesichtszüge als Fundament für stabile Konsistenz.",
@@ -18,7 +52,7 @@
       ]
     },
     {
-      "id": "Track 02 · Identity",
+      "id": "Track 06 · Identity",
       "title_de": "Charakter-Design & Identitäts-Training",
       "title_en": "Character design & identity training",
       "text_de": "Referenzgesteuerter ComfyUI-Workflow. Ein lokaler Workflow mit Referenzbild hält die Identität über Licht, Winkel und Outfits hinweg konstant.",
@@ -30,7 +64,7 @@
       ]
     },
     {
-      "id": "Track 03 · Image",
+      "id": "Track 07 · Image",
       "title_de": "Bildgenerierung",
       "title_en": "Image generation",
       "text_de": "Hybride Video-Generierung. Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway.",
@@ -42,7 +76,7 @@
       ]
     },
     {
-      "id": "Track 04 · Motion",
+      "id": "Track 08 · Motion",
       "title_de": "Videogenerierung & Lipsync",
       "title_en": "Video generation & lipsync",
       "text_de": "Stimme und Lippensynchronisation. Eigenes Voice-Model mit ElevenLabs für konstanten Tonfall, Lip-Sync über HeyGen.",
@@ -54,7 +88,7 @@
       ]
     },
     {
-      "id": "Track 05 · Voice",
+      "id": "Track 09 · Voice",
       "title_de": "Stimm-Design",
       "title_en": "Voice design",
       "text_de": "Schnitt und Motion Design. Postproduktion in Premiere Pro, Lower Thirds und Animation in After Effects.",
@@ -64,7 +98,7 @@
       ]
     },
     {
-      "id": "Track 06 · Post",
+      "id": "Track 10 · Post",
       "title_de": "Sound Engineering & Schnitt",
       "title_en": "Sound engineering & edit",
       "text_de": "Visuelle Markenidentität. Logo in Illustrator, eine eigene Farbwelt mit charakteristischem Farbverlauf für Julias Vibe.",
@@ -75,7 +109,7 @@
       ]
     },
     {
-      "id": "Track 07 · Publish",
+      "id": "Track 11 · Publish",
       "title_de": "Publishing & Wachstum",
       "title_en": "Publishing & growth",
       "text_de": "Automatisierung und Community. n8n-Automatisierung mit eigenen Skripten und Claude, ein Agent in Julias Persönlichkeit antwortet in Echtzeit. Stärkster Effekt: plus 110.000 in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
@@ -92,12 +126,15 @@
   "link_label": "@juliakallas.de · Instagram ↗",
   "title_en": "Julia Kallas: Building a Micro-Influencer From Zero",
   "gallery": [
-    { "image": "assets/uploads/julia-9-.jpg", "aspect_ratio": "auto", "size": "1" }
+    { "image": "assets/uploads/julia-kallas-1.jpg", "aspect_ratio": "auto", "size": "1" },
+    { "image": "assets/uploads/julia-kallas-2.jpg", "aspect_ratio": "auto", "size": "1" },
+    { "image": "assets/uploads/reference.png", "aspect_ratio": "auto", "size": "full" },
+    { "image": "assets/uploads/social media analytics screenshots.png", "aspect_ratio": "auto", "size": "full" }
   ],
   "cover": "assets/uploads/notegpt_image_20260607041247.png",
   "summary_de": "Eine vollständig KI-generierte Persona, in drei Monaten von Null auf 12.000 echte, aktive Follower aufgebaut. Kein Stockfilter, sondern ein eigener LoRA, ein lokaler ComfyUI-Workflow und eine n8n-Automatisierung, die wie ein Mensch antwortet.",
-  "video": "https://www.youtube.com/embed/0VaK8WaJAMY",
+  "video": "https://www.instagram.com/reel/DZUyMkNji2w/embed/",
   "aspect_ratio": "9:16",
   "media_width": "medium",
-  "body_de": "Julia Kallas ist eine zu 100 Prozent KI-generierte Persona im Podcast-Format auf Instagram (@juliakallas.de). Das Projekt beantwortet eine konkrete Frage: Kann man eine glaubwürdige Influencerin von Null aufbauen und in drei Monaten zur Mikro-Influencerin entwickeln, ohne dass die Identität bricht? Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa. Die Sprache ist bewusst Englisch gewählt, um innerhalb derselben Zielgruppe die größtmögliche Reichweite zu erreichen. Das kommerzielle Ziel ist klar gestaffelt: an erster Stelle die Vermarktung von Katzenprodukten, an zweiter Stelle Mode, getragen von Julia selbst.\n\nDer entscheidende Punkt ist die Methode. Julia ist kein \"Nano Banana\"-Output wie bei einem Gelegenheitsnutzer. Die Konsistenz, die größte Hürde generativer KI, wird über einen eigens trainierten LoRA für Julias Gesichtszüge gelöst, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, der die Identität über Licht, Winkel und Outfits hinweg stabil hält. Den Großteil der Arbeit habe ich bewusst lokal in ComfyUI umgesetzt: aus Kostengründen, aus Datenschutzgründen und vor allem wegen der deutlich größeren kreativen Kontrolle, die ein lokaler Stack gegenüber reinen Cloud-Tools bietet.\n\nDie Bewegtbild-Inhalte entstehen in einer hybriden Pipeline. Die Animation kommt teils aus lokalen Modellen in ComfyUI, teils aus Online-Modellen wie Kling und Runway, je nach Anforderung an Bewegung und Qualität. Die Stimme basiert auf einem eigenen Voice-Model in Verbindung mit ElevenLabs, sodass Tonfall und Persönlichkeit über alle Clips hinweg gleich bleiben. Die Lippensynchronisation wird über HeyGen realisiert. Das Ergebnis ist eine Figur, die nicht nur gut aussieht, sondern konsistent \"performt\".\n\nReichweite allein genügt nicht, sie muss gehalten werden. Dafür habe ich eine Automatisierung auf Basis von n8n mit eigenen Skripten und Claude gebaut. Ein trainierter Agent übernimmt dabei exakt Julias Persönlichkeit und beantwortet Kommentare in Echtzeit, nicht roboterhaft, sondern so, als würde Julia selbst antworten. Der stärkste einzelne Effekt: ein Sprung von 110.000 in 24 Stunden. Insgesamt erreichte die Persona eine Reichweite von 1,5 Millionen.\n\nWichtig ist, dass dieses Projekt nicht \"nur KI\" ist. Es ruht auf klassischem Handwerk: das Logo in Illustrator, Lower Thirds und Animation in After Effects, der Schnitt in Premiere Pro, eine eigene farbliche Markenidentität mit einem charakteristischen Farbverlauf für Julias Vibe sowie eine durchdachte, nicht zufällige Publishing-Strategie. KI liefert die Skalierung, die Handarbeit liefert die Qualität."
+  "body_de": "Julia Kallas ist eine zu 100 Prozent KI-generierte Persona im Podcast-Format auf Instagram (@juliakallas.de), entstanden um eine Frage zu beantworten: Kann man eine glaubwürdige Influencerin von Null in drei Monaten zur Mikro-Influencerin entwickeln, ohne dass die Identität bricht."
 }

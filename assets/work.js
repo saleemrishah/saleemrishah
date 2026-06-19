@@ -14,7 +14,7 @@
      On failure (e.g. local open without a server) fall back to
      data/work.json then window.WORK_DATA.
      ============================================================ */
-  var SECTION_ORDER = ['ai', 'motion', 'brand', 'football'];
+  var SECTION_ORDER = ['brand', 'ai', 'football'];
 
   /* Converts a CMS item (flat fields) into the shape init expects */
   function shapeItem(raw, slug) {
@@ -153,11 +153,6 @@
     if (sec.intro) html += '<p class="lead" style="margin-bottom:8px">' + bi(sec.intro) + '</p>';
 
     html += '<div class="work-grid">';
-    if (sec.feature_image) {
-      html += '<div class="work-card work-card--feature reveal">';
-      html += '<img src="' + img(sec.feature_image) + '" alt="" loading="lazy">';
-      html += '</div>';
-    }
     sec.items.forEach(function (it) {
       byId[it.id] = it;
       var hasVideo = !!it.video;
@@ -177,6 +172,8 @@
     html += '</div></div></section>';
   });
   mount.innerHTML = html;
+  if (window.__observeReveal) window.__observeReveal(mount);
+  if (window.__applyLangAgain) window.__applyLangAgain();
 
   /* ---------- Aspect-ratio / width helpers ---------- */
   function arClass(ar) {
@@ -196,6 +193,11 @@
     if (/\.mp4($|\?)/i.test(src) || src.indexOf('http') !== 0 || src.indexOf('/') === 0) {
       return '<div class="' + cls + '"><video controls preload="metadata"' +
         (it.cover ? ' poster="' + img(it.cover) + '"' : '') + ' src="' + src + '"></video></div>';
+    }
+    var isIg = src.indexOf('instagram.com/reel') !== -1;
+    if (isIg) {
+      return '<div class="ig-clip"><iframe class="ig-frame" src="' + src +
+        '" title="Video" scrolling="no" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
     }
     return '<div class="' + cls + '"><iframe src="' + src +
       '" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';

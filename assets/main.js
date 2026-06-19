@@ -78,8 +78,14 @@
       });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    window.__observeReveal = function (root) {
+      (root || document).querySelectorAll('.reveal:not(.in)').forEach(function (el) { io.observe(el); });
+    };
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    window.__observeReveal = function (root) {
+      (root || document).querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    };
   }
 
   /* Hook for other scripts (home.js) to re-apply language after content update */

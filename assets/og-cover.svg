@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="630" fill="#0B0E12"/>
+<rect x="0" y="0" width="4" height="630" fill="#46D5C2"/>
+<rect x="900" y="0" width="300" height="630" fill="#0F1419"/>
+<circle cx="1050" cy="315" r="220" fill="none" stroke="#46D5C2" stroke-width="0.5" opacity="0.15"/>
+<circle cx="1050" cy="315" r="160" fill="none" stroke="#46D5C2" stroke-width="0.5" opacity="0.12"/>
+<circle cx="1050" cy="315" r="100" fill="none" stroke="#46D5C2" stroke-width="0.5" opacity="0.1"/>
+<line x1="900" y1="0" x2="1200" y2="630" stroke="#46D5C2" stroke-width="0.4" opacity="0.06"/>
+<line x1="900" y1="210" x2="1200" y2="630" stroke="#46D5C2" stroke-width="0.4" opacity="0.06"/>
+<line x1="900" y1="420" x2="1200" y2="630" stroke="#46D5C2" stroke-width="0.4" opacity="0.06"/>
+<line x1="900" y1="0" x2="1200" y2="420" stroke="#46D5C2" stroke-width="0.4" opacity="0.06"/>
+<line x1="900" y1="0" x2="1200" y2="210" stroke="#46D5C2" stroke-width="0.4" opacity="0.06"/>
+<text x="1050" y="329" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#E8EDF2" text-anchor="middle" opacity="0.04">SR</text>
+<text x="60" y="108" font-family="monospace" font-size="13" fill="#46D5C2" letter-spacing="3">MEDIA DESIGN SPECIALIST · AI CREATIVE · DELMENHORST, DE</text>
+<rect x="60" y="128" width="48" height="2" fill="#46D5C2" opacity="0.6"/>
+<text x="60" y="230" font-family="Arial, sans-serif" font-size="86" font-weight="700" fill="#E8EDF2" letter-spacing="-2">Saleem</text>
+<text x="60" y="326" font-family="Arial, sans-serif" font-size="86" font-weight="700" fill="#E8EDF2" letter-spacing="-2">Rishah.</text>
+<text x="60" y="400" font-family="Arial, sans-serif" font-size="22" fill="#9BA8B4">Production craft, AI scaled.</text>
+<text x="60" y="510" font-family="monospace" font-size="12" fill="#46D5C2" opacity="0.5" letter-spacing="2">VIDEO · MOTION · BRAND · AI PRODUCTION</text>
+<rect x="60" y="555" width="180" height="38" rx="6" fill="#46D5C2"/>
+<text x="150" y="579" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0B0E12" text-anchor="middle" letter-spacing="1">VIEW WORK</text>
+</svg>

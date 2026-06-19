@@ -19,6 +19,7 @@
   --font-body: "Figtree", "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --max:       1180px;
+  --logo-h:    50px;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -62,7 +63,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 /* ---------- header ---------- */
 .site-head{position:sticky;top:0;z-index:50;background:rgba(11,14,18,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.site-head .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.site-head .wrap{display:flex;align-items:center;gap:28px;height:80px}
 .brand{font-family:var(--font-disp);font-weight:700;font-size:1.12rem;letter-spacing:.01em;color:var(--ink);display:flex;align-items:center;gap:10px;white-space:nowrap}
 .brand:hover{text-decoration:none}
 .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal)}
@@ -119,7 +120,8 @@ em.hl{font-style:italic;color:var(--teal)}
   background:radial-gradient(circle,rgba(70,213,194,.14),transparent 65%);pointer-events:none}
 .hero::after{content:"";position:absolute;bottom:-220px;left:-120px;width:520px;height:520px;border-radius:50%;
   background:radial-gradient(circle,rgba(230,161,92,.10),transparent 65%);pointer-events:none}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero .wrap{display:grid;grid-template-columns:1fr 380px;gap:64px;align-items:center;position:relative;z-index:1}
+.hero .wrap > *{min-width:0}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding:70px 0 60px}}
 
 .status{display:inline-flex;align-items:center;gap:9px;font-size:.85rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:99px;padding:7px 15px;margin-top:30px;background:var(--bg-2)}
@@ -243,7 +245,7 @@ textarea{min-height:140px;resize:vertical}
 .reveal.in{opacity:1;transform:none}
 
 /* ---------- logo image (from CMS) ---------- */
-.brand-img{height:var(--logo-h,40px);width:auto;display:block}
+.brand-img{height:var(--logo-h,72px);width:auto;display:block}
 
 /* ---------- work intro (lighter than section headers) ---------- */
 .work-intro{padding:80px 0 28px}
@@ -308,6 +310,10 @@ body.modal-open{overflow:hidden}
 .wm-video{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin:0 0 20px;aspect-ratio:16/9}
 .wm-video--vertical{aspect-ratio:9/16;max-width:360px}
 .wm-video iframe,.wm-video video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+/* Instagram reel clean embed — fixed-height crop wrapper */
+.ig-clip{width:320px;max-width:100%;height:410px;overflow:hidden;border-radius:12px;margin:0 auto 20px;position:relative;background:var(--bg-2)}
+.ig-clip::after{content:'';position:absolute;inset:0;border-radius:12px;box-shadow:inset 0 0 0 4px var(--bg-2);pointer-events:none;z-index:5}
+.ig-frame{position:absolute;top:-52px;left:-2px;width:calc(100% + 4px);height:580px;border:0}
 
 /* Aspect-ratio overrides for modal media */
 .wm-ar-9-16{aspect-ratio:9/16!important;max-width:360px}
@@ -320,9 +326,10 @@ body.modal-open{overflow:hidden}
 .wm-w-small{max-width:380px}
 .wm-w-medium{max-width:560px}
 .wm-w-large{max-width:760px}
-.wm-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:18px 0;grid-auto-flow:dense}
+.wm-gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:18px 0;grid-auto-flow:dense}
 .wm-gi{border-radius:10px;overflow:hidden;border:1px solid var(--line)}
 .wm-gi[data-size="2"]{grid-column:span 2}
+.wm-gi[data-size="full"]{grid-column:1 / -1}
 .wm-gi img{width:100%;display:block;object-fit:cover}
 /* Per-item aspect ratios */
 .wm-gi[data-ar="4:3"] img{aspect-ratio:4/3}
@@ -333,4 +340,4 @@ body.modal-open{overflow:hidden}
 /* auto = natural image height, no forcing */
 @media (max-width:520px){.wm-gi[data-size="2"]{grid-column:span 1}}
 .wm-pipeline{margin-top:24px}
-.wm-body .chips{margin-top:14px}
+.wm-body .ch

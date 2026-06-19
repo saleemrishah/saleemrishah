@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -c \"D:/Work/saleemrishah/assets/work.js\")",
+      "Bash(python3 -c \"import yaml; yaml.safe_load\\(open\\('D:/Work/saleemrishah/admin/config.yml'\\)\\)\")",
+      "PowerShell(node -c \"D:/Work/saleemrishah/admin/preview.js\" 2>&1)",
+      "PowerShell(if \\($?\\) { \"preview.js OK\" })",
+      "Bash(find \"D:/Work/saleemrishah-materials\" -type f | sort)",
+      "Bash(cp \"D:/Work/saleemrishah-materials/Julia-Kallas/Julia \\(1\\).jpg\" \"D:/Work/saleemrishah/assets/uploads/julia-kallas-1.jpg\")",
+      "Bash(cp \"D:/Work/saleemrishah-materials/Julia-Kallas/Julia \\(2\\).jpg\" \"D:/Work/saleemrishah/assets/uploads/julia-kallas-2.jpg\")",
+      "Bash(cp \"D:/Work/saleemrishah-materials/Chunky-Rhino/Firefly Render 2026-01-20 8.png\" \"D:/Work/saleemrishah/assets/uploads/chunky-rhino-cover.png\")",
+      "Bash(cp \"D:/Work/saleemrishah-materials/covers/ai-cover.jpg\" \"D:/Work/saleemrishah/assets/uploads/section-cover-ai.jpg\")",
+      "Bash(cp \"D:/Work/saleemrishah-materials/covers/video-edit-cover.png\" \"D:/Work/saleemrishah/assets/uploads/section-cover-motion.png\")",
+      "Bash(node build-work.js)",
+      "Bash(npx --yes serve . -p 3333 -s)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3333/)",
+      "Bash(npx serve *)",
+      "Bash(mkdir -p \"D:/Work/saleemrishah/.claude\" && echo \"exists\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(taskkill /PID 13876 /F)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 3333 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; \"done\")",
+      "mcp__visualize__show_widget"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "order": 30,
+  "title_de": "Brand Identity für eine Physiotherapie-Privatpraxis",
+  "title_en": "Brand Identity for a Private Physiotherapy Practice",
+  "summary_de": "Eine ganzheitliche Markenidentität für eine moderne Privatpraxis für Physiotherapie und Personal Training. Im Zentrum steht ein abstraktes, fließend konstruiertes Logo, das die kollaborative Beziehung zwischen Therapeut und Patient symbolisiert.",
+  "summary_en": "A holistic brand identity for a modern private physiotherapy and personal training practice. At its center is an abstract, fluidly constructed logo that symbolizes the collaborative relationship between therapist and patient.",
+  "cover": "assets/uploads/physio-brand-cover.png",
+  "chips": ["Illustrator", "Photoshop", "Brand Identity", "Logo Design"],
+  "body_de": "Für diese moderne Privatpraxis für Physiotherapie und Personal Training war die Aufgabe eine ganzheitliche Markenidentität, die sich bewusst von sterilen, klinischen Designs abhebt.",
+  "body_en": "For this modern private physiotherapy and personal training practice, the brief was a holistic brand identity that deliberately stands apart from sterile, clinical design.",
+  "gallery": [],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Brief",
+      "title_de": "Auftrag und Zielsetzung",
+      "title_en": "Brief and objective",
+      "text_de": "Ganzheitliche Markenidentität für eine private Physiotherapie- und Personal-Training-Praxis, mit dem Ziel, Wärme und Nähe statt klinischer Kälte zu vermitteln. Eine Physiotherapie-Praxis lebt von Vertrauen, nicht von kühler Distanz.",
+      "text_en": "A holistic brand identity for a private physiotherapy and personal training practice, aiming for warmth and closeness instead of clinical coldness. A physiotherapy practice runs on trust, not cool distance.",
+      "chips": []
+    },
+    {
+      "id": "Track 02 · Konzept",
+      "title_de": "Logo-Entwicklung",
+      "title_en": "Logo development",
+      "text_de": "Zwei untrennbar fließend verbundene, abstrakte Figuren symbolisieren die kollaborative Beziehung zwischen Therapeut und Patient während des Heilungsprozesses.",
+      "text_en": "Two inseparably, fluidly connected, abstract figures symbolize the collaborative relationship between therapist and patient during the healing process.",
+      "chips": ["Illustrator"]
+    },
+    {
+      "id": "Track 03 · Farbe & Typografie",
+      "title_de": "Palette und Schriftsystem",
+      "title_en": "Palette and type system",
+      "text_de": "Tiefes Burgunderrot für Vitalität, professionelles Marineblau für Stabilität, klare serifenlose Typografie für medizinische Glaubwürdigkeit und Lesbarkeit über alle Medien.",
+      "text_en": "Deep burgundy for vitality, professional navy for stability, clear sans-serif type for medical credibility and legibility across every medium.",
+      "chips": []
+    },
+    {
+      "id": "Track 04 · Anwendung",
+      "title_de": "Vom Praxisschild zur Visitenkarte",
+      "title_en": "From practice sign to business card",
+      "text_de": "Konsistente Anwendung über Praxisschild, Visitenkarte und digitale Touchpoints. Das Ergebnis: ein modernes, vertrauensvolles Corporate Design mit warmer, einladender Ausstrahlung, ohne an fachlicher Seriosität zu verlieren.",
+      "text_en": "Consistent application across the practice sign, business card and digital touchpoints. The result: a modern, trustworthy corporate design with a warm, welcoming character that never loses professional seriousness.",
+      "chips": ["Photoshop"]
+    }
+  ]
+}
