@@ -14,7 +14,7 @@
      On failure (e.g. local open without a server) fall back to
      data/work.json then window.WORK_DATA.
      ============================================================ */
-  var SECTION_ORDER = ['brand', 'ai', 'football'];
+  var SECTION_ORDER = ['brand', 'ai', 'automation', 'football'];
 
   /* Converts a CMS item (flat fields) into the shape init expects */
   function shapeItem(raw, slug) {
@@ -299,4 +299,108 @@
   var lastFocus = null;
 
   function syncLang() {
-    /* After filling modal, re-apply
+    /* After filling modal, re-apply language to new data-en elements */
+    var lang = document.documentElement.classList.contains('en') ? 'en' : 'de';
+    modalBody.querySelectorAll('[data-en]').forEach(function (el) {
+      if (!el.hasAttribute('data-de')) el.setAttribute('data-de', el.innerHTML);
+      el.innerHTML = el.getAttribute(lang === 'en' ? 'data-en' : 'data-de');
+    });
+  }
+
+  /* ---------- before/after compare slider drag logic ---------- */
+  function initCompareSliders(root) {
+    var boxes = root.querySelectorAll('[data-compare]');
+    boxes.forEach(function (box) {
+      var after = box.querySelector('.wm-cmp-after');
+      var handle = box.querySelector('[data-cmp-handle]');
+      if (!after || !handle) return;
+      var dragging = false;
+
+      function setPct(pct) {
+        pct = Math.max(0, Math.min(100, pct));
+        after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+        handle.style.left = pct + '%';
+      }
+
+      function pctFromEvent(clientX) {
+        var rect = box.getBoundingClientRect();
+        return ((clientX - rect.left) / rect.width) * 100;
+      }
+
+      function onMove(e) {
+        if (!dragging) return;
+        var clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        setPct(pctFromEvent(clientX));
+      }
+      function onUp() {
+        dragging = false;
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+        document.removeEventListener('touchmove', onMove);
+        document.removeEventListener('touchend', onUp);
+      }
+      function onDown(e) {
+        dragging = true;
+        document.addEventListener('mousemove', onMove);
+        document.addEventListener('mouseup', onUp);
+        document.addEventListener('touchmove', onMove, { passive: true });
+        document.addEventListener('touchend', onUp);
+        e.preventDefault();
+      }
+      handle.addEventListener('mousedown', onDown);
+      handle.addEventListener('touchstart', onDown, { passive: false });
+      /* clicking/tapping anywhere on the image jumps the slider there too */
+      box.addEventListener('click', function (e) {
+        if (e.target === handle || handle.contains(e.target)) return;
+        setPct(pctFromEvent(e.clientX));
+      });
+      setPct(50);
+    });
+  }
+
+  function openWork(id) {
+    var it = byId[id];
+    if (!it) return;
+    modalBody.innerHTML = buildModal(it);
+    syncLang();
+    initCompareSliders(modalBody);
+    modal.hidden = false;
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+    lastFocus = document.activeElement;
+    var closeBtn = modal.querySelector('.wm-close');
+    if (closeBtn) closeBtn.focus();
+    modalBody.scrollTop = 0;
+  }
+
+  function closeWork() {
+    modal.hidden = true;
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    modalBody.innerHTML = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  mount.addEventListener('click', function (e) {
+    var card = e.target.closest('[data-work]');
+    if (card) openWork(card.getAttribute('data-work'));
+  });
+
+  modal.addEventListener('click', function (e) {
+    if (e.target.hasAttribute('data-close')) closeWork();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeWork();
+  });
+
+  /* If user switches language while modal open, re-sync */
+  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      if (!modal.hidden) setTimeout(syncLang, 0);
+    });
+  });
+  } /* end init */
+
+  boot();
+})();
