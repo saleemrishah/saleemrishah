@@ -89,9 +89,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 }
 
 /* ---------- timecode eyebrow ---------- */
-.tc{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.tc{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
 .tc::before{content:"";width:34px;height:1px;background:var(--teal-dim)}
 .tc .amber{color:var(--amber)}
+.tc .loc{white-space:nowrap;padding-left:12px;border-left:1px solid var(--teal-dim)}
 
 /* ---------- sections / typography ---------- */
 section{padding:96px 0}

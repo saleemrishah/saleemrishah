@@ -114,8 +114,8 @@ collections:
         widget: "select"
         required: false
         default: "16:9"
-        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
-        hint: "16:9 = landscape video (default). 9:16 = portrait/vertical. auto = image keeps its natural shape."
+        options: ["16:9", "9:16", "4:3", "1:1", "wide", "auto"]
+        hint: "16:9 = landscape video (default). 9:16 = portrait/vertical. wide = ultra-wide screenshot. auto = image keeps its natural shape."
       - name: "media_width"
         label: "Media width in detail view"
         widget: "select"
@@ -136,8 +136,8 @@ collections:
             widget: "select"
             required: false
             default: "auto"
-            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape (recommended for mixed content)."
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
+            hint: "auto = natural image shape (recommended for mixed content). wide = ultra-wide screenshot (no cropping)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
@@ -186,8 +186,8 @@ collections:
         widget: "select"
         required: false
         default: "16:9"
-        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
-        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+        options: ["16:9", "9:16", "4:3", "1:1", "wide", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. wide = ultra-wide screenshot. auto = natural image shape."
       - name: "media_width"
         label: "Media width in detail view"
         widget: "select"
@@ -208,8 +208,8 @@ collections:
             widget: "select"
             required: false
             default: "auto"
-            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape (recommended for mixed content)."
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
+            hint: "auto = natural image shape (recommended for mixed content). wide = ultra-wide screenshot (no cropping)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
@@ -247,8 +247,8 @@ collections:
         widget: "select"
         required: false
         default: "16:9"
-        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
-        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+        options: ["16:9", "9:16", "4:3", "1:1", "wide", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. wide = ultra-wide screenshot. auto = natural image shape."
       - name: "media_width"
         label: "Media width in detail view"
         widget: "select"
@@ -269,8 +269,69 @@ collections:
             widget: "select"
             required: false
             default: "auto"
-            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape (recommended for mixed content)."
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
+            hint: "auto = natural image shape (recommended for mixed content). wide = ultra-wide screenshot (no cropping)."
+          - name: "size"
+            label: "Width in grid"
+            widget: "select"
+            required: false
+            default: "1"
+            options: ["1", "2"]
+            hint: "2 = takes double width. Good for landscape/panoramic images."
+      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
+      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
+
+  # ---- Section: Automation ----
+  - name: "automation"
+    label: "Automation"
+    label_singular: "Automation project"
+    folder: "content/automation"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title_de}}"
+    fields:
+      - { name: "order", label: "Order", widget: "number", default: 10, required: false }
+      - { name: "title_de", label: "Title (German)", widget: "string" }
+      - { name: "title_en", label: "Title (English)", widget: "string" }
+      - { name: "summary_de", label: "Short description (German)", widget: "text" }
+      - { name: "summary_en", label: "Short description (English)", widget: "text" }
+      - { name: "cover", label: "Cover image", widget: "image", required: false }
+      - { name: "chips", label: "Tools / Tags", widget: "list", required: false }
+      - { name: "body_de", label: "Long text (German, optional)", widget: "text", required: false }
+      - { name: "body_en", label: "Long text (English, optional)", widget: "text", required: false }
+      - { name: "video", label: "Video link (optional)", widget: "string", required: false }
+      - name: "aspect_ratio"
+        label: "Media shape (aspect ratio)"
+        widget: "select"
+        required: false
+        default: "16:9"
+        options: ["16:9", "9:16", "4:3", "1:1", "wide", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. wide = ultra-wide screenshot. auto = natural image shape."
+      - name: "media_width"
+        label: "Media width in detail view"
+        widget: "select"
+        required: false
+        default: "full"
+        options: ["full", "large", "medium", "small"]
+        hint: "full = edge to edge (default). medium/small = centred with max-width."
+      - name: "gallery"
+        label: "More images (gallery)"
+        widget: "list"
+        required: false
+        minimize_collapsed: false
+        summary: "Image {{i}} — {{fields.aspect_ratio}}"
+        fields:
+          - { name: "image", label: "Image", widget: "image" }
+          - name: "aspect_ratio"
+            label: "Shape (aspect ratio)"
+            widget: "select"
+            required: false
+            default: "auto"
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
+            hint: "auto = natural image shape. wide = ultra-wide screenshot (no cropping)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
@@ -308,8 +369,8 @@ collections:
         widget: "select"
         required: false
         default: "16:9"
-        options: ["16:9", "9:16", "4:3", "1:1", "auto"]
-        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. auto = natural image shape."
+        options: ["16:9", "9:16", "4:3", "1:1", "wide", "auto"]
+        hint: "16:9 = landscape (default). 9:16 = portrait/vertical. wide = ultra-wide screenshot. auto = natural image shape."
       - name: "media_width"
         label: "Media width in detail view"
         widget: "select"
@@ -330,8 +391,8 @@ collections:
             widget: "select"
             required: false
             default: "auto"
-            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16"]
-            hint: "auto = natural image shape (recommended for mixed content)."
+            options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
+            hint: "auto = natural image shape (recommended for mixed content). wide = ultra-wide screenshot (no cropping)."
           - name: "size"
             label: "Width in grid"
             widget: "select"
