@@ -2,34 +2,52 @@
   "summary_en": "A fully AI-generated persona, grown from zero to 12,000 real, active followers in three months. Not a stock filter, but a custom LoRA, a local ComfyUI workflow and an n8n automation that replies like a human.",
   "body_en": "Julia Kallas is a 100 percent AI-generated persona in a podcast format on Instagram (@juliakallas.de), built to answer one question: can you grow a believable influencer from zero to micro-influencer in three months without the identity ever breaking.",
   "chips": [
-    "ComfyUI (local)", "Custom LoRA", "Stable Diffusion", "Kling", "Runway",
-    "ElevenLabs", "HeyGen", "n8n", "Claude", "Photoshop",
-    "After Effects", "Premiere Pro", "Illustrator"
+    "ComfyUI (local)",
+    "Custom LoRA",
+    "Stable Diffusion",
+    "Kling",
+    "Runway",
+    "ElevenLabs",
+    "HeyGen",
+    "n8n",
+    "Claude",
+    "Photoshop",
+    "After Effects",
+    "Premiere Pro",
+    "Illustrator"
   ],
   "tracks": [
     {
       "id": "Track 01 · Brief",
       "title_de": "Zielgruppe & kommerzielles Ziel",
       "title_en": "Audience & commercial goal",
-      "text_de": "Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
-      "text_en": "The audience is the international \"cat community\" across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself.",
+      "text_de": "Zielgruppe ist die internationale „Cat Community“ in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
+      "text_en": "The audience is the international “cat community” across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself.",
       "chips": []
     },
     {
       "id": "Track 02 · Methode",
       "title_de": "Konsistenz statt Zufallstreffer",
       "title_en": "Consistency, not a lucky roll",
-      "text_de": "Julia ist kein \"Nano Banana\"-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
-      "text_en": "Julia is not a \"Nano Banana\" output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control.",
-      "chips": ["ComfyUI", "Custom LoRA"]
+      "text_de": "Julia ist kein „Nano Banana“-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
+      "text_en": "Julia is not a “Nano Banana” output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control.",
+      "chips": [
+        "ComfyUI",
+        "Custom LoRA"
+      ]
     },
     {
       "id": "Track 03 · Bewegtbild",
       "title_de": "Hybride Pipeline für Stimme & Bewegung",
       "title_en": "Hybrid pipeline for voice & motion",
-      "text_de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent \"performt\".",
+      "text_de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent „performt“.",
       "text_en": "Animation drawn from local ComfyUI models and online models like Kling and Runway, depending on the shot. Voice built on a dedicated model with ElevenLabs, lip-sync through HeyGen. The result performs consistently, not just looks right.",
-      "chips": ["Kling", "Runway", "ElevenLabs", "HeyGen"]
+      "chips": [
+        "Kling",
+        "Runway",
+        "ElevenLabs",
+        "HeyGen"
+      ]
     },
     {
       "id": "Track 04 · Wachstum",
@@ -37,85 +55,86 @@
       "title_en": "Automation & community",
       "text_de": "n8n-Automatisierung mit eigenen Skripten und Claude: ein trainierter Agent antwortet in Echtzeit als Julia. Stärkster Effekt: plus 110.000 Follower in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
       "text_en": "An n8n automation with custom scripts and Claude runs a trained agent that replies in real time as Julia. Strongest single effect: plus 110,000 followers in 24 hours, total reach 1.5 million.",
-      "chips": ["n8n", "Claude"]
-    },
-    {
-      "id": "Track 05 · Concept",
-      "title_de": "Themen & Content-Strategie",
-      "title_en": "Topics & content strategy",
-      "text_de": "Identität und LoRA-Training. Aufbau eines eigenen LoRA für Julias Gesichtszüge als Fundament für stabile Konsistenz.",
-      "text_en": "Identity and LoRA training. Building a custom LoRA for Julia's facial features as the foundation for stable consistency.",
       "chips": [
-        "Claude",
-        "Content-Strategie",
-        "n8n"
+        "n8n",
+        "Claude"
       ]
     },
     {
-      "id": "Track 06 · Identity",
-      "title_de": "Charakter-Design & Identitäts-Training",
-      "title_en": "Character design & identity training",
+      "id": "Track 05 · Identity",
+      "title_de": "Identität & LoRA-Training",
+      "title_en": "Identity & LoRA training",
+      "text_de": "Identität und LoRA-Training. Aufbau eines eigenen LoRA für Julias Gesichtszüge als Fundament für stabile Konsistenz.",
+      "text_en": "Identity and LoRA training. Building a custom LoRA for Julia's facial features as the foundation for stable consistency.",
+      "chips": [
+        "Custom LoRA",
+        "Reference Dataset"
+      ]
+    },
+    {
+      "id": "Track 06 · Workflow",
+      "title_de": "Referenzgesteuerter ComfyUI-Workflow",
+      "title_en": "Reference-driven ComfyUI workflow",
       "text_de": "Referenzgesteuerter ComfyUI-Workflow. Ein lokaler Workflow mit Referenzbild hält die Identität über Licht, Winkel und Outfits hinweg konstant.",
       "text_en": "Reference-driven ComfyUI workflow. A local workflow with a reference image keeps the identity constant across lighting, angles and outfits.",
       "chips": [
-        "Reference Dataset",
-        "LoRA",
+        "ComfyUI",
+        "Local Pipeline"
+      ]
+    },
+    {
+      "id": "Track 07 · Motion",
+      "title_de": "Hybride Video-Generierung",
+      "title_en": "Hybrid video generation",
+      "text_de": "Hybride Video-Generierung. Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway.",
+      "text_en": "Hybrid video generation. Motion produced from local models in ComfyUI combined with online models such as Kling and Runway.",
+      "chips": [
+        "Kling",
+        "Runway",
         "ComfyUI"
       ]
     },
     {
-      "id": "Track 07 · Image",
-      "title_de": "Bildgenerierung",
-      "title_en": "Image generation",
-      "text_de": "Hybride Video-Generierung. Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway.",
-      "text_en": "Hybrid video generation. Motion produced from local models in ComfyUI combined with online models such as Kling and Runway.",
-      "chips": [
-        "Nano Banana",
-        "Seedream",
-        "Midjourney"
-      ]
-    },
-    {
-      "id": "Track 08 · Motion",
-      "title_de": "Videogenerierung & Lipsync",
-      "title_en": "Video generation & lipsync",
+      "id": "Track 08 · Voice",
+      "title_de": "Stimme & Lippensynchronisation",
+      "title_en": "Voice & lip-sync",
       "text_de": "Stimme und Lippensynchronisation. Eigenes Voice-Model mit ElevenLabs für konstanten Tonfall, Lip-Sync über HeyGen.",
       "text_en": "Voice and lip-sync. A dedicated voice model with ElevenLabs for consistent tone, lip-sync through HeyGen.",
       "chips": [
-        "Kling AI",
-        "HeyGen",
-        "Runway"
+        "ElevenLabs",
+        "HeyGen"
       ]
     },
     {
-      "id": "Track 09 · Voice",
-      "title_de": "Stimm-Design",
-      "title_en": "Voice design",
+      "id": "Track 09 · Post",
+      "title_de": "Schnitt & Motion Design",
+      "title_en": "Edit & motion design",
       "text_de": "Schnitt und Motion Design. Postproduktion in Premiere Pro, Lower Thirds und Animation in After Effects.",
       "text_en": "Edit and motion design. Post-production in Premiere Pro, lower thirds and animation in After Effects.",
       "chips": [
-        "ElevenLabs"
+        "Premiere Pro",
+        "After Effects"
       ]
     },
     {
-      "id": "Track 10 · Post",
-      "title_de": "Sound Engineering & Schnitt",
-      "title_en": "Sound engineering & edit",
+      "id": "Track 10 · Brand",
+      "title_de": "Visuelle Markenidentität",
+      "title_en": "Visual brand identity",
       "text_de": "Visuelle Markenidentität. Logo in Illustrator, eine eigene Farbwelt mit charakteristischem Farbverlauf für Julias Vibe.",
       "text_en": "Visual brand identity. Logo in Illustrator, a dedicated color world with a signature gradient for Julia's vibe.",
       "chips": [
-        "Premiere Pro",
-        "Audition"
+        "Illustrator"
       ]
     },
     {
       "id": "Track 11 · Publish",
-      "title_de": "Publishing & Wachstum",
-      "title_en": "Publishing & growth",
+      "title_de": "Automatisierung & Community",
+      "title_en": "Automation & community",
       "text_de": "Automatisierung und Community. n8n-Automatisierung mit eigenen Skripten und Claude, ein Agent in Julias Persönlichkeit antwortet in Echtzeit. Stärkster Effekt: plus 110.000 in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
       "text_en": "Automation and community. An n8n automation with custom scripts and Claude, an agent in Julia's personality replying in real time. Strongest effect: plus 110,000 in 24 hours, total reach 1.5 million.",
       "chips": [
-        "Instagram Reels",
+        "n8n",
+        "Claude",
         "Analytics"
       ]
     }
@@ -126,10 +145,26 @@
   "link_label": "@juliakallas.de · Instagram ↗",
   "title_en": "Julia Kallas: Building a Micro-Influencer From Zero",
   "gallery": [
-    { "image": "assets/uploads/julia-kallas-1.jpg", "aspect_ratio": "auto", "size": "1" },
-    { "image": "assets/uploads/julia-kallas-2.jpg", "aspect_ratio": "auto", "size": "1" },
-    { "image": "assets/uploads/reference.png", "aspect_ratio": "auto", "size": "full" },
-    { "image": "assets/uploads/social media analytics screenshots.png", "aspect_ratio": "auto", "size": "full" }
+    {
+      "image": "assets/uploads/julia-kallas-1.jpg",
+      "aspect_ratio": "auto",
+      "size": "1"
+    },
+    {
+      "image": "assets/uploads/julia-kallas-2.jpg",
+      "aspect_ratio": "auto",
+      "size": "1"
+    },
+    {
+      "image": "assets/uploads/reference.png",
+      "aspect_ratio": "auto",
+      "size": "full"
+    },
+    {
+      "image": "assets/uploads/social media analytics screenshots.png",
+      "aspect_ratio": "auto",
+      "size": "full"
+    }
   ],
   "cover": "assets/uploads/notegpt_image_20260607041247.png",
   "summary_de": "Eine vollständig KI-generierte Persona, in drei Monaten von Null auf 12.000 echte, aktive Follower aufgebaut. Kein Stockfilter, sondern ein eigener LoRA, ein lokaler ComfyUI-Workflow und eine n8n-Automatisierung, die wie ein Mensch antwortet.",

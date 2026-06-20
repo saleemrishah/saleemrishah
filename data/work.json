@@ -81,8 +81,8 @@
                 "en": "Audience & commercial goal"
               },
               "text": {
-                "de": "Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
-                "en": "The audience is the international \"cat community\" across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself."
+                "de": "Zielgruppe ist die internationale „Cat Community“ in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
+                "en": "The audience is the international “cat community” across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself."
               },
               "chips": []
             },
@@ -93,8 +93,8 @@
                 "en": "Consistency, not a lucky roll"
               },
               "text": {
-                "de": "Julia ist kein \"Nano Banana\"-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
-                "en": "Julia is not a \"Nano Banana\" output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control."
+                "de": "Julia ist kein „Nano Banana“-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
+                "en": "Julia is not a “Nano Banana” output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control."
               },
               "chips": [
                 "ComfyUI",
@@ -108,7 +108,7 @@
                 "en": "Hybrid pipeline for voice & motion"
               },
               "text": {
-                "de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent \"performt\".",
+                "de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent „performt“.",
                 "en": "Animation drawn from local ComfyUI models and online models like Kling and Runway, depending on the shot. Voice built on a dedicated model with ElevenLabs, lip-sync through HeyGen. The result performs consistently, not just looks right."
               },
               "chips": [
@@ -134,135 +134,112 @@
               ]
             },
             {
-              "id": "Track 05 · Concept",
+              "id": "Track 05 · Identity",
               "title": {
-                "de": "Themen & Content-Strategie",
-                "en": "Topics & content strategy"
+                "de": "Identität & LoRA-Training",
+                "en": "Identity & LoRA training"
               },
               "text": {
                 "de": "Identität und LoRA-Training. Aufbau eines eigenen LoRA für Julias Gesichtszüge als Fundament für stabile Konsistenz.",
                 "en": "Identity and LoRA training. Building a custom LoRA for Julia's facial features as the foundation for stable consistency."
               },
               "chips": [
-                "Claude",
-                "Content-Strategie",
-                "n8n"
+                "Custom LoRA",
+                "Reference Dataset"
               ]
             },
             {
-              "id": "Track 06 · Identity",
+              "id": "Track 06 · Workflow",
               "title": {
-                "de": "Charakter-Design & Identitäts-Training",
-                "en": "Character design & identity training"
+                "de": "Referenzgesteuerter ComfyUI-Workflow",
+                "en": "Reference-driven ComfyUI workflow"
               },
               "text": {
                 "de": "Referenzgesteuerter ComfyUI-Workflow. Ein lokaler Workflow mit Referenzbild hält die Identität über Licht, Winkel und Outfits hinweg konstant.",
                 "en": "Reference-driven ComfyUI workflow. A local workflow with a reference image keeps the identity constant across lighting, angles and outfits."
               },
               "chips": [
-                "Reference Dataset",
-                "LoRA",
-                "ComfyUI"
+                "ComfyUI",
+                "Local Pipeline"
               ]
             },
             {
-              "id": "Track 07 · Image",
+              "id": "Track 07 · Motion",
               "title": {
-                "de": "Bildgenerierung",
-                "en": "Image generation"
+                "de": "Hybride Video-Generierung",
+                "en": "Hybrid video generation"
               },
               "text": {
                 "de": "Hybride Video-Generierung. Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway.",
                 "en": "Hybrid video generation. Motion produced from local models in ComfyUI combined with online models such as Kling and Runway."
               },
               "chips": [
-                "Nano Banana",
-                "Seedream",
-                "Midjourney"
+                "Kling",
+                "Runway",
+                "ComfyUI"
               ]
             },
             {
-              "id": "Track 08 · Motion",
+              "id": "Track 08 · Voice",
               "title": {
-                "de": "Videogenerierung & Lipsync",
-                "en": "Video generation & lipsync"
+                "de": "Stimme & Lippensynchronisation",
+                "en": "Voice & lip-sync"
               },
               "text": {
                 "de": "Stimme und Lippensynchronisation. Eigenes Voice-Model mit ElevenLabs für konstanten Tonfall, Lip-Sync über HeyGen.",
                 "en": "Voice and lip-sync. A dedicated voice model with ElevenLabs for consistent tone, lip-sync through HeyGen."
               },
               "chips": [
-                "Kling AI",
-                "HeyGen",
-                "Runway"
+                "ElevenLabs",
+                "HeyGen"
               ]
             },
             {
-              "id": "Track 09 · Voice",
+              "id": "Track 09 · Post",
               "title": {
-                "de": "Stimm-Design",
-                "en": "Voice design"
+                "de": "Schnitt & Motion Design",
+                "en": "Edit & motion design"
               },
               "text": {
                 "de": "Schnitt und Motion Design. Postproduktion in Premiere Pro, Lower Thirds und Animation in After Effects.",
                 "en": "Edit and motion design. Post-production in Premiere Pro, lower thirds and animation in After Effects."
               },
               "chips": [
-                "ElevenLabs"
+                "Premiere Pro",
+                "After Effects"
               ]
             },
             {
-              "id": "Track 10 · Post",
+              "id": "Track 10 · Brand",
               "title": {
-                "de": "Sound Engineering & Schnitt",
-                "en": "Sound engineering & edit"
+                "de": "Visuelle Markenidentität",
+                "en": "Visual brand identity"
               },
               "text": {
                 "de": "Visuelle Markenidentität. Logo in Illustrator, eine eigene Farbwelt mit charakteristischem Farbverlauf für Julias Vibe.",
                 "en": "Visual brand identity. Logo in Illustrator, a dedicated color world with a signature gradient for Julia's vibe."
               },
               "chips": [
-                "Premiere Pro",
-                "Audition"
+                "Illustrator"
               ]
             },
             {
               "id": "Track 11 · Publish",
               "title": {
-                "de": "Publishing & Wachstum",
-                "en": "Publishing & growth"
+                "de": "Automatisierung & Community",
+                "en": "Automation & community"
               },
               "text": {
                 "de": "Automatisierung und Community. n8n-Automatisierung mit eigenen Skripten und Claude, ein Agent in Julias Persönlichkeit antwortet in Echtzeit. Stärkster Effekt: plus 110.000 in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
                 "en": "Automation and community. An n8n automation with custom scripts and Claude, an agent in Julia's personality replying in real time. Strongest effect: plus 110,000 in 24 hours, total reach 1.5 million."
               },
               "chips": [
-                "Instagram Reels",
+                "n8n",
+                "Claude",
                 "Analytics"
               ]
             }
           ]
-        },
-        {
-          "id": "motion-showcase",
-          "title": {
-            "de": "Schnitt, Motion & Color Grading",
-            "en": "Edit, Motion & Color Grading"
-          },
-          "summary": {
-            "de": "Dokumentarischer Schnitt, Motion Graphics und filmisches Color Grading, das klassische Postproduktions-Handwerk hinter jeder Produktion.",
-            "en": "Documentary editing, motion graphics and cinematic color grading, the classic post-production craft behind every production."
-          },
-          "cover": "assets/work-motion.jpg",
-          "chips": [
-            "Premiere Pro",
-            "After Effects",
-            "DaVinci-Stil Grade"
-          ],
-          "body": {
-            "de": "Platzhalter-Projekt. Hier kommen Showreel-Videos, Vorher-Nachher-Grades und Motion-Beispiele hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
-            "en": "Placeholder project. Showreel videos, before/after grades and motion examples go here. Replace or extend via the content manager."
-          }
         },
         {
           "id": "orion-flooring",
@@ -503,8 +480,8 @@
                 "en": "Edit & motion design"
               },
               "text": {
-                "de": "Postproduktion in Premiere Pro und Motion Design in After Effects für ein klares, didaktisches Tempo. Entscheidend: das Projekt ist nicht \"nur KI\", die Postproduktion ruht auf klassischem Handwerk.",
-                "en": "Post-production in Premiere Pro and motion design in After Effects for a clear, didactic pace. What matters: this project is not \"just AI\", post-production rests on traditional craft."
+                "de": "Postproduktion in Premiere Pro und Motion Design in After Effects für ein klares, didaktisches Tempo. Entscheidend: das Projekt ist nicht „nur KI“, die Postproduktion ruht auf klassischem Handwerk.",
+                "en": "Post-production in Premiere Pro and motion design in After Effects for a clear, didactic pace. What matters: this project is not “just AI”, post-production rests on traditional craft."
               },
               "chips": [
                 "Premiere Pro",
@@ -641,7 +618,7 @@
                 "en": "Three flavor worlds"
               },
               "text": {
-                "de": "Pizza bekam ein freches Mashup-Maskottchen in Rot und Gold, verspielt und einladend. Teuflisch Scharf nutzt ein Teufel-Charakter in Blau-Schwarz mit Feuerrot, klar als Schärfe-Warnung lesbar. Zwiebel bricht bewusst mit dem Comic-Stil: ein Samurai-Zwiebel-Charakter in Gelb-Grün, ernster im Ton.",
+                "de": "Pizza bekam ein freches Mashup-Maskottchen in Rot und Gold, verspielt und einladend. Teuflisch Scharf nutzt einen Teufel-Charakter in Blau-Schwarz mit Feuerrot, klar als Schärfe-Warnung lesbar. Zwiebel bricht bewusst mit dem Comic-Stil: ein Samurai-Zwiebel-Charakter in Gelb-Grün, ernster im Ton.",
                 "en": "Pizza got a playful mashup mascot in red and gold, fun and inviting. Teuflisch Scharf (Devilishly Hot) uses a devil character in blue-black with fiery red, reading clearly as a heat warning. Zwiebel (Onion) deliberately breaks from the comic style: a samurai onion character in yellow-green, more serious in tone."
               },
               "chips": [
@@ -1106,8 +1083,8 @@
           "gallery": [
             {
               "src": "assets/uploads/gallery/automation/news.jpg",
-              "ar": "auto",
-              "size": "1"
+              "ar": "wide",
+              "size": "full"
             }
           ],
           "tracks": [
@@ -1212,8 +1189,8 @@
           "gallery": [
             {
               "src": "assets/uploads/gallery/automation/fb.jpg",
-              "ar": "auto",
-              "size": "1"
+              "ar": "wide",
+              "size": "full"
             }
           ],
           "tracks": [
@@ -1224,8 +1201,8 @@
                 "en": "Why automate comments, not news"
               },
               "text": {
-                "de": "Dieser Bot löst ein anderes Problem als der News Bot: nicht Veröffentlichung, sondern Volumen an Reaktionen. Bei einer aktiven Fußballseite kommen mehr Kommentare zusammen, als sich in vertretbarer Zeit persönlich beantworten lassen, ohne ein System würde Engagement entweder unbeantwortet bleiben oder meine gesamte Zeit beanspruchen.",
-                "en": "This bot solves a different problem than the News Bot: not publishing, but reply volume. An active football page generates more comments than can be answered personally in a reasonable amount of time, without a system, engagement either goes unanswered or eats up all my available time."
+                "de": "Dieser Bot löst ein anderes Problem als der News Bot: nicht Veröffentlichung, sondern Volumen an Reaktionen. Bei einer aktiven Fußballseite kommen mehr Kommentare zusammen, als sich in vertretbarer Zeit persönlich beantworten lassen. Ohne ein System bliebe Engagement entweder unbeantwortet oder würde meine gesamte Zeit beanspruchen.",
+                "en": "This bot solves a different problem than the News Bot: not publishing, but reply volume. An active football page generates more comments than can be answered personally in a reasonable amount of time. Without a system, engagement either goes unanswered or eats up all my available time."
               },
               "chips": [
                 "Comment Volume",
@@ -1318,8 +1295,8 @@
           "gallery": [
             {
               "src": "assets/uploads/gallery/automation/IG.jpg",
-              "ar": "auto",
-              "size": "1"
+              "ar": "wide",
+              "size": "full"
             }
           ],
           "tracks": [
@@ -1420,7 +1397,7 @@
         {
           "id": "color-grading",
           "title": {
-            "de": "Farbkorrektur: Von Sony Log3 zum fertigen Look",
+            "de": "Farbkorrektur: Von Sony S-Log3 zum fertigen Look",
             "en": "Color Grading: From Sony S-Log3 to the Finished Look"
           },
           "summary": {

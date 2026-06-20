@@ -5,11 +5,20 @@
   "summary_de": "Ein Interaktions-Bot, kein Publishing-Bot: beantwortet automatisch Kommentare auf der Facebook-Seite zu Chelsea- und Fußballinhalten, in meiner eigenen Stimme als Fan und Analyst, mit fester Obergrenze pro Lauf gegen Spam-Verhalten.",
   "summary_en": "An interaction bot, not a publishing bot: automatically replies to comments on the Facebook page for Chelsea and football content, in my own voice as a fan and analyst, with a hard cap per run against spam-like behavior.",
   "cover": "assets/uploads/gallery/automation/cover-chelsea-bot.jpg",
-  "chips": ["n8n", "Claude API", "Google Sheets", "Facebook API"],
+  "chips": [
+    "n8n",
+    "Claude API",
+    "Google Sheets",
+    "Facebook API"
+  ],
   "body_de": "Wie der News Bot ein Hobbyprojekt aus Zeitgründen entstanden, nicht als kommerzielle Dienstleistung.",
   "body_en": "Like the News Bot, born out of a hobby and a time constraint, not a commercial service.",
   "gallery": [
-    { "image": "assets/uploads/gallery/automation/fb.jpg", "aspect_ratio": "auto", "size": "1" }
+    {
+      "image": "assets/uploads/gallery/automation/fb.jpg",
+      "aspect_ratio": "wide",
+      "size": "full"
+    }
   ],
   "link_url": "",
   "link_label": "",
@@ -18,9 +27,12 @@
       "id": "Track 01 · Problem",
       "title_de": "Warum Kommentare automatisieren statt News",
       "title_en": "Why automate comments, not news",
-      "text_de": "Dieser Bot löst ein anderes Problem als der News Bot: nicht Veröffentlichung, sondern Volumen an Reaktionen. Bei einer aktiven Fußballseite kommen mehr Kommentare zusammen, als sich in vertretbarer Zeit persönlich beantworten lassen, ohne ein System würde Engagement entweder unbeantwortet bleiben oder meine gesamte Zeit beanspruchen.",
-      "text_en": "This bot solves a different problem than the News Bot: not publishing, but reply volume. An active football page generates more comments than can be answered personally in a reasonable amount of time, without a system, engagement either goes unanswered or eats up all my available time.",
-      "chips": ["Comment Volume", "Time Constraint"]
+      "text_de": "Dieser Bot löst ein anderes Problem als der News Bot: nicht Veröffentlichung, sondern Volumen an Reaktionen. Bei einer aktiven Fußballseite kommen mehr Kommentare zusammen, als sich in vertretbarer Zeit persönlich beantworten lassen. Ohne ein System bliebe Engagement entweder unbeantwortet oder würde meine gesamte Zeit beanspruchen.",
+      "text_en": "This bot solves a different problem than the News Bot: not publishing, but reply volume. An active football page generates more comments than can be answered personally in a reasonable amount of time. Without a system, engagement either goes unanswered or eats up all my available time.",
+      "chips": [
+        "Comment Volume",
+        "Time Constraint"
+      ]
     },
     {
       "id": "Track 02 · Datenerfassung",
@@ -28,7 +40,10 @@
       "title_en": "Posts and Reels captured separately, then merged",
       "text_de": "Facebook-Beiträge und Reels werden über getrennte Abfragen erfasst, weil die API-Struktur für beide Inhaltstypen unterschiedlich ist, und anschließend in einer gemeinsamen Liste zusammengeführt. Aus dieser Liste werden ausschließlich neue, noch unbeantwortete Kommentare herausgefiltert, ein Abgleich gegen den bisherigen Antwortverlauf verhindert doppelte oder wiederholte Reaktionen auf denselben Kommentar.",
       "text_en": "Facebook posts and Reels are pulled through separate queries, because the API structure differs between the two content types, then merged into one combined list. From that list, only new, not-yet-answered comments get filtered out, checked against the existing reply history to prevent duplicate or repeated responses to the same comment.",
-      "chips": ["Facebook API", "Posts + Reels"]
+      "chips": [
+        "Facebook API",
+        "Posts + Reels"
+      ]
     },
     {
       "id": "Track 03 · Persönliche Stimme statt generischer Antwort",
@@ -36,7 +51,10 @@
       "title_en": "A trained prompt for my own voice",
       "text_de": "Claude antwortet nicht generisch, sondern über einen eigens trainierten Prompt, der meine Perspektive als Fan und Analyst abbildet, statt eine neutrale, erkennbar automatisierte Antwort zu liefern. Dieser Unterschied ist entscheidend: eine offensichtlich automatisierte Antwort wirkt distanzierend, eine Antwort in der eigenen Stimme erhält die persönliche Bindung zur Community.",
       "text_en": "Claude doesn't reply generically, it runs through a specifically trained prompt that reflects my perspective as a fan and analyst, instead of a neutral, visibly automated answer. That distinction matters: an obviously automated reply feels distancing, a reply in my own voice keeps the personal connection with the community intact.",
-      "chips": ["Claude API", "Voice Matching"]
+      "chips": [
+        "Claude API",
+        "Voice Matching"
+      ]
     },
     {
       "id": "Track 04 · Schutzmechanismus",
@@ -44,7 +62,10 @@
       "title_en": "A per-run cap as a deliberate safeguard",
       "text_de": "Jeder Durchlauf hat eine feste Obergrenze an Antworten, eine bewusste technische Entscheidung gegen unkontrolliertes Massenantworten, das wie Spam wirken oder die Facebook-Richtlinien verletzen könnte. Lieber regelmäßige, kontrollierte Durchläufe als ein einziger unbegrenzter Lauf, der die Plattform oder die Glaubwürdigkeit des Kontos riskiert.",
       "text_en": "Every run has a fixed cap on the number of replies, a deliberate technical decision against uncontrolled mass-replying that could look like spam or risk violating Facebook's policies. Regular, controlled runs are preferable to a single unbounded run that risks the platform or the account's credibility.",
-      "chips": ["Rate Limiting", "Platform Safety"]
+      "chips": [
+        "Rate Limiting",
+        "Platform Safety"
+      ]
     },
     {
       "id": "Track 05 · Speicherung",
@@ -52,7 +73,10 @@
       "title_en": "Reply history as the central control layer",
       "text_de": "Jede gesendete Antwort wird in Google Sheets protokolliert, dieses Protokoll ist die einzige Quelle der Wahrheit dafür, was bereits beantwortet wurde. Ohne diese zentrale Steuerungsschicht müsste der Bot bei jedem Lauf raten, was schon erledigt ist, mit ihr bleibt das System auch über viele Durchläufe hinweg konsistent.",
       "text_en": "Every reply sent gets logged in Google Sheets, that log is the single source of truth for what's already been answered. Without that central control layer the bot would have to guess what's already done on every run, with it the system stays consistent across many runs over time.",
-      "chips": ["Google Sheets", "State Tracking"]
+      "chips": [
+        "Google Sheets",
+        "State Tracking"
+      ]
     }
   ]
 }

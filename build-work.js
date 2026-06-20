@@ -52,6 +52,12 @@ const SECTION_META = {
 
 const ORDER = ['ai', 'motion', 'brand', 'automation', 'football'];
 
+/* slug.json files that exist on disk but should never render on the live site */
+const EXCLUDE = { ai: ['motion-showcase'] };
+function isExcluded(secId, slug) {
+  return Array.isArray(EXCLUDE[secId]) && EXCLUDE[secId].indexOf(slug) !== -1;
+}
+
 function readJSON(p) {
   try { return JSON.parse(fs.readFileSync(p, 'utf8')); }
   catch (e) { console.warn('skip (invalid JSON):', p, e.message); return null; }
@@ -94,9 +100,10 @@ ORDER.forEach(secId => {
   const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
   const items = [];
   files.forEach(f => {
+    const slug = f.replace(/\.json$/, '');
+    if (isExcluded(secId, slug)) return;
     const raw = readJSON(path.join(dir, f));
     if (!raw) return;
-    const slug = f.replace(/\.json$/, '');
     items.push(shape(raw, slug));
   });
   items.sort((a, b) => a._order - b._order);
@@ -123,7 +130,9 @@ ORDER.forEach(function (secId) {
   if (!fs.existsSync(dir)) return;
   var meta = SECTION_META[secId] || {};
   var slugs = fs.readdirSync(dir).filter(function (f) { return f.endsWith('.json'); })
-    .map(function (f) { return { slug: f.replace(/\.json$/, ''), order: (readJSON(path.join(dir, f)) || {}).order }; })
+    .map(function (f) { return f.replace(/\.json$/, ''); })
+    .filter(function (slug) { return !isExcluded(secId, slug); })
+    .map(function (slug) { return { slug: slug, order: (readJSON(path.join(dir, slug + '.json')) || {}).order }; })
     .sort(function (a, b) { return (a.order == null ? 999 : a.order) - (b.order == null ? 999 : b.order); })
     .map(function (x) { return x.slug; });
   manifest[secId] = {
