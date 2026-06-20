@@ -4,8 +4,13 @@
   "title_en": "AI Clone Reels (English, Vertical)",
   "summary_de": "Kurzform-Taktikclips auf Englisch, vorgetragen von einem AI-Klon meiner selbst, Bild via HeyGen, Stimme via ElevenLabs, geschnitten in Premiere Pro und After Effects. Wie das YouTube-Format ein Hobbyprojekt aus Leidenschaft für Content-Produktion, kein kommerzieller Auftrag.",
   "summary_en": "Short-form tactical clips in English, presented by an AI clone of myself, face via HeyGen, voice via ElevenLabs, edited in Premiere Pro and After Effects. Like the YouTube format, this is a hobby project driven by a passion for content production, not a commercial assignment.",
-  "cover": "assets/uploads/gallery/football-colorgrade/before.jpg",
-  "chips": ["HeyGen", "ElevenLabs", "Premiere Pro", "After Effects"],
+  "cover": "assets/uploads/gallery/football-colorgrade/cover-ai-clone-reels.jpg",
+  "chips": [
+    "HeyGen",
+    "ElevenLabs",
+    "Premiere Pro",
+    "After Effects"
+  ],
   "body_de": "Beispiel: ein 9:16-Clip über Enzo Marescas Taktik, präsentiert vom AI-Klon für ein englischsprachiges Kurzform-Publikum auf TikTok, Reels und Shorts.",
   "body_en": "Example: a 9:16 clip on Enzo Maresca's tactics, presented by the AI clone for an English-speaking short-form audience on TikTok, Reels and Shorts.",
   "video": "https://www.youtube.com/embed/zmD-jQdIhkk",
@@ -21,7 +26,10 @@
       "title_en": "Not a camera appearance, a clone of myself",
       "text_de": "Wichtig vorab: Die Person, die in diesen Clips spricht, bin technisch nicht ich live vor der Kamera, sondern ein AI-generierter Klon meines Gesichts und meiner Stimme. Das Gesicht entsteht über HeyGen aus einem kurzen Referenzvideo von mir, die Plattform erzeugt daraus eine fotorealistische, lippensynchrone Video-Persona für beliebigen neuen Text. Die Stimme wird separat über ElevenLabs geklont, ein eigenes Stimmenmodell aus aufgenommenen Sprachproben, das jeden neuen Skripttext in meiner Stimme synthetisiert. Beide Klone werden anschließend in der Post zusammengeführt.",
       "text_en": "Important context up front: the person speaking in these clips isn't, technically, me live on camera, it's an AI-generated clone of my face and voice. The face is built through HeyGen from a short reference video of me, the platform generates a photorealistic, lip-synced video persona from that for any new script text. The voice is cloned separately through ElevenLabs, a dedicated voice model trained on recorded speech samples that synthesizes any new script in my voice. Both clones get combined together afterward in post.",
-      "chips": ["HeyGen", "Face Clone"]
+      "chips": [
+        "HeyGen",
+        "Face Clone"
+      ]
     },
     {
       "id": "Track 02 · Warum ein Klon",
@@ -29,7 +37,10 @@
       "title_en": "The technical reason: speed and scale",
       "text_de": "Kurzform-Plattformen verlangen hohe Veröffentlichungsfrequenz, um in der Empfehlungslogik relevant zu bleiben. Ein Klon-Workflow entkoppelt die Produktionszeit von Drehterminen, Skripte lassen sich schreiben und vertonen, ohne dass jedes Mal ein neuer Dreh mit Kamera, Licht und Ton nötig ist. Das ist eine bewusste technische Entscheidung für Konsistenz und Tempo, kein Ersatz für die echte Präsenz in den Querformat-Dokumentationen, wo ich tatsächlich selbst vor der Kamera stehe.",
       "text_en": "Short-form platforms demand high publishing frequency to stay relevant in the recommendation logic. A clone workflow decouples production time from filming sessions, scripts can be written and voiced without a fresh shoot involving camera, lighting and sound every time. That's a deliberate technical choice for consistency and speed, not a replacement for the real, in-person presence in the widescreen documentaries, where I genuinely stand in front of the camera myself.",
-      "chips": ["Production Speed", "Consistency"]
+      "chips": [
+        "Production Speed",
+        "Consistency"
+      ]
     },
     {
       "id": "Track 03 · Stimme: ElevenLabs",
@@ -37,7 +48,11 @@
       "title_en": "How the voice clone actually works",
       "text_de": "ElevenLabs trainiert aus einigen Minuten saubereren Sprachaufnahmen ein Modell, das Tonfall, Sprechrhythmus und Akzentfärbung erfasst. Jeder neue Skripttext wird dann text-to-speech über dieses Modell erzeugt, statt jede Zeile selbst einzusprechen. Entscheidend ist die Nachbearbeitung: Tempo, Betonung und Pausen werden manuell pro Satz angepasst, eine unbearbeitete Sprachsynthese klingt monoton, das Nachjustieren ist der Schritt, der den Unterschied zwischen „hörbar synthetisch“ und „klingt wie ein echtes Voiceover“ ausmacht.",
       "text_en": "ElevenLabs trains a model from a few minutes of clean voice recordings, capturing tone, speech rhythm and accent character. Every new script line then gets generated as text-to-speech through that model, instead of recording each line live. The decisive part is the post-processing: pacing, emphasis and pauses get manually adjusted per sentence, an unedited synthesis output sounds flat, that manual tuning is what separates “audibly synthetic” from “sounds like a real voiceover.”",
-      "chips": ["ElevenLabs", "Voice Clone", "TTS"]
+      "chips": [
+        "ElevenLabs",
+        "Voice Clone",
+        "TTS"
+      ]
     },
     {
       "id": "Track 04 · Schnitt: Premiere & After Effects",
@@ -45,7 +60,11 @@
       "title_en": "From HeyGen render to finished vertical clip",
       "text_de": "Der HeyGen-Export kommt als flacher Talking-Head-Clip, in Premiere Pro wird er in das 9:16-Format eingepasst, mit Taktiktafeln, Statistik-Einblendungen und B-Roll aus dem Spielmaterial kombiniert. After Effects übernimmt die Bewegtgrafiken: animierte Pfeile für Laufwege, eingeblendete Spielerstatistiken, Lower Thirds. Untertitel werden grundsätzlich fest eingebrannt, weil ein Großteil der Kurzform-Zuschauer mit ausgeschaltetem Ton scrollt, ohne eingebrannte Untertitel würde die Kernaussage in genau diesem Konsumverhalten verloren gehen.",
       "text_en": "The HeyGen export comes out as a flat talking-head clip, in Premiere Pro it gets fit into the 9:16 frame, combined with tactic boards, stat overlays and B-roll from match footage. After Effects handles the motion graphics: animated arrows for player runs, on-screen stat callouts, lower thirds. Subtitles are always burned in, because a large share of short-form viewers scroll with sound off, without burned-in captions the core point would get lost entirely in that exact viewing behavior.",
-      "chips": ["Premiere Pro", "After Effects", "Burned-in Captions"]
+      "chips": [
+        "Premiere Pro",
+        "After Effects",
+        "Burned-in Captions"
+      ]
     },
     {
       "id": "Track 05 · Plattform-Specs",
@@ -53,7 +72,11 @@
       "title_en": "Resolution, frame rate and audio per platform",
       "text_de": "Export erfolgt durchgehend in 1080×1920 (9:16), H.264, 30 fps, dem von TikTok, Instagram Reels und YouTube Shorts gemeinsam unterstützten Standard, damit eine einzige Exportdatei auf allen drei Plattformen ohne Qualitätsverlust funktioniert. Audio wird auf -16 bis -14 LUFS normalisiert, abgestimmt auf mobile Lautsprecher-Wiedergabe, der häufigsten Wiedergabeumgebung für dieses Format. Die ersten 1-2 Sekunden enthalten immer eine visuelle oder textliche Kernaussage, da auf diesen Plattformen die Wischgeschwindigkeit, mit der ein Zuschauer weiterscrollt, der entscheidende Frühindikator für den Algorithmus ist.",
       "text_en": "Export runs consistently at 1080×1920 (9:16), H.264, 30fps, the standard shared by TikTok, Instagram Reels and YouTube Shorts, so a single export file works across all three without quality loss. Audio is normalized to -16 to -14 LUFS, tuned for mobile speaker playback, the most common listening environment for this format. The first 1-2 seconds always carry a visual or text-based core message, because on these platforms the scroll-away speed is the earliest signal the algorithm reads.",
-      "chips": ["1080×1920", "30fps", "Mobile Audio"]
+      "chips": [
+        "1080×1920",
+        "30fps",
+        "Mobile Audio"
+      ]
     },
     {
       "id": "Track 06 · Wettbewerbsanalyse",
@@ -61,7 +84,11 @@
       "title_en": "What similar accounts get right and wrong",
       "text_de": "Vergleichbare englischsprachige Taktik-Kurzclips analysiere ich regelmäßig über die TikTok- und Reels-eigenen Analytics: Profile mit hoher Bindung kombinieren meist eine klare visuelle Marke (Wiedererkennbares Intro, feste Farbgebung) mit kurzen, einzelfokussierten Aussagen statt mehrerer Punkte pro Clip. Häufige Schwäche bei ähnlichen Kanälen ist ein zu langer Einstieg vor dem eigentlichen Taktikpunkt, genau das fließt als bewusste Gegenmaßnahme in Track 05 oben ein.",
       "text_en": "I analyze comparable English-language tactical short clips regularly through TikTok's and Reels' own analytics: high-retention accounts usually combine a clear visual brand (a recognizable intro, consistent color treatment) with short, single-focus statements instead of cramming several points into one clip. A common weakness among similar accounts is a slow wind-up before the actual tactical point lands, which is exactly the deliberate countermeasure built into Track 05 above.",
-      "chips": ["TikTok Analytics", "Reels Analytics", "Benchmarking"]
+      "chips": [
+        "TikTok Analytics",
+        "Reels Analytics",
+        "Benchmarking"
+      ]
     }
   ]
 }

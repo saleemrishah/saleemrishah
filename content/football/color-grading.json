@@ -4,8 +4,14 @@
   "title_en": "Color Grading: From Sony S-Log3 to the Finished Look",
   "summary_de": "Ein Vorher/Nachher-Vergleich derselben Aufnahme: rohes S-Log3-Footage einer Sony-Kamera gegenüber dem fertig gegradeten Ergebnis in Premiere Pro. Bewege den Regler, um den Unterschied direkt zu sehen.",
   "summary_en": "A before/after comparison of the same shot: raw S-Log3 footage from a Sony camera against the finished, graded result in Premiere Pro. Drag the slider to see the difference directly.",
-  "cover": "assets/uploads/gallery/football-colorgrade/after.jpg",
-  "chips": ["Sony S-Log3", "Premiere Pro", "Lumetri Color", "Color Science", "Lighting Design"],
+  "cover": "assets/uploads/gallery/football-colorgrade/cover-color-grading.jpg",
+  "chips": [
+    "Sony S-Log3",
+    "Premiere Pro",
+    "Lumetri Color",
+    "Color Science",
+    "Lighting Design"
+  ],
   "compare": {
     "before": "assets/uploads/gallery/football-colorgrade/before.jpg",
     "after": "assets/uploads/gallery/football-colorgrade/after.jpg",
@@ -28,7 +34,10 @@
       "title_en": "Why S-Log3 instead of a standard profile",
       "text_de": "S-Log3 ist ein logarithmisches Gammaprofil von Sony, das den vollen Dynamikumfang des Sensors (rund 14+ Blendenstufen) in die Aufnahme presst, statt ihn wie ein Standardprofil schon im Rec.709-Kontrast \"wegzuschneiden\". Der Trade-off: das Rohbild sieht flach und blass aus, fast grau. Genau das ist beabsichtigt, denn jede Information, die in der Aufnahme steckt, bleibt für die Farbkorrektur verfügbar. Wer stattdessen mit einem fertigen Bildprofil dreht, hat in den Schatten und Lichtern oft schon Information verloren, bevor die Bearbeitung überhaupt beginnt.",
       "text_en": "S-Log3 is a logarithmic gamma profile from Sony that compresses the sensor's full dynamic range (roughly 14+ stops) into the recording, instead of crushing it into Rec.709 contrast in-camera like a standard picture profile would. The trade-off: the raw image looks flat and pale, almost gray. That's intentional — every bit of information the sensor captured stays available for grading. Shooting with a baked-in picture profile instead often means losing detail in the shadows and highlights before editing has even started.",
-      "chips": ["Sony S-Log3", "Dynamic Range"]
+      "chips": [
+        "Sony S-Log3",
+        "Dynamic Range"
+      ]
     },
     {
       "id": "Track 02 · Kameraeinstellungen",
@@ -36,7 +45,11 @@
       "title_en": "Exposure, aperture and frame rate, chosen deliberately",
       "text_de": "Bei Log-Material wird bewusst etwas überbelichtet (\"expose to the right\"), weil Log-Kurven in den Schatten stärker rauschen als in den Lichtern, das Rauschen lässt sich in der Post leichter aus überbelichteten als aus unterbelichteten Bereichen entfernen. Die Blende steuert dabei die Schärfentiefe: eine offenere Blende isoliert die Person im Vordergrund von einem unscharfen Hintergrund, was bei Interviewaufnahmen im Freien hilft, visuelle Unruhe zu reduzieren. Die Framerate richtet sich nach dem Verwendungszweck: 25 oder 50 fps für die übliche europäische Bildwiederholrate, höhere Werte nur, wenn eine Zeitlupe geplant ist, da unnötig hohe Framerates ohne Bedarf nur Speicherplatz und Schärfe (durch kürzere Verschlusszeiten) kosten.",
       "text_en": "With Log footage, you deliberately overexpose a touch (\"expose to the right\"), because Log curves carry more noise in the shadows than in the highlights, and noise is far easier to clean out of overexposed footage than underexposed footage in post. Aperture controls depth of field: a wider aperture isolates the subject from a soft background, which helps reduce visual clutter on outdoor interview shots. Frame rate is chosen by intended use: 25 or 50fps for standard European playback, higher only when a slow-motion shot is planned, since unnecessarily high frame rates only cost storage and sharpness (through shorter shutter speeds) without benefit.",
-      "chips": ["Aperture", "Frame Rate", "Exposure"]
+      "chips": [
+        "Aperture",
+        "Frame Rate",
+        "Exposure"
+      ]
     },
     {
       "id": "Track 03 · Lichtsetzung",
@@ -44,7 +57,11 @@
       "title_en": "Key light, fill light, and mixing daylight with artificial light",
       "text_de": "Das Key Light ist die Hauptlichtquelle, die Form und Kontrast im Gesicht definiert, bei Außenaufnahmen ist das oft die Sonne selbst oder ein Reflektor, der sie lenkt. Das Fill Light gleicht die Schatten aus, die das Key Light wirft, ohne sie ganz zu beseitigen, sonst wirkt das Bild flach. Schwieriger wird es, wenn Tageslicht (ca. 5600K, bläulich) mit künstlichem Licht (oft 3200K, warm) im selben Bild gemischt wird: ohne Abgleich entstehen Farbstiche, ein Gesicht kann auf einer Seite warm und auf der anderen kühl wirken. Die Lösung ist entweder, beide Lichtquellen auf dieselbe Farbtemperatur zu bringen (z. B. mit Farbfolien vor einer Kunstlichtquelle), oder den Unterschied bewusst als Stilmittel zu nutzen und ihn erst in der Farbkorrektur gezielt auszugleichen oder zu verstärken.",
       "text_en": "Key light is the main light source shaping the contrast and form on a face, on outdoor shoots that's often the sun itself or a reflector redirecting it. Fill light softens the shadows the key light casts without removing them entirely, otherwise the image goes flat. The harder part is mixing daylight (around 5600K, cool/blue) with artificial light (often 3200K, warm) in the same frame: left unmatched, this creates color casts, a face can look warm on one side and cool on the other. The fix is either to bring both sources to the same color temperature (gel filters on the artificial source, for instance), or to use the mismatch deliberately as a style choice and balance or amplify it intentionally later in the grade.",
-      "chips": ["Key Light", "Fill Light", "Color Temperature"]
+      "chips": [
+        "Key Light",
+        "Fill Light",
+        "Color Temperature"
+      ]
     },
     {
       "id": "Track 04 · Color Science",
@@ -52,7 +69,10 @@
       "title_en": "Why color science is more than just \"making it pretty\"",
       "text_de": "Color Science beschreibt, wie eine Kamera Licht in Farbwerte übersetzt, jeder Sensor und jedes Log-Profil hat eine eigene Farbcharakteristik. Der erste Schritt in der Bearbeitung ist deshalb nie der kreative Look, sondern die technische Normalisierung: ein LUT (Lookup Table), der für genau dieses Kameraprofil gebaut ist, übersetzt das Log-Signal zurück in einen realistischen, ausgewogenen Ausgangspunkt. Erst danach beginnt das eigentliche Grading, die kreative Entscheidung über Stimmung, Kontrast und Farbtonalität, weil sie auf einer technisch korrekten Basis aufbaut statt auf einem zufällig wirkenden Rohbild.",
       "text_en": "Color science describes how a camera translates light into color values, every sensor and every Log profile has its own color character. The first step in editing is therefore never the creative look, it's technical normalization: a LUT (lookup table) built specifically for that camera profile translates the Log signal back into a realistic, balanced starting point. Only after that does the actual grading begin, the creative decision about mood, contrast and color tonality, because it's built on a technically correct base instead of a randomly flat raw image.",
-      "chips": ["LUT", "Lumetri Color"]
+      "chips": [
+        "LUT",
+        "Lumetri Color"
+      ]
     },
     {
       "id": "Track 05 · Grading",
@@ -60,7 +80,11 @@
       "title_en": "From flat Log image to finished look in Premiere Pro",
       "text_de": "In Premiere Pro läuft die Korrektur in Lumetri Color in klarer Reihenfolge: zuerst die technische Basiskorrektur (Weißabgleich, Belichtung, Kontrast über die Kurven), dann die kreative Schicht (Farbräder für Schatten/Mitten/Lichter, Sättigung, Vignette). Hautton bleibt dabei die wichtigste Referenz, jede Korrektur wird gegen einen natürlich wirkenden Hautton geprüft, denn ein Zuschauer erkennt einen falschen Hautton sofort, selbst ohne die Abweichung benennen zu können. Das Ergebnis im Vergleichsregler oben ist genau dieser Prozess in einem Schritt sichtbar gemacht: ein Bild, das im Rohzustand absichtlich \"langweilig\" aussieht, und ein Bild, das gezielt zu einem fertigen, konsistenten Look geführt wurde.",
       "text_en": "In Premiere Pro the correction runs through Lumetri Color in a clear order: first the technical base correction (white balance, exposure, contrast via the curves), then the creative layer (color wheels for shadows/mids/highlights, saturation, vignette). Skin tone stays the most important reference throughout, every correction gets checked against a natural-looking skin tone, because a viewer spots a wrong skin tone instantly even without being able to name what's off. The slider above makes that exact process visible in one step: an image that's deliberately \"boring\" in its raw state, and an image that's been deliberately carried to a finished, consistent look.",
-      "chips": ["Premiere Pro", "Lumetri Color", "Skin Tone"]
+      "chips": [
+        "Premiere Pro",
+        "Lumetri Color",
+        "Skin Tone"
+      ]
     }
   ]
 }

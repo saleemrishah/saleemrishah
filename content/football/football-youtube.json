@@ -1,11 +1,16 @@
 {
   "order": 10,
-  "title_de": "Fußball-Dokumentationen (YouTube)",
-  "title_en": "Football Documentaries (YouTube)",
+  "title_de": "Tahlilat YouTube · Taktische Analysen",
+  "title_en": "YouTube Breakdowns · Tactical Analysis",
   "summary_de": "Arabischsprachige Fußball-Analyse im Querformat: Recherche, Skript, Schnitt, Thumbnail und Veröffentlichung, alles aus einer Hand. Ein Hobbyprojekt, das ich in meiner Freizeit produziere, weil ich Content-Erstellung liebe, nicht als Geschäft.",
   "summary_en": "Arabic-language football analysis in widescreen format: research, script, edit, thumbnail and publishing, all from one pair of hands. A hobby project I produce in my free time because I love content creation, not as a business.",
-  "cover": "assets/uploads/gallery/football-colorgrade/after.jpg",
-  "chips": ["YouTube", "Premiere Pro", "After Effects", "Analytics"],
+  "cover": "assets/uploads/gallery/football-colorgrade/cover-youtube-analytics.jpg",
+  "chips": [
+    "YouTube",
+    "Premiere Pro",
+    "After Effects",
+    "Analytics"
+  ],
   "body_de": "Beispiel: eine Halbzeitbilanz zum Chelsea-Transferfenster, mit derselben dokumentarischen Sorgfalt produziert wie jede andere Episode.",
   "body_en": "Example: a mid-season review of Chelsea's transfer window, produced with the same documentary-level care as every other episode.",
   "video": "https://www.youtube.com/embed/JZPRQQ6n7Y8",
@@ -20,7 +25,10 @@
       "title_en": "Why widescreen, and why Arabic",
       "text_de": "Das Querformat 16:9 ist die native Auflösung für YouTube-Wiedergabe auf TV, Desktop und in der mobilen App im Querformat, dort findet Langform-Sehverhalten überwiegend statt. Die Sprache Arabisch ist keine Lokalisierungsentscheidung, sondern die Zielgruppe selbst: arabischsprachige Chelsea- und Premier-League-Fans, eine Community mit hoher Wiedergabedauer für taktische Tiefenanalyse, aber wenig vergleichbarem Angebot in dieser Qualität und Sprache.",
       "text_en": "Widescreen 16:9 is the native resolution for YouTube playback on TV, desktop, and the mobile app in landscape, where long-form viewing behavior mostly happens. Arabic isn't a localization choice, it's the audience itself: Arabic-speaking Chelsea and Premier League fans, a community with high watch-time appetite for tactical deep-dives but comparatively little supply at this quality and in this language.",
-      "chips": ["16:9", "Audience"]
+      "chips": [
+        "16:9",
+        "Audience"
+      ]
     },
     {
       "id": "Track 02 · Technische Specs",
@@ -28,7 +36,11 @@
       "title_en": "Resolution, frame rate and audio to YouTube spec",
       "text_de": "Export erfolgt in 1080p (oder 4K bei Bedarf) mit H.264, 25 oder 50 fps passend zur Quellaufnahme, da ein Framerate-Wechsel in der Post zu Ruckeln oder unnötigem Interpolations-Artefakt führt. Audio wird auf -14 LUFS normalisiert, dem von YouTube verwendeten Referenzwert, damit die Lautstärke nicht automatisch abgesenkt wird und im Vergleich zu anderen Kanälen konsistent bleibt. Das Thumbnail wird separat in 1280×720 exportiert, hochkontrastig und mit großer, gut lesbarer Typografie, weil es auf kleinen mobilen Vorschaubildern funktionieren muss.",
       "text_en": "Export runs at 1080p (or 4K when warranted) in H.264, 25 or 50fps matching the source footage, because changing frame rate in post causes stutter or unnecessary interpolation artifacts. Audio is normalized to -14 LUFS, YouTube's reference loudness target, so the platform doesn't auto-duck the volume and it stays consistent against other channels. The thumbnail is exported separately at 1280×720, high-contrast with large, legible type, because it has to read clearly at small mobile preview sizes.",
-      "chips": ["1080p/4K", "-14 LUFS", "Thumbnail 1280×720"]
+      "chips": [
+        "1080p/4K",
+        "-14 LUFS",
+        "Thumbnail 1280×720"
+      ]
     },
     {
       "id": "Track 03 · Struktur & Retention",
@@ -36,7 +48,11 @@
       "title_en": "Structure built for retention, not just the click",
       "text_de": "Die ersten 15 Sekunden enthalten immer den stärksten Aussagepunkt der Episode (den sogenannten Hook), weil YouTube Analytics zeigt, dass der größte Zuschauerabfall in genau diesem Fenster passiert. Danach folgt eine klare Kapitelstruktur, jedes Kapitel beantwortet eine einzelne, im Titel angedeutete Frage, statt offen zu mäandern. Über YouTube Studio wird die Audience-Retention-Kurve jeder Episode geprüft: Einbrüche an bestimmten Zeitstempeln zeigen, welche Abschnitte zu lang oder zu redundant waren, und fließen direkt in den Schnitt der nächsten Episode ein.",
       "text_en": "The first 15 seconds always carry the episode's strongest point (the hook), because YouTube Analytics consistently shows the steepest audience drop happens exactly in that window. After that comes a clear chapter structure, each chapter answers one specific question hinted at in the title, instead of wandering openly. The audience retention curve for every episode gets checked in YouTube Studio: drops at specific timestamps reveal which sections ran too long or felt redundant, and that directly informs how the next episode gets cut.",
-      "chips": ["Hook", "Retention Curve", "YouTube Studio"]
+      "chips": [
+        "Hook",
+        "Retention Curve",
+        "YouTube Studio"
+      ]
     },
     {
       "id": "Track 04 · Algorithmus & Veröffentlichung",
@@ -44,7 +60,11 @@
       "title_en": "How the recommendation algorithm works, and how I plan around it",
       "text_de": "YouTubes Algorithmus priorisiert Click-Through-Rate (wie viele Zuschauer auf das Thumbnail klicken, wenn sie es sehen) und durchschnittliche Wiedergabedauer, beide Werte zusammen entscheiden, wie oft ein Video weiter vorgeschlagen wird. Veröffentlichungszeiten richten sich nach den Aktivitätsspitzen der Zielgruppe in der Golfregion und der Levante (typischerweise Abendstunden nach lokaler Zeit), nicht nach einer pauschalen Faustregel. Titel und Beschreibung folgen einem festen Muster: Schlüsselwort vorne, klare Erwartung, keine Clickbait-Übertreibung, weil ein Erwartungsbruch die Watch-Time im Nachhinein senkt und damit die Reichweite des nächsten Videos schwächt.",
       "text_en": "YouTube's algorithm prioritizes click-through rate (how many viewers click the thumbnail when they see it) and average view duration, together those two numbers determine how often a video keeps getting surfaced. Publish times are set around the audience's actual activity peaks in the Gulf region and the Levant (typically evening hours local time), not a generic rule of thumb. Titles and descriptions follow a fixed pattern: keyword up front, a clear and accurate expectation, no clickbait exaggeration, because a broken expectation lowers watch-time after the fact and weakens how far the next video reaches.",
-      "chips": ["CTR", "Watch Time", "Publish Timing"]
+      "chips": [
+        "CTR",
+        "Watch Time",
+        "Publish Timing"
+      ]
     },
     {
       "id": "Track 05 · Wettbewerbsanalyse",
@@ -52,7 +72,10 @@
       "title_en": "Benchmarking against similar channels",
       "text_de": "Die eigene Performance wird regelmäßig gegen vergleichbare arabischsprachige Fußballkanäle benchmarkt, unter anderem über die Insights in Facebook Business Suite, die Reichweite und Interaktion im Vergleich zu ähnlichen Seiten zeigen. Stärken liegen meist in der inhaltlichen Tiefe und der visuellen Qualität, während andere Kanäle oft auf reine Veröffentlichungsfrequenz setzen, daraus ergibt sich die bewusste Entscheidung, auf Qualität statt Quantität zu setzen statt täglich zu posten.",
       "text_en": "Performance gets benchmarked regularly against comparable Arabic-language football channels, including through the insights in Facebook Business Suite, which show reach and engagement relative to similar pages. Strengths usually show up in content depth and visual quality, while other channels often lean on raw publishing frequency, which is what drives the deliberate choice to prioritize quality over quantity instead of posting daily.",
-      "chips": ["Benchmarking", "Facebook Business Suite"]
+      "chips": [
+        "Benchmarking",
+        "Facebook Business Suite"
+      ]
     }
   ]
 }
