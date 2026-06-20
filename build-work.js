@@ -36,15 +36,21 @@ const SECTION_META = {
     intro_de: "Markenidentitäten, Logos und maßgeschneiderte visuelle Systeme für Social-Media-Kanäle, von Start-ups bis Content Creators.",
     intro_en: "Brand identities, logos and tailored visual systems for social media channels, from start-ups to content creators."
   },
+  automation: {
+    eyebrow_de: "04 · KI-Automatisierung", eyebrow_en: "04 · AI Automation",
+    title_de: "KI-Automatisierung", title_en: "AI Automation",
+    intro_de: "Selbst gebaute Bots und Workflows, die Publishing und Community-Interaktion automatisieren, von der Nachrichten-Pipeline bis zur Persona-Antwort in Echtzeit.",
+    intro_en: "Self-built bots and workflows that automate publishing and community interaction, from the news pipeline to persona replies in real time."
+  },
   football: {
-    eyebrow_de: "04 · Proof · Reichweite", eyebrow_en: "04 · Proof · Reach",
+    eyebrow_de: "05 · Proof · Reichweite", eyebrow_en: "05 · Proof · Reach",
     title_de: "Eigenprojekte · Football Content", title_en: "Personal Projects · Football Content",
     intro_de: "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
     intro_en: "For years I have produced Arabic-language football content in documentary quality: script, edit, thumbnails, animations and publishing, all from one pair of hands. My ongoing real-world proof of full-stack production with reach in the millions."
   }
 };
 
-const ORDER = ['ai', 'motion', 'brand', 'football'];
+const ORDER = ['ai', 'motion', 'brand', 'automation', 'football'];
 
 function readJSON(p) {
   try { return JSON.parse(fs.readFileSync(p, 'utf8')); }

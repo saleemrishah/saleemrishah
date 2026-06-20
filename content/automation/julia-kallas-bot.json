@@ -1,0 +1,58 @@
+{
+  "order": 30,
+  "title_de": "Julia Kallas Bot",
+  "title_en": "Julia Kallas Bot",
+  "summary_de": "Der Interaktions-Layer für die KI-Persona Julia Kallas: beantwortet automatisch Kommentare und Nachrichten auf Instagram, exakt in Julias Stimme und Persönlichkeit, mit fester Obergrenze pro Lauf, damit die Illusion konsistent bleibt.",
+  "summary_en": "The interaction layer for the AI persona Julia Kallas: automatically replies to comments and messages on Instagram, exactly in Julia's voice and personality, with a fixed cap per run to keep the illusion consistent.",
+  "cover": "assets/uploads/gallery/automation/cover-julia-kallas-bot.jpg",
+  "chips": ["n8n", "Claude API", "Google Sheets", "Instagram API"],
+  "body_de": "Direkt verbunden mit dem Julia-Kallas-Projekt im AI-Bereich: dieselbe Persona, jetzt mit einem System, das sie rund um die Uhr am Leben hält.",
+  "body_en": "Directly tied to the Julia Kallas project in the AI section: the same persona, now with a system that keeps her alive around the clock.",
+  "gallery": [
+    { "image": "assets/uploads/gallery/automation/IG.jpg", "aspect_ratio": "auto", "size": "1" }
+  ],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Warum dieser Bot existiert",
+      "title_de": "Eine virtuelle Persona braucht konsistente Interaktion",
+      "title_en": "A virtual persona needs consistent interaction",
+      "text_de": "Julia Kallas ist eine vollständig KI-produzierte Persona, ihre Glaubwürdigkeit hängt davon ab, dass jede Interaktion zu ihrer Identität passt. Eine erkennbar generische oder kühle automatische Antwort würde die Illusion sofort durchbrechen, deshalb ist dieser Bot kein einfacher Auto-Responder, sondern ein eigens auf Julias Charakter trainiertes System.",
+      "text_en": "Julia Kallas is a fully AI-produced persona, her credibility depends on every interaction matching her identity. A visibly generic or cold automated reply would break the illusion immediately, which is why this bot isn't a simple auto-responder, it's a system specifically trained on Julia's character.",
+      "chips": ["AI Persona", "Brand Consistency"]
+    },
+    {
+      "id": "Track 02 · Erfassung",
+      "title_de": "Überwachung neuer Beiträge und Kommentare",
+      "title_en": "Monitoring new posts and comments",
+      "text_de": "Der Bot überwacht laufend Julias Instagram-Konto auf neue Medien und neue Kommentare, statt einmalig zu prüfen, weil Interaktionen über den Tag verteilt eintreffen und zeitnahe Antworten für die Wahrnehmung von Lebendigkeit entscheidend sind.",
+      "text_en": "The bot continuously monitors Julia's Instagram account for new media and new comments, rather than checking once, because interactions arrive spread across the day and timely replies are what makes the persona feel alive rather than scripted.",
+      "chips": ["Instagram API", "Continuous Monitoring"]
+    },
+    {
+      "id": "Track 03 · Vermeidung von Wiederholung",
+      "title_de": "Abgleich gegen den Antwortverlauf",
+      "title_en": "Checking against the reply history",
+      "text_de": "Jeder neue Kommentar wird gegen ein in Google Sheets gespeichertes Verlaufsprotokoll abgeglichen, bevor eine Antwort generiert wird. Ohne diesen Schritt würde derselbe Kommentar bei mehreren Durchläufen wiederholt beantwortet, was sofort als automatisiert und damit unglaubwürdig auffallen würde.",
+      "text_en": "Every new comment gets checked against a history log stored in Google Sheets before a reply is generated. Without that step the same comment would get answered repeatedly across multiple runs, which would immediately read as automated and break the persona's credibility.",
+      "chips": ["Google Sheets", "Deduplication"]
+    },
+    {
+      "id": "Track 04 · Charaktertreue Antworten",
+      "title_de": "Ein Prompt, der Julias Tonfall exakt abbildet",
+      "title_en": "A prompt that mirrors Julia's tone exactly",
+      "text_de": "Claude generiert Antworten über einen eigens auf Julias Persönlichkeit und Sprachstil trainierten Prompt, nicht über eine allgemeine Antwortvorlage. Die Anforderung ist höher als beim Chelsea Bot, dort spreche ich in meiner eigenen, bereits vorhandenen Stimme, hier muss eine vollständig konstruierte Identität konsistent bleiben.",
+      "text_en": "Claude generates replies through a prompt specifically trained on Julia's personality and speech style, not a general-purpose reply template. The bar here is higher than for the Chelsea Bot, there I'm speaking in my own already-existing voice, here a fully constructed identity has to stay consistent.",
+      "chips": ["Claude API", "Persona Prompting"]
+    },
+    {
+      "id": "Track 05 · Begrenzung",
+      "title_de": "Maximal drei Antworten pro Durchlauf",
+      "title_en": "A maximum of three replies per run",
+      "text_de": "Die Obergrenze von drei Antworten pro Lauf ist enger gesetzt als beim Chelsea Bot, weil Julias Konto kleiner ist und ein plötzlicher Schwall identisch klingender Antworten schneller auffallen und unnatürlich wirken würde. Lieber häufigere, kleine Durchläufe als ein einzelner großer, der die Illusion einer echten Person riskiert.",
+      "text_en": "The cap of three replies per run is set tighter than on the Chelsea Bot, because Julia's account is smaller and a sudden burst of identical-sounding replies would stand out faster and read as unnatural. Frequent small runs are preferable to one large run that risks the illusion of a real person.",
+      "chips": ["Rate Limiting", "3 Replies per Run"]
+    }
+  ]
+}

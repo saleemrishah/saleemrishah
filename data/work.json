@@ -42,8 +42,8 @@
             "Illustrator"
           ],
           "body": {
-            "de": "Julia Kallas ist eine zu 100 Prozent KI-generierte Persona im Podcast-Format auf Instagram (@juliakallas.de). Das Projekt beantwortet eine konkrete Frage: Kann man eine glaubwürdige Influencerin von Null aufbauen und in drei Monaten zur Mikro-Influencerin entwickeln, ohne dass die Identität bricht? Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa. Die Sprache ist bewusst Englisch gewählt, um innerhalb derselben Zielgruppe die größtmögliche Reichweite zu erreichen. Das kommerzielle Ziel ist klar gestaffelt: an erster Stelle die Vermarktung von Katzenprodukten, an zweiter Stelle Mode, getragen von Julia selbst.\n\nDer entscheidende Punkt ist die Methode. Julia ist kein \"Nano Banana\"-Output wie bei einem Gelegenheitsnutzer. Die Konsistenz, die größte Hürde generativer KI, wird über einen eigens trainierten LoRA für Julias Gesichtszüge gelöst, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, der die Identität über Licht, Winkel und Outfits hinweg stabil hält. Den Großteil der Arbeit habe ich bewusst lokal in ComfyUI umgesetzt: aus Kostengründen, aus Datenschutzgründen und vor allem wegen der deutlich größeren kreativen Kontrolle, die ein lokaler Stack gegenüber reinen Cloud-Tools bietet.\n\nDie Bewegtbild-Inhalte entstehen in einer hybriden Pipeline. Die Animation kommt teils aus lokalen Modellen in ComfyUI, teils aus Online-Modellen wie Kling und Runway, je nach Anforderung an Bewegung und Qualität. Die Stimme basiert auf einem eigenen Voice-Model in Verbindung mit ElevenLabs, sodass Tonfall und Persönlichkeit über alle Clips hinweg gleich bleiben. Die Lippensynchronisation wird über HeyGen realisiert. Das Ergebnis ist eine Figur, die nicht nur gut aussieht, sondern konsistent \"performt\".\n\nReichweite allein genügt nicht, sie muss gehalten werden. Dafür habe ich eine Automatisierung auf Basis von n8n mit eigenen Skripten und Claude gebaut. Ein trainierter Agent übernimmt dabei exakt Julias Persönlichkeit und beantwortet Kommentare in Echtzeit, nicht roboterhaft, sondern so, als würde Julia selbst antworten. Der stärkste einzelne Effekt: ein Sprung von 110.000 in 24 Stunden. Insgesamt erreichte die Persona eine Reichweite von 1,5 Millionen.\n\nWichtig ist, dass dieses Projekt nicht \"nur KI\" ist. Es ruht auf klassischem Handwerk: das Logo in Illustrator, Lower Thirds und Animation in After Effects, der Schnitt in Premiere Pro, eine eigene farbliche Markenidentität mit einem charakteristischen Farbverlauf für Julias Vibe sowie eine durchdachte, nicht zufällige Publishing-Strategie. KI liefert die Skalierung, die Handarbeit liefert die Qualität.",
-            "en": "Julia Kallas is a 100 percent AI-generated persona in a podcast format on Instagram (@juliakallas.de). The project answers a specific question: can you build a believable influencer from zero and grow her into a micro-influencer in three months without the identity ever breaking? The audience is the international \"cat community\" across the USA, Canada and Europe. English was a deliberate choice, used to reach the largest possible slice of that same audience. The commercial goal is clearly tiered: first, marketing cat products, and second, fashion, worn by Julia herself.\n\nThe decisive point is the method. Julia is not a \"Nano Banana\" output like a casual user would produce. Consistency, the biggest hurdle in generative AI, is solved through a custom-trained LoRA for Julia's facial features, combined with a reference-image-driven ComfyUI workflow that holds her identity stable across lighting, angles and outfits. I deliberately ran most of the work locally in ComfyUI: for cost, for data privacy and above all for the far greater creative control a local stack offers over cloud-only tools.\n\nThe motion content runs through a hybrid pipeline. Animation comes partly from local models in ComfyUI and partly from online models such as Kling and Runway, depending on the motion and quality the shot requires. The voice is built on a dedicated voice model paired with ElevenLabs, so tone and personality stay identical across every clip. Lip-sync is handled through HeyGen. The result is a character that does not just look right, but performs consistently.\n\nReach on its own is not enough, it has to be held. For that I built an automation on n8n with custom scripts and Claude. A trained agent fully adopts Julia's personality and answers comments in real time, not robotically, but as if Julia were replying herself. The single strongest effect: a jump of 110,000 in 24 hours. In total, the persona reached 1.5 million.\n\nWhat matters is that this project is not \"just AI\". It rests on traditional craft: the logo in Illustrator, lower thirds and animation in After Effects, the edit in Premiere Pro, a dedicated color identity with a signature gradient for Julia's vibe, and a deliberate, non-random publishing strategy. AI delivers the scale, the handwork delivers the quality.\n"
+            "de": "Julia Kallas ist eine zu 100 Prozent KI-generierte Persona im Podcast-Format auf Instagram (@juliakallas.de), entstanden um eine Frage zu beantworten: Kann man eine glaubwürdige Influencerin von Null in drei Monaten zur Mikro-Influencerin entwickeln, ohne dass die Identität bricht.",
+            "en": "Julia Kallas is a 100 percent AI-generated persona in a podcast format on Instagram (@juliakallas.de), built to answer one question: can you grow a believable influencer from zero to micro-influencer in three months without the identity ever breaking."
           },
           "video": "https://www.instagram.com/reel/DZUyMkNji2w/embed/",
           "gallery": [
@@ -75,7 +75,66 @@
           },
           "tracks": [
             {
-              "id": "Track 01 · Concept",
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Zielgruppe & kommerzielles Ziel",
+                "en": "Audience & commercial goal"
+              },
+              "text": {
+                "de": "Zielgruppe ist die internationale \"Cat Community\" in den USA, Kanada und Europa, Sprache bewusst Englisch für maximale Reichweite. Ziel klar gestaffelt: zuerst Katzenprodukte, dann Mode, getragen von Julia selbst.",
+                "en": "The audience is the international \"cat community\" across the USA, Canada and Europe, English chosen deliberately for maximum reach within it. The commercial goal is clearly tiered: first cat products, then fashion, worn by Julia herself."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Methode",
+              "title": {
+                "de": "Konsistenz statt Zufallstreffer",
+                "en": "Consistency, not a lucky roll"
+              },
+              "text": {
+                "de": "Julia ist kein \"Nano Banana\"-Output. Ein eigens trainierter LoRA für ihre Gesichtszüge, kombiniert mit einem referenzbild-gesteuerten ComfyUI-Workflow, hält die Identität über Licht, Winkel und Outfits hinweg stabil. Größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
+                "en": "Julia is not a \"Nano Banana\" output. A custom-trained LoRA for her facial features, combined with a reference-image-driven ComfyUI workflow, keeps her identity stable across lighting, angles and outfits. Mostly run locally for cost, privacy and creative control."
+              },
+              "chips": [
+                "ComfyUI",
+                "Custom LoRA"
+              ]
+            },
+            {
+              "id": "Track 03 · Bewegtbild",
+              "title": {
+                "de": "Hybride Pipeline für Stimme & Bewegung",
+                "en": "Hybrid pipeline for voice & motion"
+              },
+              "text": {
+                "de": "Animation aus lokalen ComfyUI-Modellen und Online-Modellen wie Kling und Runway, je nach Bedarf. Stimme über ein eigenes Voice-Model mit ElevenLabs, Lip-Sync via HeyGen. Ergebnis: eine Figur, die konsistent \"performt\".",
+                "en": "Animation drawn from local ComfyUI models and online models like Kling and Runway, depending on the shot. Voice built on a dedicated model with ElevenLabs, lip-sync through HeyGen. The result performs consistently, not just looks right."
+              },
+              "chips": [
+                "Kling",
+                "Runway",
+                "ElevenLabs",
+                "HeyGen"
+              ]
+            },
+            {
+              "id": "Track 04 · Wachstum",
+              "title": {
+                "de": "Automatisierung & Community",
+                "en": "Automation & community"
+              },
+              "text": {
+                "de": "n8n-Automatisierung mit eigenen Skripten und Claude: ein trainierter Agent antwortet in Echtzeit als Julia. Stärkster Effekt: plus 110.000 Follower in 24 Stunden, Gesamtreichweite 1,5 Millionen.",
+                "en": "An n8n automation with custom scripts and Claude runs a trained agent that replies in real time as Julia. Strongest single effect: plus 110,000 followers in 24 hours, total reach 1.5 million."
+              },
+              "chips": [
+                "n8n",
+                "Claude"
+              ]
+            },
+            {
+              "id": "Track 05 · Concept",
               "title": {
                 "de": "Themen & Content-Strategie",
                 "en": "Topics & content strategy"
@@ -91,7 +150,7 @@
               ]
             },
             {
-              "id": "Track 02 · Identity",
+              "id": "Track 06 · Identity",
               "title": {
                 "de": "Charakter-Design & Identitäts-Training",
                 "en": "Character design & identity training"
@@ -107,7 +166,7 @@
               ]
             },
             {
-              "id": "Track 03 · Image",
+              "id": "Track 07 · Image",
               "title": {
                 "de": "Bildgenerierung",
                 "en": "Image generation"
@@ -123,7 +182,7 @@
               ]
             },
             {
-              "id": "Track 04 · Motion",
+              "id": "Track 08 · Motion",
               "title": {
                 "de": "Videogenerierung & Lipsync",
                 "en": "Video generation & lipsync"
@@ -139,7 +198,7 @@
               ]
             },
             {
-              "id": "Track 05 · Voice",
+              "id": "Track 09 · Voice",
               "title": {
                 "de": "Stimm-Design",
                 "en": "Voice design"
@@ -153,7 +212,7 @@
               ]
             },
             {
-              "id": "Track 06 · Post",
+              "id": "Track 10 · Post",
               "title": {
                 "de": "Sound Engineering & Schnitt",
                 "en": "Sound engineering & edit"
@@ -168,7 +227,7 @@
               ]
             },
             {
-              "id": "Track 07 · Publish",
+              "id": "Track 11 · Publish",
               "title": {
                 "de": "Publishing & Wachstum",
                 "en": "Publishing & growth"
@@ -206,6 +265,108 @@
           }
         },
         {
+          "id": "orion-flooring",
+          "title": {
+            "de": "Orion Flooring: Vertikale Vinyl-Kampagne mit KI-Stimme",
+            "en": "Orion Flooring: A Vertical Vinyl Campaign With an AI Voice"
+          },
+          "summary": {
+            "de": "Eine Vinylboden-Werbung im vertikalen 9:16-Format für Orion Flooring, Kalifornien, beauftragt über eine Werbeagentur. Eine KI-Persona mit amerikanischem Vibe und akzentfreier amerikanischer Stimme trägt die Botschaft, bewusst reduziert auf Wunsch des Kunden.",
+            "en": "A vertical 9:16 vinyl flooring ad for Orion Flooring, California, commissioned through an advertising agency. An AI persona with an American vibe and an accent-free American voice carries the message, deliberately stripped back at the client's request."
+          },
+          "cover": "assets/uploads/orion-flooring-cover.png",
+          "chips": [
+            "Higgsfield",
+            "Nano Banana",
+            "ElevenLabs",
+            "Adobe Audition",
+            "Premiere Pro",
+            "After Effects"
+          ],
+          "body": {
+            "de": "Orion Flooring ist ein Bodenbelagsunternehmen in Kalifornien mit Standorten in Rialto, Anaheim und Hesperia. Der Auftrag kam über eine Werbeagentur, gedacht für ein vollständig amerikanisches Publikum.",
+            "en": "Orion Flooring is a flooring company based in California with locations in Rialto, Anaheim and Hesperia. The job came through an advertising agency, built for a fully American audience."
+          },
+          "video": "https://player.vimeo.com/video/1202644495?h=d287b78fd6&title=0&byline=0&portrait=0&dnt=1",
+          "link": {
+            "url": "https://orionflooring.com",
+            "label_de": "orionflooring.com ↗",
+            "label_en": "orionflooring.com ↗"
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Auftrag und Zielgruppe",
+                "en": "Brief and audience"
+              },
+              "text": {
+                "de": "Vinylboden-Werbung über eine Werbeagentur für Orion Flooring, Kalifornien, im vertikalen 9:16-Format. Diese Zielgruppe war der entscheidende Ausgangspunkt für jede kreative Entscheidung im Projekt.",
+                "en": "A vinyl flooring ad commissioned through an advertising agency for Orion Flooring, California, in a vertical 9:16 format. That audience was the deciding factor behind every creative choice on the project."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Persona & Stimme",
+              "title": {
+                "de": "Persona-Entwicklung",
+                "en": "Persona development"
+              },
+              "text": {
+                "de": "Statt eines neutralen Sprechers oder eines generischen KI-Gesichts: eine Figur mit klar amerikanischem Vibe, getragen von einer akzentfreien amerikanischen Stimme über ElevenLabs. Bei einem rein amerikanischen Publikum entscheidet genau dieses Detail, ob eine Werbung wie \"von hier\" wirkt oder wie ein importiertes Stockvideo.",
+                "en": "Instead of a neutral voiceover or a generic AI face: a character with a distinctly American vibe, carried by an accent-free American voice through ElevenLabs. For an audience that is entirely American, that single detail decides whether an ad feels like it belongs there or like an imported stock clip."
+              },
+              "chips": [
+                "ElevenLabs"
+              ]
+            },
+            {
+              "id": "Track 03 · Bild & Bewegtbild",
+              "title": {
+                "de": "Visuelle Grundlage",
+                "en": "Visual foundation"
+              },
+              "text": {
+                "de": "Higgsfield und Nano Banana für Bild- und Bewegtbild-Generierung der Persona. Die zweite prägende Entscheidung kam direkt vom Kunden: maximale Einfachheit, ohne überflüssige Bewegung oder Effekte, die vom Produkt ablenken.",
+                "en": "Higgsfield and Nano Banana for image and motion generation of the persona. The second defining decision came straight from the client: maximum simplicity, with no unnecessary movement or effects pulling attention away from the product."
+              },
+              "chips": [
+                "Higgsfield",
+                "Nano Banana"
+              ]
+            },
+            {
+              "id": "Track 04 · Audio",
+              "title": {
+                "de": "Audiobearbeitung",
+                "en": "Audio engineering"
+              },
+              "text": {
+                "de": "Saubere Sprachqualität und Tonmischung in Adobe Audition als Basis für eine glaubwürdige, ruhige Stimme, ohne dabei leblos zu wirken.",
+                "en": "Clean speech quality and audio mixing in Adobe Audition as the basis for a credible, calm voice that never feels lifeless."
+              },
+              "chips": [
+                "Adobe Audition"
+              ]
+            },
+            {
+              "id": "Track 05 · Schnitt",
+              "title": {
+                "de": "Schnitt und Finishing",
+                "en": "Edit and finishing"
+              },
+              "text": {
+                "de": "Montage in Premiere Pro, gezielte Bewegtbild-Akzente in After Effects. Das Ergebnis: eine vertikale Werbung, ruhig, glaubwürdig amerikanisch, ganz auf das Produkt fokussiert statt auf Inszenierung.",
+                "en": "Assembly in Premiere Pro, targeted motion accents in After Effects. The result: a vertical ad that's calm, credibly American, and entirely focused on the product rather than the staging."
+              },
+              "chips": [
+                "Premiere Pro",
+                "After Effects"
+              ]
+            }
+          ]
+        },
+        {
           "id": "chunky-rhino",
           "title": {
             "de": "Chunky Rhino: KI-Charakter für Edutainment",
@@ -228,8 +389,8 @@
             "Adobe Audition"
           ],
           "body": {
-            "de": "Chunky Rhino ist ein KI-Charakter, den ich für einen EdTech-Kunden entwickelt habe. Die Aufgabe war klar umrissen: eine Figur, die technisches Wissen über künstliche Intelligenz vermittelt, ohne dass die Zielgruppe von der Komplexität des Themas abgeschreckt wird. Die Lösung liegt im Charakterdesign selbst. Chunky ist bewusst als Kontrast angelegt: optisch ein massiges, fast einschüchterndes Nashorn, im Wesen jedoch eine humorvolle, nahbare Persönlichkeit. Genau dieser Widerspruch macht ihn sympathisch und senkt die Einstiegshürde zu einem sonst sperrigen Thema. Eine ernste Materie wird über eine warmherzige, komische Figur zugänglich.\n\nMethodisch folgt das Projekt derselben Pipeline, die ich für meine eigenen KI-Personas einsetze. Die Konsistenz der Figur, also die größte Hürde generativer KI, wird über einen eigens trainierten LoRA in Verbindung mit einem referenzgesteuerten ComfyUI-Workflow gelöst. Den Kern der Bildgenerierung habe ich bewusst lokal in ComfyUI umgesetzt, aus Kostengründen, aus Datenschutzgründen und vor allem wegen der deutlich größeren kreativen Kontrolle. So bleibt Chunky über unterschiedliche Szenen, Winkel und Kontexte hinweg dieselbe, klar wiedererkennbare Figur.\n\nDie Bewegtbild-Inhalte entstehen in einer hybriden Pipeline aus lokalen Modellen in ComfyUI und Online-Modellen wie Kling und Runway, je nach Anforderung an Bewegung und Qualität. Die Stimme basiert auf einem eigenen Voice-Model in Verbindung mit ElevenLabs, sodass Chunkys vokale Identität über alle Inhalte hinweg konstant bleibt, ergänzt durch Lippensynchronisation. Entscheidend ist, dass das Projekt nicht \"nur KI\" ist. Die gesamte Postproduktion liegt in klassischem Handwerk: Schnitt und Montage in Premiere Pro, Motion Design in After Effects sowie eine vollständige Audiobearbeitung in Adobe Audition für einen sauberen, studioreifen Klang. KI liefert die Skalierung, die Handarbeit liefert die Qualität.\n\nDas Ergebnis ist eine Figur, die als wiederverwendbares Edutainment-Format funktioniert: ein charismatischer Avatar, der schwierige Inhalte trägt und die Barriere zum Lernen spürbar senkt.",
-            "en": "Chunky Rhino is an AI character I developed for an EdTech client. The brief was clearly defined: a figure that teaches technical knowledge about artificial intelligence without the audience being put off by the complexity of the subject. The solution sits in the character design itself. Chunky is deliberately built on contrast: visually a massive, almost intimidating rhino, but in temperament a humorous, approachable personality. It is exactly this contradiction that makes him likeable and lowers the barrier to an otherwise heavy topic. A serious subject becomes accessible through a warm, comic character.\n\nMethodically, the project follows the same pipeline I use for my own AI personas. Character consistency, the biggest hurdle in generative AI, is solved through a custom-trained LoRA combined with a reference-driven ComfyUI workflow. I deliberately ran the core of the image generation locally in ComfyUI, for cost, for data privacy and above all for the far greater creative control. This keeps Chunky the same, clearly recognizable figure across different scenes, angles and contexts.\n\nThe motion content runs through a hybrid pipeline of local models in ComfyUI and online models such as Kling and Runway, depending on the motion and quality each shot requires. The voice is built on a dedicated voice model paired with ElevenLabs, so Chunky's vocal identity stays constant across all content, complemented by lip-sync. What matters is that this project is not \"just AI\". The entire post-production rests on traditional craft: editing in Premiere Pro, motion design in After Effects, and full audio engineering in Adobe Audition for clean, studio-grade sound.\n\nThe result is a figure that works as a reusable edutainment format: a charismatic avatar that carries difficult content and noticeably lowers the barrier to learning."
+            "de": "Chunky Rhino ist ein KI-Charakter für einen EdTech-Kunden: eine Figur, die technisches KI-Wissen vermittelt, ohne die Zielgruppe von der Komplexität des Themas abzuschrecken.",
+            "en": "Chunky Rhino is an AI character built for an EdTech client: a figure that teaches technical AI knowledge without putting the audience off with the complexity of the subject."
           },
           "video": "https://www.instagram.com/reel/DUD-ZtEDUcY/embed/",
           "gallery": [
@@ -267,8 +428,8 @@
                 "en": "Character concept & brief"
               },
               "text": {
-                "de": "Übersetzung des EdTech-Ziels in ein Design: ein massiges Nashorn mit warmer, komischer Persönlichkeit, dessen Kontrast die Einstiegshürde senkt.",
-                "en": "Translating the EdTech goal into a design: a massive rhino with a warm, comic personality whose contrast lowers the entry barrier."
+                "de": "Chunky ist bewusst als Kontrast angelegt: optisch ein massiges, fast einschüchterndes Nashorn, im Wesen eine humorvolle, nahbare Persönlichkeit. Genau dieser Widerspruch macht ihn sympathisch und senkt die Einstiegshürde zu einem sonst sperrigen Thema.",
+                "en": "Chunky is deliberately built on contrast: visually a massive, almost intimidating rhino, but in temperament a humorous, approachable personality. It is exactly this contradiction that makes him likeable and lowers the barrier to an otherwise heavy topic."
               },
               "chips": [
                 "Character Design",
@@ -282,8 +443,8 @@
                 "en": "Identity & LoRA training"
               },
               "text": {
-                "de": "Aufbau eines eigenen LoRA für Chunky als Fundament für stabile, wiedererkennbare Konsistenz.",
-                "en": "Building a custom LoRA for Chunky as the foundation for stable, recognizable consistency."
+                "de": "Aufbau eines eigenen LoRA für Chunky als Fundament für stabile, wiedererkennbare Konsistenz, gelöst über die größte Hürde generativer KI: Charaktertreue über jede Szene hinweg.",
+                "en": "Building a custom LoRA for Chunky as the foundation for stable, recognizable consistency, solving the biggest hurdle in generative AI: character fidelity across every scene."
               },
               "chips": [
                 "Custom LoRA",
@@ -297,8 +458,8 @@
                 "en": "Reference-driven ComfyUI workflow"
               },
               "text": {
-                "de": "Ein lokaler Workflow mit Referenzbild hält die Figur über Szenen, Winkel und Kontexte hinweg konstant.",
-                "en": "A local workflow with a reference image keeps the figure constant across scenes, angles and contexts."
+                "de": "Ein lokaler Workflow mit Referenzbild hält die Figur über Szenen, Winkel und Kontexte hinweg konstant, größtenteils lokal umgesetzt für Kosten, Datenschutz und kreative Kontrolle.",
+                "en": "A local workflow with a reference image keeps the figure constant across scenes, angles and contexts, mostly run locally for cost, privacy and creative control."
               },
               "chips": [
                 "ComfyUI (local)",
@@ -312,8 +473,8 @@
                 "en": "Hybrid video generation"
               },
               "text": {
-                "de": "Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway.",
-                "en": "Motion produced from local models in ComfyUI combined with online models such as Kling and Runway."
+                "de": "Bewegtbild aus lokalen Modellen in ComfyUI kombiniert mit Online-Modellen wie Kling und Runway, je nach Anforderung an Bewegung und Qualität.",
+                "en": "Motion produced from local models in ComfyUI combined with online models such as Kling and Runway, depending on the motion and quality each shot requires."
               },
               "chips": [
                 "Kling",
@@ -328,8 +489,8 @@
                 "en": "Voice & lip-sync"
               },
               "text": {
-                "de": "Eigenes Voice-Model mit ElevenLabs für eine konstante vokale Identität, ergänzt durch Lip-Sync.",
-                "en": "A dedicated voice model with ElevenLabs for a constant vocal identity, complemented by lip-sync."
+                "de": "Eigenes Voice-Model mit ElevenLabs für eine konstante vokale Identität über alle Inhalte hinweg, ergänzt durch Lip-Sync.",
+                "en": "A dedicated voice model with ElevenLabs for a constant vocal identity across all content, complemented by lip-sync."
               },
               "chips": [
                 "ElevenLabs"
@@ -342,8 +503,8 @@
                 "en": "Edit & motion design"
               },
               "text": {
-                "de": "Postproduktion in Premiere Pro und Motion Design in After Effects für ein klares, didaktisches Tempo.",
-                "en": "Post-production in Premiere Pro and motion design in After Effects for a clear, didactic pace."
+                "de": "Postproduktion in Premiere Pro und Motion Design in After Effects für ein klares, didaktisches Tempo. Entscheidend: das Projekt ist nicht \"nur KI\", die Postproduktion ruht auf klassischem Handwerk.",
+                "en": "Post-production in Premiere Pro and motion design in After Effects for a clear, didactic pace. What matters: this project is not \"just AI\", post-production rests on traditional craft."
               },
               "chips": [
                 "Premiere Pro",
@@ -357,8 +518,8 @@
                 "en": "Audio engineering"
               },
               "text": {
-                "de": "Vollständige Audiobearbeitung in Adobe Audition für sauberen, studioreifen Klang.",
-                "en": "Full audio processing in Adobe Audition for clean, studio-grade sound."
+                "de": "Vollständige Audiobearbeitung in Adobe Audition für sauberen, studioreifen Klang. Das Ergebnis: ein charismatischer Avatar, der schwierige Inhalte trägt und die Lernbarriere spürbar senkt.",
+                "en": "Full audio processing in Adobe Audition for clean, studio-grade sound. The result: a charismatic avatar that carries difficult content and noticeably lowers the barrier to learning."
               },
               "chips": [
                 "Adobe Audition"
@@ -422,6 +583,103 @@
       },
       "items": [
         {
+          "id": "cheetos-chips",
+          "title": {
+            "de": "Markenidentität und Verpackungsdesign für eine Chips-Linie",
+            "en": "Brand Identity and Packaging Design for a Chips Line"
+          },
+          "summary": {
+            "de": "Master-Logo, eigenständige Sub-Logos für drei Geschmacksrichtungen und vollständiges Verpackungsdesign für eine Chips-Marke, inszeniert in fotorealistischen Social-Media-Postings.",
+            "en": "A master logo, standalone sub-logos for three flavors, and full packaging design for a chips brand, staged in photorealistic social media posts."
+          },
+          "cover": "assets/uploads/gallery/cheetos-chips/Pizza.png",
+          "chips": [
+            "Illustrator",
+            "Photoshop",
+            "Brand Identity",
+            "Packaging",
+            "Social Media"
+          ],
+          "body": {
+            "de": "Für diese Chips-Marke war der Auftrag mehrstufig: ein Master-Logo für die Dachmarke, eigenständige Sub-Logos für drei Geschmacksrichtungen, und das komplette Verpackungsdesign jeder Tüte.",
+            "en": "This chips brand needed a layered system: a master logo for the umbrella brand, standalone sub-logos for three flavors, and the full packaging design for every bag."
+          },
+          "gallery": [
+            {
+              "src": "assets/uploads/gallery/cheetos-chips/Cheetos_package_Preview.jpg",
+              "ar": "4:3",
+              "size": "full"
+            },
+            {
+              "src": "assets/uploads/gallery/cheetos-chips/TeuflischScharf.png",
+              "ar": "1:1",
+              "size": "1"
+            },
+            {
+              "src": "assets/uploads/gallery/cheetos-chips/Zwiebel.png",
+              "ar": "1:1",
+              "size": "1"
+            }
+          ],
+          "tracks": [
+            {
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Auftrag und Struktur",
+                "en": "Brief and structure"
+              },
+              "text": {
+                "de": "Master-Logo für die Dachmarke plus eigenständige Sub-Logos für drei Geschmacksrichtungen, jede mit eigener visueller Persönlichkeit innerhalb derselben Markenfamilie, ohne die Wiedererkennung der Hauptmarke zu verlieren.",
+                "en": "A master logo for the umbrella brand plus standalone sub-logos for three flavors, each with its own visual personality within the same brand family, without losing recognition of the main brand."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Sub-Logos",
+              "title": {
+                "de": "Drei Geschmackswelten",
+                "en": "Three flavor worlds"
+              },
+              "text": {
+                "de": "Pizza bekam ein freches Mashup-Maskottchen in Rot und Gold, verspielt und einladend. Teuflisch Scharf nutzt ein Teufel-Charakter in Blau-Schwarz mit Feuerrot, klar als Schärfe-Warnung lesbar. Zwiebel bricht bewusst mit dem Comic-Stil: ein Samurai-Zwiebel-Charakter in Gelb-Grün, ernster im Ton.",
+                "en": "Pizza got a playful mashup mascot in red and gold, fun and inviting. Teuflisch Scharf (Devilishly Hot) uses a devil character in blue-black with fiery red, reading clearly as a heat warning. Zwiebel (Onion) deliberately breaks from the comic style: a samurai onion character in yellow-green, more serious in tone."
+              },
+              "chips": [
+                "Illustrator"
+              ]
+            },
+            {
+              "id": "Track 03 · Verpackung",
+              "title": {
+                "de": "Tüten-Design",
+                "en": "Bag packaging"
+              },
+              "text": {
+                "de": "Vollständiges Verpackungsdesign jeder Tüte inklusive Markenführung, Geschmacksangabe und Produktillustration, abgestimmt auf die jeweilige Geschmackswelt.",
+                "en": "Full packaging design for each bag including brand lockup, flavor callout and product illustration, matched to its flavor world."
+              },
+              "chips": [
+                "Illustrator",
+                "Photoshop"
+              ]
+            },
+            {
+              "id": "Track 04 · Inszenierung",
+              "title": {
+                "de": "Social-Media-Composings",
+                "en": "Social media composites"
+              },
+              "text": {
+                "de": "Freistellen der fertigen Tüten und Compositing in realistische, zur Geschmacksrichtung passende Umgebungen (Pizzeria-Holzofen, Flammen und Chili, Zwiebelschneidebrett), fertig zum direkten Posten.",
+                "en": "Cutting out the finished bags and compositing them into realistic, flavor-matched environments (a wood-fired pizzeria, flames and chili, an onion cutting board), ready to post directly."
+              },
+              "chips": [
+                "Photoshop"
+              ]
+            }
+          ]
+        },
+        {
           "id": "passion-cafe",
           "title": {
             "de": "Visuelle Identität für eine Spezialitätenrösterei",
@@ -439,108 +697,60 @@
             "Packaging"
           ],
           "body": {
-            "de": "Dieses Projekt umfasst die Entwicklung einer maßgeschneiderten visuellen Identität für Passion Cafe, eine exklusive Destination für Kaffeekenner und Liebhaber der Röstkunst. Das zentrale visuelle Element ist ein meisterhaft konstruiertes Monogramm, das den Anfangsbuchstaben P auf raffinierte Weise mit der Silhouette einer dampfenden Kaffeetasse und organischen Röstbohnen verbindet.\n\nDie Farbentscheidung war bewusst reduziert: eine durchdachte, monochrome braune Palette fängt die verschiedenen, intensiven Röststufen visuell ein und weckt unmittelbare Assoziationen an das Produkt selbst, ohne auf zusätzliche Farben angewiesen zu sein. Die Kombination aus weichen, einladenden Kurven im Bildzeichen und einer eleganten, kontrastreichen Serifenschrift vermittelt nicht nur Wärme und handwerkliche Expertise, sondern auch eine Verwurzelung in der traditionellen Kaffeekultur.\n\nDas Logo wurde so konstruiert, dass es auf Tassen, Verpackungen und Ladenfronten gleich gut funktioniert: Die Linienführung bleibt auch in kleinem Maßstab klar lesbar, während die Komposition auf großen Flächen genug Raum für Wiedererkennung lässt. Das Resultat ist eine organische und zugleich sehr anspruchsvolle visuelle Sprache, die sich perfekt für die Anwendung auf physischen Produkten eignet.",
-            "en": "This project covers the development of a tailored visual identity for Passion Cafe, an exclusive destination for coffee connoisseurs and lovers of the roasting craft. The central visual element is a masterfully constructed monogram that fuses the initial letter P, in a refined way, with the silhouette of a steaming coffee cup and organic roasted beans.\n\nThe color decision was deliberately restrained: a considered, monochrome brown palette visually captures the different, intense roast levels and triggers immediate associations with the product itself, without relying on additional colors. The combination of soft, inviting curves in the pictorial mark and an elegant, high-contrast serif typeface conveys not just warmth and craft expertise, but also a rootedness in traditional coffee culture.\n\nThe logo was built to work equally well on cups, packaging and storefronts: the linework stays clearly legible even at small scale, while the composition leaves enough room for recognition at large format. The result is an organic yet highly sophisticated visual language, perfectly suited for application on physical products."
-          }
-        },
-        {
-          "id": "orion-flooring",
-          "title": {
-            "de": "Orion Flooring: Vertikale Vinyl-Kampagne mit KI-Stimme",
-            "en": "Orion Flooring: A Vertical Vinyl Campaign With an AI Voice"
-          },
-          "summary": {
-            "de": "Eine Vinylboden-Werbung im vertikalen 9:16-Format für Orion Flooring, Kalifornien, beauftragt über eine Werbeagentur. Eine KI-Persona mit amerikanischem Vibe und akzentfreier amerikanischer Stimme trägt die Botschaft, bewusst reduziert auf Wunsch des Kunden.",
-            "en": "A vertical 9:16 vinyl flooring ad for Orion Flooring, California, commissioned through an advertising agency. An AI persona with an American vibe and an accent-free American voice carries the message, deliberately stripped back at the client's request."
-          },
-          "cover": "assets/uploads/orion-flooring-cover.png",
-          "chips": [
-            "Higgsfield",
-            "Nano Banana",
-            "ElevenLabs",
-            "Adobe Audition",
-            "Premiere Pro",
-            "After Effects"
-          ],
-          "body": {
-            "de": "Orion Flooring ist ein Bodenbelagsunternehmen in Kalifornien mit Standorten in Rialto, Anaheim und Hesperia. Der Auftrag kam über eine Werbeagentur: eine Vinylboden-Werbung im vertikalen 9:16-Format, gedacht für ein vollständig amerikanisches Publikum. Diese Zielgruppe war der entscheidende Ausgangspunkt für jede kreative Entscheidung im Projekt.\n\nDie zentrale Entscheidung war die Persona. Statt eines neutralen Sprechers oder eines generischen KI-Gesichts habe ich eine Figur mit klar amerikanischem \"Vibe\" entwickelt, getragen von einer akzentfreien amerikanischen Stimme. Bei einem Publikum, das ausschließlich amerikanisch ist, entscheidet genau dieses Detail darüber, ob eine Werbung wie \"von hier\" wirkt oder wie ein importiertes Stockvideo. Es ist ein bewusster Unterschied zwischen einer KI-Figur, die irgendwie amerikanisch aussieht, und einer, die durch Sprachfarbe, Tonfall und Auftreten tatsächlich amerikanisch klingt.\n\nDie zweite prägende Entscheidung kam direkt vom Kunden: maximale Einfachheit, ohne überflüssige Bewegung. Kein visuelles Feuerwerk, keine unnötigen Schnitte oder Effekte, die vom Produkt ablenken. Diese Zurückhaltung ist in der Werbung für Handwerksprodukte oft die richtige Wahl, der Boden soll im Mittelpunkt stehen, nicht die Inszenierung. Die Herausforderung lag genau darin: eine Persona-getriebene KI-Werbung so zu bauen, dass sie ruhig, vertrauenswürdig und unaufdringlich wirkt, ohne dabei leblos zu werden.\n\nProduziert wurde die Kampagne in einer hybriden Pipeline. Higgsfield und Nano Banana lieferten Bild- und Bewegtbild-Grundlagen für die Persona, ElevenLabs die akzentfreie amerikanische Stimme, Adobe Audition übernahm die Audiobearbeitung für saubere Sprachqualität. Premiere Pro und After Effects bildeten das Rückgrat für Schnitt und die wenigen, gezielt eingesetzten Bewegtbild-Akzente. Das Ergebnis ist eine vertikale Werbung, die genau das tut, was der Kunde verlangt hat: ruhig, glaubwürdig amerikanisch, und ganz auf das Produkt fokussiert.",
-            "en": "Orion Flooring is a flooring company based in California with locations in Rialto, Anaheim and Hesperia. The job came through an advertising agency: a vinyl flooring ad in a vertical 9:16 format, built for a fully American audience. That audience was the deciding factor behind every creative choice on the project.\n\nThe central decision was the persona. Instead of a neutral voiceover or a generic AI face, I built a character with a distinctly American vibe, carried by an accent-free American voice. For an audience that is entirely American, that single detail decides whether an ad feels like it belongs there or like an imported stock clip. There is a real difference between an AI character that merely looks American and one that actually sounds American through tone, delivery and presence.\n\nThe second defining decision came straight from the client: maximum simplicity, with no unnecessary movement. No visual fireworks, no extra cuts or effects pulling attention away from the product. That restraint is often the right call in advertising for trade products, the flooring needs to stay the focus, not the staging. The real challenge sat right there: building a persona-driven AI ad that feels calm, trustworthy and unobtrusive without ever feeling lifeless.\n\nThe campaign was produced through a hybrid pipeline. Higgsfield and Nano Banana provided the image and motion foundations for the persona, ElevenLabs supplied the accent-free American voice, and Adobe Audition handled the audio engineering for clean speech quality. Premiere Pro and After Effects formed the backbone for editing and the few, deliberately placed motion accents. The result is a vertical ad that does exactly what the client asked for: calm, credibly American, and entirely focused on the product."
-          },
-          "video": "https://player.vimeo.com/video/1202644495?h=d287b78fd6&title=0&byline=0&portrait=0&dnt=1",
-          "link": {
-            "url": "https://orionflooring.com",
-            "label_de": "orionflooring.com ↗",
-            "label_en": "orionflooring.com ↗"
+            "de": "Passion Cafe ist eine exklusive Destination für Kaffeekenner. Die Aufgabe war eine vollständige visuelle Identität, die handwerkliche Wärme transportiert, ohne in Kaffeehaus-Klischees zu verfallen.",
+            "en": "Passion Cafe is an exclusive destination for coffee connoisseurs. The brief called for a complete visual identity that carries craft warmth without falling into coffee-house cliches."
           },
           "tracks": [
             {
               "id": "Track 01 · Brief",
               "title": {
-                "de": "Auftrag und Zielgruppe",
-                "en": "Brief and audience"
+                "de": "Auftrag und Zielsetzung",
+                "en": "Brief and objective"
               },
               "text": {
-                "de": "Vinylboden-Werbung über eine Werbeagentur für Orion Flooring, Kalifornien, im vertikalen 9:16-Format für ein vollständig amerikanisches Publikum.",
-                "en": "A vinyl flooring ad commissioned through an advertising agency for Orion Flooring, California, in a vertical 9:16 format for a fully American audience."
+                "de": "Vollständige visuelle Identität für eine Spezialitätenrösterei, gedacht für Kaffeekenner statt Massenpublikum, mit Anspruch auf handwerkliche Glaubwürdigkeit statt Kaffeehaus-Klischee.",
+                "en": "A complete visual identity for a specialty coffee roastery, built for connoisseurs rather than a mass audience, aiming for craft credibility instead of coffee-house cliche."
               },
               "chips": []
             },
             {
-              "id": "Track 02 · Persona & Stimme",
+              "id": "Track 02 · Konzept",
               "title": {
-                "de": "Persona-Entwicklung",
-                "en": "Persona development"
+                "de": "Monogramm-Entwicklung",
+                "en": "Monogram development"
               },
               "text": {
-                "de": "Eine KI-Figur mit amerikanischem Vibe, getragen von einer akzentfreien amerikanischen Stimme über ElevenLabs, damit die Werbung wie \"von hier\" wirkt statt importiert.",
-                "en": "An AI character with an American vibe, carried by an accent-free American voice through ElevenLabs, so the ad feels like it belongs rather than feeling imported."
+                "de": "Das P verschmilzt auf raffinierte Weise mit der Silhouette einer dampfenden Tasse und organischen Bohnenformen zu einem einzigen, eindeutigen Bildzeichen.",
+                "en": "The P fuses, in a refined way, with the silhouette of a steaming cup and organic bean shapes into a single, unmistakable mark."
               },
               "chips": [
-                "ElevenLabs"
+                "Illustrator"
               ]
             },
             {
-              "id": "Track 03 · Bild & Bewegtbild",
+              "id": "Track 03 · Farbe & Typografie",
               "title": {
-                "de": "Visuelle Grundlage",
-                "en": "Visual foundation"
+                "de": "Palette und Schriftsystem",
+                "en": "Palette and type system"
               },
               "text": {
-                "de": "Higgsfield und Nano Banana für Bild- und Bewegtbild-Generierung der Persona, bewusst reduziert auf Wunsch des Kunden, ohne überflüssige Bewegung.",
-                "en": "Higgsfield and Nano Banana for image and motion generation of the persona, deliberately stripped back at the client's request, with no unnecessary movement."
+                "de": "Bewusst reduzierte, monochrome braune Palette für die Röststufen, kombiniert mit einer eleganten Serifenschrift für Wärme und Verwurzelung in der Kaffeekultur.",
+                "en": "A deliberately restrained, monochrome brown palette for the roast levels, paired with an elegant serif typeface for warmth and roots in coffee culture."
               },
-              "chips": [
-                "Higgsfield",
-                "Nano Banana"
-              ]
+              "chips": []
             },
             {
-              "id": "Track 04 · Audio",
+              "id": "Track 04 · Anwendung",
               "title": {
-                "de": "Audiobearbeitung",
-                "en": "Audio engineering"
+                "de": "Skalierung auf Produkten",
+                "en": "Scaling across products"
               },
               "text": {
-                "de": "Saubere Sprachqualität und Tonmischung in Adobe Audition als Basis für eine glaubwürdige, ruhige Stimme.",
-                "en": "Clean speech quality and audio mixing in Adobe Audition as the basis for a credible, calm voice."
+                "de": "Test und Feinschliff des Logos auf Tassen, Verpackungen und Ladenfronten, damit Linienführung im Kleinen und Wiedererkennung im Großen gleichzeitig funktionieren. Das Ergebnis: eine organische, zugleich anspruchsvolle visuelle Sprache.",
+                "en": "Testing and refining the logo across cups, packaging and storefronts so linework holds up small and recognition holds up large, at the same time. The result: an organic yet sophisticated visual language."
               },
               "chips": [
-                "Adobe Audition"
-              ]
-            },
-            {
-              "id": "Track 05 · Schnitt",
-              "title": {
-                "de": "Schnitt und Finishing",
-                "en": "Edit and finishing"
-              },
-              "text": {
-                "de": "Montage in Premiere Pro, gezielte Bewegtbild-Akzente in After Effects, ganz auf das Produkt fokussiert statt auf Inszenierung.",
-                "en": "Assembly in Premiere Pro, targeted motion accents in After Effects, entirely focused on the product rather than the staging."
-              },
-              "chips": [
-                "Premiere Pro",
-                "After Effects"
+                "Photoshop"
               ]
             }
           ]
@@ -563,9 +773,63 @@
             "Logo Design"
           ],
           "body": {
-            "de": "Für dieses Projekt habe ich eine ganzheitliche Markenidentität für eine moderne Privatpraxis für Physiotherapie und Personal Training entwickelt. Das Herzstück der visuellen Gestaltung bildet ein abstraktes, fließend konstruiertes Logo: zwei untrennbar miteinander verbundene Figuren, die auf subtile Weise die essenzielle, kollaborative Beziehung zwischen Therapeut und Patient während des Heilungsprozesses symbolisieren.\n\nDie Farbpalette war keine beliebige Wahl. Ein tiefes Burgunderrot kombiniert mit einem professionellen Marineblau vermittelt einerseits dynamische Vitalität und Energie, andererseits strahlt sie die strukturelle Stabilität und Ruhe aus, die eine medizinische Praxis braucht. Die klare, serifenlose Typografie unterstreicht die medizinische Glaubwürdigkeit und sorgt für maximale Lesbarkeit über alle Medien hinweg, vom Praxisschild bis zur Visitenkarte.\n\nDie eigentliche Herausforderung lag darin, einen Markenauftritt zu schaffen, der sich bewusst von den oft sehr sterilen, traditionellen klinischen Designs abhebt. Eine Physiotherapie-Praxis lebt von Vertrauen und Nähe, nicht von kühler Distanz. Insgesamt entstand so ein modernes, hochgradig vertrauensvolles Corporate Design, das durch seine warme, menschliche Ausstrahlung eine einladende Atmosphäre für die Patienten schafft, ohne an fachlicher Seriosität zu verlieren.",
-            "en": "For this project, I developed a holistic brand identity for a modern private physiotherapy and personal training practice. The heart of the visual design is an abstract, fluidly constructed logo: two figures inseparably connected with each other, subtly symbolizing the essential, collaborative relationship between therapist and patient during the healing process.\n\nThe color palette was not an arbitrary choice. A deep burgundy combined with a professional navy blue conveys dynamic vitality and energy on one hand, while radiating the structural stability and calm a medical practice needs on the other. The clear, sans-serif typography underlines medical credibility and ensures maximum legibility across every medium, from the practice sign to the business card.\n\nThe real challenge was creating a brand presence that deliberately stands apart from the often sterile, traditional clinical designs in this field. A physiotherapy practice runs on trust and closeness, not cool distance. The result is a modern, highly trustworthy corporate design that, through its warm, human character, creates a welcoming atmosphere for patients without losing professional seriousness."
-          }
+            "de": "Für diese moderne Privatpraxis für Physiotherapie und Personal Training war die Aufgabe eine ganzheitliche Markenidentität, die sich bewusst von sterilen, klinischen Designs abhebt.",
+            "en": "For this modern private physiotherapy and personal training practice, the brief was a holistic brand identity that deliberately stands apart from sterile, clinical design."
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Auftrag und Zielsetzung",
+                "en": "Brief and objective"
+              },
+              "text": {
+                "de": "Ganzheitliche Markenidentität für eine private Physiotherapie- und Personal-Training-Praxis, mit dem Ziel, Wärme und Nähe statt klinischer Kälte zu vermitteln. Eine Physiotherapie-Praxis lebt von Vertrauen, nicht von kühler Distanz.",
+                "en": "A holistic brand identity for a private physiotherapy and personal training practice, aiming for warmth and closeness instead of clinical coldness. A physiotherapy practice runs on trust, not cool distance."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Konzept",
+              "title": {
+                "de": "Logo-Entwicklung",
+                "en": "Logo development"
+              },
+              "text": {
+                "de": "Zwei untrennbar fließend verbundene, abstrakte Figuren symbolisieren die kollaborative Beziehung zwischen Therapeut und Patient während des Heilungsprozesses.",
+                "en": "Two inseparably, fluidly connected, abstract figures symbolize the collaborative relationship between therapist and patient during the healing process."
+              },
+              "chips": [
+                "Illustrator"
+              ]
+            },
+            {
+              "id": "Track 03 · Farbe & Typografie",
+              "title": {
+                "de": "Palette und Schriftsystem",
+                "en": "Palette and type system"
+              },
+              "text": {
+                "de": "Tiefes Burgunderrot für Vitalität, professionelles Marineblau für Stabilität, klare serifenlose Typografie für medizinische Glaubwürdigkeit und Lesbarkeit über alle Medien.",
+                "en": "Deep burgundy for vitality, professional navy for stability, clear sans-serif type for medical credibility and legibility across every medium."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 04 · Anwendung",
+              "title": {
+                "de": "Vom Praxisschild zur Visitenkarte",
+                "en": "From practice sign to business card"
+              },
+              "text": {
+                "de": "Konsistente Anwendung über Praxisschild, Visitenkarte und digitale Touchpoints. Das Ergebnis: ein modernes, vertrauensvolles Corporate Design mit warmer, einladender Ausstrahlung, ohne an fachlicher Seriosität zu verlieren.",
+                "en": "Consistent application across the practice sign, business card and digital touchpoints. The result: a modern, trustworthy corporate design with a warm, welcoming character that never loses professional seriousness."
+              },
+              "chips": [
+                "Photoshop"
+              ]
+            }
+          ]
         },
         {
           "id": "alpha-zone",
@@ -584,19 +848,73 @@
             "Logo Design"
           ],
           "body": {
-            "de": "Alpha Zone General Trading and Contracting Co ist ein Handels- und Bauunternehmen, dessen Geschäft sich über zwei sehr unterschiedliche Bereiche erstreckt: den gewerblichen Hochbau und den klassischen Wohnungsbau. Die Aufgabe bestand darin, beide Felder in einem einzigen, kohärenten Markenzeichen sichtbar zu machen, ohne dass eines der beiden visuell untergeht.\n\nDie Lösung liegt in der Bildmarke selbst: ein mehrstöckiges Gewerbegebäude und ein klassisches Wohnhaus mit Satteldach, ineinander verschachtelt zu einer einzigen Silhouette. Die metallisch-dunkle Farbgebung mit reliefartiger 3D-Oberfläche signalisiert Solidität und Materialkompetenz, exakt das Vertrauen, das ein Bauunternehmen im B2B-Kontext braucht. Die kräftige, serifenlose Blockschrift trägt den Firmennamen leserlich und durchsetzungsfähig, auch auf Baustellenschildern und Fahrzeugbeschriftungen.\n\nBesondere Sorgfalt galt der Skalierbarkeit: Das Logo musste sowohl als kleines Favicon als auch großformatig auf einer Fassade funktionieren, ohne dass Details verschwimmen. Das Ergebnis ist eine klare, unternehmerisch ernste Bildmarke, die ein diversifiziertes Bauunternehmen in einem Zeichen zusammenfasst.",
-            "en": "Alpha Zone General Trading and Contracting Co is a trading and construction company whose business spans two quite different fields: commercial high-rise construction and classic residential building. The task was to make both fields visible in a single, coherent mark without either one disappearing visually.\n\nThe solution sits in the pictorial mark itself: a multi-story commercial building and a classic gable-roofed house, nested into one silhouette. The dark, metallic finish with a relief-style 3D surface signals solidity and material expertise, exactly the kind of trust a construction company needs in a B2B context. The bold, sans-serif block type carries the company name legibly and assertively, holding up just as well on a job-site sign as on vehicle livery.\n\nParticular care went into scalability: the logo had to work both as a tiny favicon and at large format on a building facade without details blurring together. The result is a clear, business-serious mark that summarizes a diversified construction company in a single sign."
-          }
+            "de": "Alpha Zone General Trading and Contracting Co braucht ein einziges, kohärentes Markenzeichen für zwei sehr unterschiedliche Geschäftsfelder.",
+            "en": "Alpha Zone General Trading and Contracting Co needed a single, coherent mark for two quite different business lines."
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Auftrag und Herausforderung",
+                "en": "Brief and challenge"
+              },
+              "text": {
+                "de": "Ein einziges Markenzeichen für zwei Geschäftsfelder: gewerblicher Hochbau und privater Wohnungsbau, ohne dass eines der beiden visuell untergeht.",
+                "en": "One single mark for two business lines: commercial high-rise construction and private home building, without either field disappearing visually."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Konzept",
+              "title": {
+                "de": "Verschachtelte Silhouette",
+                "en": "Nested silhouette"
+              },
+              "text": {
+                "de": "Ein Gewerbegebäude und ein Wohnhaus mit Satteldach werden ineinander verschachtelt zu einer einzigen, eindeutigen Bildmarke. Die metallisch-dunkle, reliefartige Oberfläche signalisiert die Solidität, die ein Bauunternehmen im B2B-Kontext braucht.",
+                "en": "A commercial building and a gable-roofed house are nested together into a single, unmistakable mark. The dark, metallic relief-style surface signals the solidity a construction company needs in a B2B context."
+              },
+              "chips": [
+                "Illustrator"
+              ]
+            },
+            {
+              "id": "Track 03 · Material & Typografie",
+              "title": {
+                "de": "Oberfläche und Schrift",
+                "en": "Finish and type"
+              },
+              "text": {
+                "de": "Metallisch-dunkle, reliefartige 3D-Oberfläche für Solidität, kombiniert mit kräftiger serifenloser Blockschrift für Lesbarkeit auf Baustellenschildern und Fahrzeugen.",
+                "en": "A dark, metallic relief-style 3D surface for solidity, paired with bold sans-serif block type for legibility on job-site signs and vehicle livery."
+              },
+              "chips": [
+                "Photoshop"
+              ]
+            },
+            {
+              "id": "Track 04 · Skalierung",
+              "title": {
+                "de": "Vom Favicon zur Fassade",
+                "en": "From favicon to facade"
+              },
+              "text": {
+                "de": "Test des Logos über den gesamten Größenbereich, vom winzigen Favicon bis zur großformatigen Anwendung auf einer Gebäudefassade. Das Ergebnis ist eine klare, unternehmerisch ernste Bildmarke, die ein diversifiziertes Bauunternehmen in einem Zeichen zusammenfasst.",
+                "en": "Testing the logo across the full size range, from a tiny favicon up to large-format application on a building facade. The result is a clear, business-serious mark that summarizes a diversified construction company in a single sign."
+              },
+              "chips": []
+            }
+          ]
         },
         {
           "id": "print-editorial",
           "title": {
-            "de": "Print & Editorial Design: Übungsprojekte",
-            "en": "Print & Editorial Design: Practice Projects"
+            "de": "Print & Editorial Design: Studienprojekte",
+            "en": "Print & Editorial Design: Case Studies"
           },
           "summary": {
-            "de": "Drei selbst gestellte Übungsprojekte zum Vertiefen von Print-Layout, Editorial Design und Datenvisualisierung. Bewusst als Trainingsarbeiten markiert, nicht als Kundenprojekte.",
-            "en": "Three self-assigned practice projects for deepening print layout, editorial design and data visualization skills. Deliberately marked as training work, not client projects."
+            "de": "Drei eigenständig konzipierte Studienprojekte zu Print-Layout, Editorial Design und Datenvisualisierung, jedes mit Bestnote (100%) abgeschlossen.",
+            "en": "Three independently conceived case studies in print layout, editorial design and data visualization, each completed with a top grade (100%)."
           },
           "cover": "assets/uploads/print-exercises-cover.png",
           "chips": [
@@ -607,17 +925,488 @@
             "Editorial Layout"
           ],
           "body": {
-            "de": "Diese drei Arbeiten sind bewusst als Übungsprojekte gekennzeichnet, nicht als reale Kundenaufträge. Ich nutze sie regelmäßig, um Print-Layout, Editorial Design und Datenvisualisierung gezielt zu trainieren, fernab von Briefing-Zwängen und mit voller gestalterischer Freiheit.\n\nDie erste Übung ist der Nachbau einer Magazinseite für ein fiktives Nike-Sports-Cover im DIN-A4-Format. Der Fokus lag auf präziser Typografie-Nachbildung, korrektem CMYK-Farbmanagement für den Druck und dem exakten Treffen einer bestehenden Bildsprache anhand einer niedrig aufgelösten Quelle, eine Übung in Beobachtungsgenauigkeit und technischer Druckvorstufe.\n\nDie zweite Übung ist ein Editorial-Layout für ein fiktives Fachmagazin, das Einsteiger in InDesign unterrichtet. Hier ging es um den Aufbau eines konsistenten Rastersystems über mehrere Spalten-Layouts (ein, zwei und drei Spalten), eine klare typografische Hierarchie und den bewussten Einsatz von Weißraum, um Inhalte lesbar zu strukturieren.\n\nDie dritte Übung ist ein mehrseitiges Infoblatt für die fiktive \"Zahlen GmbH\": eine Marktanalyse-Broschüre mit Kreis-, Balken- und Liniendiagrammen, eigenem Inhaltsverzeichnis und durchgehendem Layout-System. Der Schwerpunkt lag auf der Übersetzung abstrakter Zahlen in klar lesbare, visuell konsistente Grafiken.\n\nAlle drei Arbeiten zusammen zeigen die Bandbreite klassischer Print-Skills, die ich heute mit in digitale und KI-gestützte Projekte einbringe: Rastersysteme, Typografie-Disziplin und ein geschultes Auge für Layout-Hierarchie.",
-            "en": "These three pieces are deliberately marked as practice projects, not real client commissions. I use them regularly to train print layout, editorial design and data visualization on purpose, away from briefing constraints and with full creative freedom.\n\nThe first exercise recreates a magazine page for a fictional Nike Sports cover in DIN A4 format. The focus was on precise typography matching, correct CMYK color management for print, and accurately hitting an existing visual language based on a low-resolution source, an exercise in observational accuracy and technical prepress work.\n\nThe second exercise is an editorial layout for a fictional trade magazine that teaches beginners how to use InDesign. The goal here was building a consistent grid system across multiple column layouts (one, two and three columns), a clear typographic hierarchy, and the deliberate use of whitespace to structure content for readability.\n\nThe third exercise is a multi-page infosheet for the fictional \"Zahlen GmbH\": a market analysis brochure with pie, bar and line charts, its own table of contents, and a consistent layout system throughout. The emphasis was on translating abstract numbers into clearly legible, visually consistent graphics.\n\nTogether, all three pieces show the range of classic print skills I bring into digital and AI-driven projects today: grid systems, typographic discipline and a trained eye for layout hierarchy."
-          }
+            "de": "Drei eigenständig konzipierte Studienprojekte aus meiner Ausbildung zu Print-Layout, Editorial Design und Datenvisualisierung, jedes mit voller gestalterischer Freiheit umgesetzt und mit Bestnote (100%) bewertet.",
+            "en": "Three independently conceived case studies from my training in print layout, editorial design and data visualization, each executed with full creative freedom and graded at the top mark (100%)."
+          },
+          "tracks": [
+            {
+              "id": "Studie 01 · Nike Magazin",
+              "title": {
+                "de": "Magazin-Cover-Nachbau · Bestnote 100%",
+                "en": "Magazine cover recreation · Top grade 100%"
+              },
+              "text": {
+                "de": "Nachbau einer Magazinseite für ein fiktives Nike-Sports-Cover im DIN-A4-Format. Fokus auf präziser Typografie-Nachbildung, korrektem CMYK-Farbmanagement für den Druck und exaktem Treffen einer bestehenden Bildsprache anhand einer niedrig aufgelösten Quelle. Abgeschlossen mit Bestnote (100%).",
+                "en": "Recreating a magazine page for a fictional Nike Sports cover in DIN A4 format. Focus on precise typography matching, correct CMYK color management for print, and accurately hitting an existing visual language based on a low-resolution source. Completed with a top grade (100%)."
+              },
+              "chips": [
+                "InDesign",
+                "Photoshop"
+              ]
+            },
+            {
+              "id": "Studie 02 · InDesign-Lehrmagazin",
+              "title": {
+                "de": "Editorial-Rastersystem · Bestnote 100%",
+                "en": "Editorial grid system · Top grade 100%"
+              },
+              "text": {
+                "de": "Editorial-Layout für ein fiktives Fachmagazin, das Einsteiger in InDesign unterrichtet. Aufbau eines konsistenten Rastersystems über ein-, zwei- und dreispaltige Layouts, klare typografische Hierarchie, bewusster Einsatz von Weißraum. Abgeschlossen mit Bestnote (100%).",
+                "en": "An editorial layout for a fictional trade magazine teaching InDesign beginners. Building a consistent grid system across one, two and three column layouts, a clear typographic hierarchy, and deliberate use of whitespace. Completed with a top grade (100%)."
+              },
+              "chips": [
+                "InDesign",
+                "Typography"
+              ]
+            },
+            {
+              "id": "Studie 03 · Zahlen GmbH",
+              "title": {
+                "de": "Daten-Infoblatt · Bestnote 100%",
+                "en": "Data infosheet · Top grade 100%"
+              },
+              "text": {
+                "de": "Mehrseitiges Infoblatt für die fiktive \"Zahlen GmbH\": eine Marktanalyse-Broschüre mit Kreis-, Balken- und Liniendiagrammen, eigenem Inhaltsverzeichnis und durchgehendem Layout-System. Schwerpunkt: abstrakte Zahlen in klar lesbare, visuell konsistente Grafiken übersetzen. Abgeschlossen mit Bestnote (100%).",
+                "en": "A multi-page infosheet for the fictional \"Zahlen GmbH\": a market analysis brochure with pie, bar and line charts, its own table of contents, and a consistent layout system throughout. Focus: translating abstract numbers into clearly legible, visually consistent graphics. Completed with a top grade (100%)."
+              },
+              "chips": [
+                "InDesign",
+                "Illustrator"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zahlen-gmbh",
+          "title": {
+            "de": "Datenvisualisierung und Layout-Design für ein Infoblatt",
+            "en": "Data Visualization and Layout Design for an Infosheet"
+          },
+          "summary": {
+            "de": "Ein mehrseitiges Infoblatt für die fiktive Marktforschungsfirma \"Zahlen GmbH\": komplexe Umfragedaten in ein klares, durchgehendes Layout-System übersetzt. Abgeschlossen mit Bestnote (100%).",
+            "en": "A multi-page infosheet for the fictional market research firm \"Zahlen GmbH\": translating complex survey data into a clear, consistent layout system. Completed with a top grade (100%)."
+          },
+          "cover": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-mockup.cover.jpg",
+          "chips": [
+            "InDesign",
+            "Illustrator",
+            "Editorial Layout",
+            "Data Visualization"
+          ],
+          "body": {
+            "de": "Ein umfassendes, mehrseitiges Infoblatt für die Statistikfirma \"Zahlen GmbH\": komplexe Umfragedaten in ein klares, strukturiertes Layout übersetzt. Studienprojekt, abgeschlossen mit Bestnote (100%).",
+            "en": "A comprehensive, multi-page infosheet for the fictional statistics firm \"Zahlen GmbH\": translating complex survey data into a clear, structured layout. A case study completed with a top grade (100%)."
+          },
+          "gallery": [
+            {
+              "src": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-mockup.png",
+              "ar": "16:9",
+              "size": "full"
+            }
+          ],
+          "link": {
+            "url": "assets/uploads/gallery/zahlen-gmbh/zahlen-gmbh-infoblatt.pdf",
+            "label_de": "PDF ansehen",
+            "label_en": "PDF ansehen"
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Brief",
+              "title": {
+                "de": "Auftrag und Zielsetzung",
+                "en": "Brief and objective"
+              },
+              "text": {
+                "de": "Mehrseitiges Infoblatt für die fiktive \"Zahlen GmbH\", gedacht als Marktanalyse-Broschüre mit eigenem Inhaltsverzeichnis und durchgehendem Layout-System.",
+                "en": "A multi-page infosheet for the fictional \"Zahlen GmbH,\" conceived as a market analysis brochure with its own table of contents and a consistent layout system throughout."
+              },
+              "chips": []
+            },
+            {
+              "id": "Track 02 · Struktur",
+              "title": {
+                "de": "Navigation und Inhaltsverzeichnis",
+                "en": "Navigation and table of contents"
+              },
+              "text": {
+                "de": "Ein detailliertes Inhaltsverzeichnis zu Beginn sorgt für intuitive Navigation durch das mehrseitige Dokument, begleitet von kuratierter Bildauswahl, die den analytischen Charakter visuell unterstützt.",
+                "en": "A detailed table of contents at the start ensures intuitive navigation through the multi-page document, paired with curated imagery that visually supports the analytical character."
+              },
+              "chips": [
+                "InDesign"
+              ]
+            },
+            {
+              "id": "Track 03 · Datenvisualisierung",
+              "title": {
+                "de": "Von Zahlen zu Diagrammen",
+                "en": "From numbers to charts"
+              },
+              "text": {
+                "de": "Umfangreiche Datensätze zur Demografie, zum Konsumverhalten und zur Kundenzufriedenheit transformiert in klar lesbare Kreis-, Balken- und Liniendiagramme.",
+                "en": "Extensive datasets on demographics, consumer behavior and customer satisfaction transformed into clearly legible pie, bar and line charts."
+              },
+              "chips": [
+                "Illustrator"
+              ]
+            },
+            {
+              "id": "Track 04 · Ergebnis",
+              "title": {
+                "de": "Bestnote 100%",
+                "en": "Top grade 100%"
+              },
+              "text": {
+                "de": "Sauberes Rastersystem und klare visuelle Hierarchie für schnell erfassbare Ergebnisse. Im Rahmen meiner Ausbildung mit voller gestalterischer Freiheit umgesetzt und mit Bestnote (100%) bewertet.",
+                "en": "A clean grid system and clear visual hierarchy for quickly graspable results. Completed during my training with full creative freedom and graded at the top mark (100%)."
+              },
+              "chips": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "eyebrow": {
+        "de": "04 · KI-Automatisierung",
+        "en": "04 · AI Automation"
+      },
+      "title": {
+        "de": "KI-Automatisierung",
+        "en": "AI Automation"
+      },
+      "intro": {
+        "de": "Selbst gebaute Bots und Workflows, die Publishing und Community-Interaktion automatisieren, von der Nachrichten-Pipeline bis zur Persona-Antwort in Echtzeit.",
+        "en": "Self-built bots and workflows that automate publishing and community interaction, from the news pipeline to persona replies in real time."
+      },
+      "items": [
+        {
+          "id": "chelsea-news-bot",
+          "title": {
+            "de": "Chelsea News Bot",
+            "en": "Chelsea News Bot"
+          },
+          "summary": {
+            "de": "Vollautomatische Nachrichten-Pipeline für Chelsea-News: 8 Quellen, KI-Textproduktion und ein selbst entwickelter Design-Engine, die jede Meldung wie ein handgemachtes Grafik-Design aussehen lässt, veröffentlicht ohne manuellen Eingriff auf Telegram.",
+            "en": "A fully automated news pipeline for Chelsea coverage: 8 sources, AI-written copy and a self-built design engine that makes every post look hand-designed, published without manual intervention on Telegram."
+          },
+          "cover": "assets/uploads/gallery/automation/cover-chelsea-news-bot.jpg",
+          "chips": [
+            "n8n",
+            "Gemini API",
+            "Python",
+            "Google Sheets",
+            "Telegram API"
+          ],
+          "body": {
+            "de": "Ein Hobbyprojekt, kein kommerzieller Dienst: gebaut, weil manuelles Nachrichten-Publishing zu viel Zeit gekostet hat, die ich lieber in Inhalt statt in Routinearbeit stecke.",
+            "en": "A hobby project, not a commercial service: built because manual news publishing was eating up time I'd rather spend on content than on repetitive routine work."
+          },
+          "gallery": [
+            {
+              "src": "assets/uploads/gallery/automation/news.jpg",
+              "ar": "auto",
+              "size": "1"
+            }
+          ],
+          "tracks": [
+            {
+              "id": "Track 01 · Problem",
+              "title": {
+                "de": "Warum Automatisierung statt manuellem Publishing",
+                "en": "Why automation instead of manual publishing"
+              },
+              "text": {
+                "de": "Acht Nachrichtenquellen gleichzeitig zu verfolgen (football.london, Sky Sports, The Guardian, ESPN und weitere), Artikel zu verfassen, ein Bild zu gestalten und es zu veröffentlichen, hat manuell pro Meldung deutlich zu lange gedauert, und war nicht rund um die Uhr leistbar. Der Bot übernimmt genau diese Kette, damit Veröffentlichungen schneller und regelmäßiger erscheinen, ohne dass ich ständig erreichbar sein muss.",
+                "en": "Tracking eight news sources at once (football.london, Sky Sports, The Guardian, ESPN and others), writing the copy, designing the image and publishing it manually took far too long per story, and wasn't sustainable around the clock. The bot takes over exactly that chain, so posts go out faster and more consistently without me needing to be available at all hours."
+              },
+              "chips": [
+                "8 Sources",
+                "Time Savings"
+              ]
+            },
+            {
+              "id": "Track 02 · Aufnahme & Dedupe",
+              "title": {
+                "de": "Mehrquellen-Erfassung und Duplikat-Schutz",
+                "en": "Multi-source intake and duplicate protection"
+              },
+              "text": {
+                "de": "n8n fragt alle acht Quellen parallel ab statt sequenziell, das hält die Latenz zwischen Veröffentlichung und Erfassung niedrig. Jede neue Meldung wird gegen ein Verlaufsprotokoll in Google Sheets geprüft, bevor sie weiterverarbeitet wird, ohne diesen Schritt würde dieselbe Nachricht von mehreren Quellen mehrfach veröffentlicht werden, was Glaubwürdigkeit kostet.",
+                "en": "n8n polls all eight sources in parallel rather than sequentially, which keeps the lag between a story breaking and the bot catching it low. Every new story gets checked against a history log in Google Sheets before moving forward, without that step the same story picked up from multiple sources would get posted multiple times, which costs credibility."
+              },
+              "chips": [
+                "n8n",
+                "Google Sheets",
+                "Deduplication"
+              ]
+            },
+            {
+              "id": "Track 03 · Textproduktion",
+              "title": {
+                "de": "Redaktionelle Richtlinie statt freiem Generieren",
+                "en": "An editorial policy, not free-form generation"
+              },
+              "text": {
+                "de": "Gemini verfasst den Artikeltext nicht frei, sondern nach einer vorab festgelegten redaktionellen Richtlinie (Tonfall, Länge, was ausgelassen wird), damit das Ergebnis konsistent bleibt und nicht von Meldung zu Meldung im Stil schwankt. Diese Richtlinie ist der eigentliche Qualitätsfilter, das Modell liefert nur die Ausführung innerhalb fester Grenzen.",
+                "en": "Gemini doesn't write the copy freely, it follows a pre-defined editorial policy (tone, length, what to leave out), so the output stays consistent instead of drifting in style from story to story. That policy is the real quality filter, the model only handles execution within fixed boundaries."
+              },
+              "chips": [
+                "Gemini API",
+                "Editorial Policy"
+              ]
+            },
+            {
+              "id": "Track 04 · Design Engine",
+              "title": {
+                "de": "Ein eigener Template-Engine statt Text-auf-Bild",
+                "en": "A custom template engine instead of text-on-image"
+              },
+              "text": {
+                "de": "Statt Text simpel über ein Hintergrundbild zu legen, läuft jede Meldung durch einen selbst gebauten Python-Engine, der den Text in ein vordefiniertes visuelles Layout einsetzt, inklusive Typografie, Hierarchie und Markenfarben. Der Unterschied ist sichtbar: das Ergebnis sieht aus wie eine von Hand in Photoshop gestaltete Grafik, nicht wie automatisch generierter Text auf einem Foto.",
+                "en": "Instead of simply overlaying text on a background image, every story runs through a custom-built Python engine that places the text into a predefined visual layout, including typography, hierarchy and brand colors. The difference is visible: the result looks like a graphic hand-designed in Photoshop, not like auto-generated text dropped on a photo."
+              },
+              "chips": [
+                "Python",
+                "Custom Template Engine"
+              ]
+            },
+            {
+              "id": "Track 05 · Veröffentlichung",
+              "title": {
+                "de": "Automatische Veröffentlichung auf Telegram",
+                "en": "Automatic publishing to Telegram"
+              },
+              "text": {
+                "de": "Das fertige Design wird über die Telegram API direkt veröffentlicht, ohne weiteren manuellen Schritt. Telegram wurde als Kanal gewählt, weil das Publikum dort Nachrichtenupdates in Echtzeit erwartet, eine Verzögerung durch manuelles Posten würde den eigentlichen Vorteil (Aktualität) wieder aufheben.",
+                "en": "The finished design publishes directly through the Telegram API, no further manual step needed. Telegram was chosen as the channel because that audience expects real-time news updates, any delay from manual posting would cancel out the actual advantage of automation, which is timeliness."
+              },
+              "chips": [
+                "Telegram API"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "chelsea-bot",
+          "title": {
+            "de": "Chelsea Bot",
+            "en": "Chelsea Bot"
+          },
+          "summary": {
+            "de": "Ein Interaktions-Bot, kein Publishing-Bot: beantwortet automatisch Kommentare auf der Facebook-Seite zu Chelsea- und Fußballinhalten, in meiner eigenen Stimme als Fan und Analyst, mit fester Obergrenze pro Lauf gegen Spam-Verhalten.",
+            "en": "An interaction bot, not a publishing bot: automatically replies to comments on the Facebook page for Chelsea and football content, in my own voice as a fan and analyst, with a hard cap per run against spam-like behavior."
+          },
+          "cover": "assets/uploads/gallery/automation/cover-chelsea-bot.jpg",
+          "chips": [
+            "n8n",
+            "Claude API",
+            "Google Sheets",
+            "Facebook API"
+          ],
+          "body": {
+            "de": "Wie der News Bot ein Hobbyprojekt aus Zeitgründen entstanden, nicht als kommerzielle Dienstleistung.",
+            "en": "Like the News Bot, born out of a hobby and a time constraint, not a commercial service."
+          },
+          "gallery": [
+            {
+              "src": "assets/uploads/gallery/automation/fb.jpg",
+              "ar": "auto",
+              "size": "1"
+            }
+          ],
+          "tracks": [
+            {
+              "id": "Track 01 · Problem",
+              "title": {
+                "de": "Warum Kommentare automatisieren statt News",
+                "en": "Why automate comments, not news"
+              },
+              "text": {
+                "de": "Dieser Bot löst ein anderes Problem als der News Bot: nicht Veröffentlichung, sondern Volumen an Reaktionen. Bei einer aktiven Fußballseite kommen mehr Kommentare zusammen, als sich in vertretbarer Zeit persönlich beantworten lassen, ohne ein System würde Engagement entweder unbeantwortet bleiben oder meine gesamte Zeit beanspruchen.",
+                "en": "This bot solves a different problem than the News Bot: not publishing, but reply volume. An active football page generates more comments than can be answered personally in a reasonable amount of time, without a system, engagement either goes unanswered or eats up all my available time."
+              },
+              "chips": [
+                "Comment Volume",
+                "Time Constraint"
+              ]
+            },
+            {
+              "id": "Track 02 · Datenerfassung",
+              "title": {
+                "de": "Beiträge und Reels getrennt erfasst, dann zusammengeführt",
+                "en": "Posts and Reels captured separately, then merged"
+              },
+              "text": {
+                "de": "Facebook-Beiträge und Reels werden über getrennte Abfragen erfasst, weil die API-Struktur für beide Inhaltstypen unterschiedlich ist, und anschließend in einer gemeinsamen Liste zusammengeführt. Aus dieser Liste werden ausschließlich neue, noch unbeantwortete Kommentare herausgefiltert, ein Abgleich gegen den bisherigen Antwortverlauf verhindert doppelte oder wiederholte Reaktionen auf denselben Kommentar.",
+                "en": "Facebook posts and Reels are pulled through separate queries, because the API structure differs between the two content types, then merged into one combined list. From that list, only new, not-yet-answered comments get filtered out, checked against the existing reply history to prevent duplicate or repeated responses to the same comment."
+              },
+              "chips": [
+                "Facebook API",
+                "Posts + Reels"
+              ]
+            },
+            {
+              "id": "Track 03 · Persönliche Stimme statt generischer Antwort",
+              "title": {
+                "de": "Ein trainierter Prompt für meine eigene Stimme",
+                "en": "A trained prompt for my own voice"
+              },
+              "text": {
+                "de": "Claude antwortet nicht generisch, sondern über einen eigens trainierten Prompt, der meine Perspektive als Fan und Analyst abbildet, statt eine neutrale, erkennbar automatisierte Antwort zu liefern. Dieser Unterschied ist entscheidend: eine offensichtlich automatisierte Antwort wirkt distanzierend, eine Antwort in der eigenen Stimme erhält die persönliche Bindung zur Community.",
+                "en": "Claude doesn't reply generically, it runs through a specifically trained prompt that reflects my perspective as a fan and analyst, instead of a neutral, visibly automated answer. That distinction matters: an obviously automated reply feels distancing, a reply in my own voice keeps the personal connection with the community intact."
+              },
+              "chips": [
+                "Claude API",
+                "Voice Matching"
+              ]
+            },
+            {
+              "id": "Track 04 · Schutzmechanismus",
+              "title": {
+                "de": "Begrenzung pro Durchlauf als bewusste Schutzmaßnahme",
+                "en": "A per-run cap as a deliberate safeguard"
+              },
+              "text": {
+                "de": "Jeder Durchlauf hat eine feste Obergrenze an Antworten, eine bewusste technische Entscheidung gegen unkontrolliertes Massenantworten, das wie Spam wirken oder die Facebook-Richtlinien verletzen könnte. Lieber regelmäßige, kontrollierte Durchläufe als ein einziger unbegrenzter Lauf, der die Plattform oder die Glaubwürdigkeit des Kontos riskiert.",
+                "en": "Every run has a fixed cap on the number of replies, a deliberate technical decision against uncontrolled mass-replying that could look like spam or risk violating Facebook's policies. Regular, controlled runs are preferable to a single unbounded run that risks the platform or the account's credibility."
+              },
+              "chips": [
+                "Rate Limiting",
+                "Platform Safety"
+              ]
+            },
+            {
+              "id": "Track 05 · Speicherung",
+              "title": {
+                "de": "Antwortverlauf als zentrale Steuerungsschicht",
+                "en": "Reply history as the central control layer"
+              },
+              "text": {
+                "de": "Jede gesendete Antwort wird in Google Sheets protokolliert, dieses Protokoll ist die einzige Quelle der Wahrheit dafür, was bereits beantwortet wurde. Ohne diese zentrale Steuerungsschicht müsste der Bot bei jedem Lauf raten, was schon erledigt ist, mit ihr bleibt das System auch über viele Durchläufe hinweg konsistent.",
+                "en": "Every reply sent gets logged in Google Sheets, that log is the single source of truth for what's already been answered. Without that central control layer the bot would have to guess what's already done on every run, with it the system stays consistent across many runs over time."
+              },
+              "chips": [
+                "Google Sheets",
+                "State Tracking"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "julia-kallas-bot",
+          "title": {
+            "de": "Julia Kallas Bot",
+            "en": "Julia Kallas Bot"
+          },
+          "summary": {
+            "de": "Der Interaktions-Layer für die KI-Persona Julia Kallas: beantwortet automatisch Kommentare und Nachrichten auf Instagram, exakt in Julias Stimme und Persönlichkeit, mit fester Obergrenze pro Lauf, damit die Illusion konsistent bleibt.",
+            "en": "The interaction layer for the AI persona Julia Kallas: automatically replies to comments and messages on Instagram, exactly in Julia's voice and personality, with a fixed cap per run to keep the illusion consistent."
+          },
+          "cover": "assets/uploads/gallery/automation/cover-julia-kallas-bot.jpg",
+          "chips": [
+            "n8n",
+            "Claude API",
+            "Google Sheets",
+            "Instagram API"
+          ],
+          "body": {
+            "de": "Direkt verbunden mit dem Julia-Kallas-Projekt im AI-Bereich: dieselbe Persona, jetzt mit einem System, das sie rund um die Uhr am Leben hält.",
+            "en": "Directly tied to the Julia Kallas project in the AI section: the same persona, now with a system that keeps her alive around the clock."
+          },
+          "gallery": [
+            {
+              "src": "assets/uploads/gallery/automation/IG.jpg",
+              "ar": "auto",
+              "size": "1"
+            }
+          ],
+          "tracks": [
+            {
+              "id": "Track 01 · Warum dieser Bot existiert",
+              "title": {
+                "de": "Eine virtuelle Persona braucht konsistente Interaktion",
+                "en": "A virtual persona needs consistent interaction"
+              },
+              "text": {
+                "de": "Julia Kallas ist eine vollständig KI-produzierte Persona, ihre Glaubwürdigkeit hängt davon ab, dass jede Interaktion zu ihrer Identität passt. Eine erkennbar generische oder kühle automatische Antwort würde die Illusion sofort durchbrechen, deshalb ist dieser Bot kein einfacher Auto-Responder, sondern ein eigens auf Julias Charakter trainiertes System.",
+                "en": "Julia Kallas is a fully AI-produced persona, her credibility depends on every interaction matching her identity. A visibly generic or cold automated reply would break the illusion immediately, which is why this bot isn't a simple auto-responder, it's a system specifically trained on Julia's character."
+              },
+              "chips": [
+                "AI Persona",
+                "Brand Consistency"
+              ]
+            },
+            {
+              "id": "Track 02 · Erfassung",
+              "title": {
+                "de": "Überwachung neuer Beiträge und Kommentare",
+                "en": "Monitoring new posts and comments"
+              },
+              "text": {
+                "de": "Der Bot überwacht laufend Julias Instagram-Konto auf neue Medien und neue Kommentare, statt einmalig zu prüfen, weil Interaktionen über den Tag verteilt eintreffen und zeitnahe Antworten für die Wahrnehmung von Lebendigkeit entscheidend sind.",
+                "en": "The bot continuously monitors Julia's Instagram account for new media and new comments, rather than checking once, because interactions arrive spread across the day and timely replies are what makes the persona feel alive rather than scripted."
+              },
+              "chips": [
+                "Instagram API",
+                "Continuous Monitoring"
+              ]
+            },
+            {
+              "id": "Track 03 · Vermeidung von Wiederholung",
+              "title": {
+                "de": "Abgleich gegen den Antwortverlauf",
+                "en": "Checking against the reply history"
+              },
+              "text": {
+                "de": "Jeder neue Kommentar wird gegen ein in Google Sheets gespeichertes Verlaufsprotokoll abgeglichen, bevor eine Antwort generiert wird. Ohne diesen Schritt würde derselbe Kommentar bei mehreren Durchläufen wiederholt beantwortet, was sofort als automatisiert und damit unglaubwürdig auffallen würde.",
+                "en": "Every new comment gets checked against a history log stored in Google Sheets before a reply is generated. Without that step the same comment would get answered repeatedly across multiple runs, which would immediately read as automated and break the persona's credibility."
+              },
+              "chips": [
+                "Google Sheets",
+                "Deduplication"
+              ]
+            },
+            {
+              "id": "Track 04 · Charaktertreue Antworten",
+              "title": {
+                "de": "Ein Prompt, der Julias Tonfall exakt abbildet",
+                "en": "A prompt that mirrors Julia's tone exactly"
+              },
+              "text": {
+                "de": "Claude generiert Antworten über einen eigens auf Julias Persönlichkeit und Sprachstil trainierten Prompt, nicht über eine allgemeine Antwortvorlage. Die Anforderung ist höher als beim Chelsea Bot, dort spreche ich in meiner eigenen, bereits vorhandenen Stimme, hier muss eine vollständig konstruierte Identität konsistent bleiben.",
+                "en": "Claude generates replies through a prompt specifically trained on Julia's personality and speech style, not a general-purpose reply template. The bar here is higher than for the Chelsea Bot, there I'm speaking in my own already-existing voice, here a fully constructed identity has to stay consistent."
+              },
+              "chips": [
+                "Claude API",
+                "Persona Prompting"
+              ]
+            },
+            {
+              "id": "Track 05 · Begrenzung",
+              "title": {
+                "de": "Maximal drei Antworten pro Durchlauf",
+                "en": "A maximum of three replies per run"
+              },
+              "text": {
+                "de": "Die Obergrenze von drei Antworten pro Lauf ist enger gesetzt als beim Chelsea Bot, weil Julias Konto kleiner ist und ein plötzlicher Schwall identisch klingender Antworten schneller auffallen und unnatürlich wirken würde. Lieber häufigere, kleine Durchläufe als ein einzelner großer, der die Illusion einer echten Person riskiert.",
+                "en": "The cap of three replies per run is set tighter than on the Chelsea Bot, because Julia's account is smaller and a sudden burst of identical-sounding replies would stand out faster and read as unnatural. Frequent small runs are preferable to one large run that risks the illusion of a real person."
+              },
+              "chips": [
+                "Rate Limiting",
+                "3 Replies per Run"
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "id": "football",
       "eyebrow": {
-        "de": "04 · Proof · Reichweite",
-        "en": "04 · Proof · Reach"
+        "de": "05 · Proof · Reichweite",
+        "en": "05 · Proof · Reach"
       },
       "title": {
         "de": "Eigenprojekte · Football Content",
@@ -629,56 +1418,339 @@
       },
       "items": [
         {
-          "id": "football-youtube",
+          "id": "color-grading",
           "title": {
-            "de": "Fußball-Dokumentationen (YouTube)",
-            "en": "Football Documentaries (YouTube)"
+            "de": "Farbkorrektur: Von Sony Log3 zum fertigen Look",
+            "en": "Color Grading: From Sony S-Log3 to the Finished Look"
           },
           "summary": {
-            "de": "Langform-Fußballinhalte in dokumentarischer Qualität: recherchiert, geschrieben, geschnitten und veröffentlicht.",
-            "en": "Long-form football content in documentary quality: researched, written, edited and published."
+            "de": "Ein Vorher/Nachher-Vergleich derselben Aufnahme: rohes S-Log3-Footage einer Sony-Kamera gegenüber dem fertig gegradeten Ergebnis in Premiere Pro. Bewege den Regler, um den Unterschied direkt zu sehen.",
+            "en": "A before/after comparison of the same shot: raw S-Log3 footage from a Sony camera against the finished, graded result in Premiere Pro. Drag the slider to see the difference directly."
           },
-          "cover": "assets/work-motion.jpg",
+          "cover": "assets/uploads/gallery/football-colorgrade/cover-color-grading.jpg",
+          "chips": [
+            "Sony S-Log3",
+            "Premiere Pro",
+            "Lumetri Color",
+            "Color Science",
+            "Lighting Design"
+          ],
+          "body": {
+            "de": "Hinweis: Dieses Projekt ist keine kommerzielle Dienstleistung, sondern ein persönliches Hobby. Ich drehe und schneide Fußballinhalte in meiner Freizeit, weil ich Content-Produktion liebe, nicht als Geschäft. Jede Entscheidung unten ist technisch begründet, keine ist willkürlich.",
+            "en": "Note: this project is not a commercial service, it's a personal hobby. I shoot and edit football content in my free time because I love content production, not as a business. Every decision below is technically grounded, none of it is arbitrary."
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Aufnahme",
+              "title": {
+                "de": "Warum S-Log3 statt eines normalen Profils",
+                "en": "Why S-Log3 instead of a standard profile"
+              },
+              "text": {
+                "de": "S-Log3 ist ein logarithmisches Gammaprofil von Sony, das den vollen Dynamikumfang des Sensors (rund 14+ Blendenstufen) in die Aufnahme presst, statt ihn wie ein Standardprofil schon im Rec.709-Kontrast \"wegzuschneiden\". Der Trade-off: das Rohbild sieht flach und blass aus, fast grau. Genau das ist beabsichtigt, denn jede Information, die in der Aufnahme steckt, bleibt für die Farbkorrektur verfügbar. Wer stattdessen mit einem fertigen Bildprofil dreht, hat in den Schatten und Lichtern oft schon Information verloren, bevor die Bearbeitung überhaupt beginnt.",
+                "en": "S-Log3 is a logarithmic gamma profile from Sony that compresses the sensor's full dynamic range (roughly 14+ stops) into the recording, instead of crushing it into Rec.709 contrast in-camera like a standard picture profile would. The trade-off: the raw image looks flat and pale, almost gray. That's intentional — every bit of information the sensor captured stays available for grading. Shooting with a baked-in picture profile instead often means losing detail in the shadows and highlights before editing has even started."
+              },
+              "chips": [
+                "Sony S-Log3",
+                "Dynamic Range"
+              ]
+            },
+            {
+              "id": "Track 02 · Kameraeinstellungen",
+              "title": {
+                "de": "Belichtung, Blende und Framerate bewusst gewählt",
+                "en": "Exposure, aperture and frame rate, chosen deliberately"
+              },
+              "text": {
+                "de": "Bei Log-Material wird bewusst etwas überbelichtet (\"expose to the right\"), weil Log-Kurven in den Schatten stärker rauschen als in den Lichtern, das Rauschen lässt sich in der Post leichter aus überbelichteten als aus unterbelichteten Bereichen entfernen. Die Blende steuert dabei die Schärfentiefe: eine offenere Blende isoliert die Person im Vordergrund von einem unscharfen Hintergrund, was bei Interviewaufnahmen im Freien hilft, visuelle Unruhe zu reduzieren. Die Framerate richtet sich nach dem Verwendungszweck: 25 oder 50 fps für die übliche europäische Bildwiederholrate, höhere Werte nur, wenn eine Zeitlupe geplant ist, da unnötig hohe Framerates ohne Bedarf nur Speicherplatz und Schärfe (durch kürzere Verschlusszeiten) kosten.",
+                "en": "With Log footage, you deliberately overexpose a touch (\"expose to the right\"), because Log curves carry more noise in the shadows than in the highlights, and noise is far easier to clean out of overexposed footage than underexposed footage in post. Aperture controls depth of field: a wider aperture isolates the subject from a soft background, which helps reduce visual clutter on outdoor interview shots. Frame rate is chosen by intended use: 25 or 50fps for standard European playback, higher only when a slow-motion shot is planned, since unnecessarily high frame rates only cost storage and sharpness (through shorter shutter speeds) without benefit."
+              },
+              "chips": [
+                "Aperture",
+                "Frame Rate",
+                "Exposure"
+              ]
+            },
+            {
+              "id": "Track 03 · Lichtsetzung",
+              "title": {
+                "de": "Key Light, Fill Light und das Mischen von Tageslicht mit Kunstlicht",
+                "en": "Key light, fill light, and mixing daylight with artificial light"
+              },
+              "text": {
+                "de": "Das Key Light ist die Hauptlichtquelle, die Form und Kontrast im Gesicht definiert, bei Außenaufnahmen ist das oft die Sonne selbst oder ein Reflektor, der sie lenkt. Das Fill Light gleicht die Schatten aus, die das Key Light wirft, ohne sie ganz zu beseitigen, sonst wirkt das Bild flach. Schwieriger wird es, wenn Tageslicht (ca. 5600K, bläulich) mit künstlichem Licht (oft 3200K, warm) im selben Bild gemischt wird: ohne Abgleich entstehen Farbstiche, ein Gesicht kann auf einer Seite warm und auf der anderen kühl wirken. Die Lösung ist entweder, beide Lichtquellen auf dieselbe Farbtemperatur zu bringen (z. B. mit Farbfolien vor einer Kunstlichtquelle), oder den Unterschied bewusst als Stilmittel zu nutzen und ihn erst in der Farbkorrektur gezielt auszugleichen oder zu verstärken.",
+                "en": "Key light is the main light source shaping the contrast and form on a face, on outdoor shoots that's often the sun itself or a reflector redirecting it. Fill light softens the shadows the key light casts without removing them entirely, otherwise the image goes flat. The harder part is mixing daylight (around 5600K, cool/blue) with artificial light (often 3200K, warm) in the same frame: left unmatched, this creates color casts, a face can look warm on one side and cool on the other. The fix is either to bring both sources to the same color temperature (gel filters on the artificial source, for instance), or to use the mismatch deliberately as a style choice and balance or amplify it intentionally later in the grade."
+              },
+              "chips": [
+                "Key Light",
+                "Fill Light",
+                "Color Temperature"
+              ]
+            },
+            {
+              "id": "Track 04 · Color Science",
+              "title": {
+                "de": "Warum Color Science mehr ist als \"schöner machen\"",
+                "en": "Why color science is more than just \"making it pretty\""
+              },
+              "text": {
+                "de": "Color Science beschreibt, wie eine Kamera Licht in Farbwerte übersetzt, jeder Sensor und jedes Log-Profil hat eine eigene Farbcharakteristik. Der erste Schritt in der Bearbeitung ist deshalb nie der kreative Look, sondern die technische Normalisierung: ein LUT (Lookup Table), der für genau dieses Kameraprofil gebaut ist, übersetzt das Log-Signal zurück in einen realistischen, ausgewogenen Ausgangspunkt. Erst danach beginnt das eigentliche Grading, die kreative Entscheidung über Stimmung, Kontrast und Farbtonalität, weil sie auf einer technisch korrekten Basis aufbaut statt auf einem zufällig wirkenden Rohbild.",
+                "en": "Color science describes how a camera translates light into color values, every sensor and every Log profile has its own color character. The first step in editing is therefore never the creative look, it's technical normalization: a LUT (lookup table) built specifically for that camera profile translates the Log signal back into a realistic, balanced starting point. Only after that does the actual grading begin, the creative decision about mood, contrast and color tonality, because it's built on a technically correct base instead of a randomly flat raw image."
+              },
+              "chips": [
+                "LUT",
+                "Lumetri Color"
+              ]
+            },
+            {
+              "id": "Track 05 · Grading",
+              "title": {
+                "de": "Vom flachen Log-Bild zum fertigen Look in Premiere Pro",
+                "en": "From flat Log image to finished look in Premiere Pro"
+              },
+              "text": {
+                "de": "In Premiere Pro läuft die Korrektur in Lumetri Color in klarer Reihenfolge: zuerst die technische Basiskorrektur (Weißabgleich, Belichtung, Kontrast über die Kurven), dann die kreative Schicht (Farbräder für Schatten/Mitten/Lichter, Sättigung, Vignette). Hautton bleibt dabei die wichtigste Referenz, jede Korrektur wird gegen einen natürlich wirkenden Hautton geprüft, denn ein Zuschauer erkennt einen falschen Hautton sofort, selbst ohne die Abweichung benennen zu können. Das Ergebnis im Vergleichsregler oben ist genau dieser Prozess in einem Schritt sichtbar gemacht: ein Bild, das im Rohzustand absichtlich \"langweilig\" aussieht, und ein Bild, das gezielt zu einem fertigen, konsistenten Look geführt wurde.",
+                "en": "In Premiere Pro the correction runs through Lumetri Color in a clear order: first the technical base correction (white balance, exposure, contrast via the curves), then the creative layer (color wheels for shadows/mids/highlights, saturation, vignette). Skin tone stays the most important reference throughout, every correction gets checked against a natural-looking skin tone, because a viewer spots a wrong skin tone instantly even without being able to name what's off. The slider above makes that exact process visible in one step: an image that's deliberately \"boring\" in its raw state, and an image that's been deliberately carried to a finished, consistent look."
+              },
+              "chips": [
+                "Premiere Pro",
+                "Lumetri Color",
+                "Skin Tone"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "football-youtube",
+          "title": {
+            "de": "YouTube-Analysen · Taktische Breakdowns",
+            "en": "YouTube Breakdowns · Tactical Analysis"
+          },
+          "summary": {
+            "de": "Arabischsprachige Fußball-Analyse im Querformat: Recherche, Skript, Schnitt, Thumbnail und Veröffentlichung, alles aus einer Hand. Ein Hobbyprojekt, das ich in meiner Freizeit produziere, weil ich Content-Erstellung liebe, nicht als Geschäft.",
+            "en": "Arabic-language football analysis in widescreen format: research, script, edit, thumbnail and publishing, all from one pair of hands. A hobby project I produce in my free time because I love content creation, not as a business."
+          },
+          "cover": "assets/uploads/gallery/football-colorgrade/cover-youtube-analytics.jpg",
           "chips": [
             "YouTube",
             "Premiere Pro",
-            "After Effects"
+            "After Effects",
+            "Analytics"
           ],
           "body": {
-            "de": "Platzhalter. Bette hier deine besten YouTube-Videos ein (Video-Link unten einfügen). Ersetze das Coverbild über die Inhalts-Verwaltung.",
-            "en": "Placeholder. Embed your best YouTube videos here (add a video link below). Replace the cover image via the content manager."
+            "de": "Beispiel: eine Halbzeitbilanz zum Chelsea-Transferfenster, mit derselben dokumentarischen Sorgfalt produziert wie jede andere Episode.",
+            "en": "Example: a mid-season review of Chelsea's transfer window, produced with the same documentary-level care as every other episode."
           },
+          "video": "https://www.youtube.com/embed/JZPRQQ6n7Y8",
           "link": {
             "url": "https://www.youtube.com/@saleem.rishah",
             "label_de": "YouTube @saleem.rishah ↗",
             "label_en": "YouTube @saleem.rishah ↗"
-          }
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Format",
+              "title": {
+                "de": "Warum Querformat und warum Arabisch",
+                "en": "Why widescreen, and why Arabic"
+              },
+              "text": {
+                "de": "Das Querformat 16:9 ist die native Auflösung für YouTube-Wiedergabe auf TV, Desktop und in der mobilen App im Querformat, dort findet Langform-Sehverhalten überwiegend statt. Die Sprache Arabisch ist keine Lokalisierungsentscheidung, sondern die Zielgruppe selbst: arabischsprachige Chelsea- und Premier-League-Fans, eine Community mit hoher Wiedergabedauer für taktische Tiefenanalyse, aber wenig vergleichbarem Angebot in dieser Qualität und Sprache.",
+                "en": "Widescreen 16:9 is the native resolution for YouTube playback on TV, desktop, and the mobile app in landscape, where long-form viewing behavior mostly happens. Arabic isn't a localization choice, it's the audience itself: Arabic-speaking Chelsea and Premier League fans, a community with high watch-time appetite for tactical deep-dives but comparatively little supply at this quality and in this language."
+              },
+              "chips": [
+                "16:9",
+                "Audience"
+              ]
+            },
+            {
+              "id": "Track 02 · Technische Specs",
+              "title": {
+                "de": "Auflösung, Framerate und Audio nach YouTube-Vorgaben",
+                "en": "Resolution, frame rate and audio to YouTube spec"
+              },
+              "text": {
+                "de": "Export erfolgt in 1080p (oder 4K bei Bedarf) mit H.264, 25 oder 50 fps passend zur Quellaufnahme, da ein Framerate-Wechsel in der Post zu Ruckeln oder unnötigem Interpolations-Artefakt führt. Audio wird auf -14 LUFS normalisiert, dem von YouTube verwendeten Referenzwert, damit die Lautstärke nicht automatisch abgesenkt wird und im Vergleich zu anderen Kanälen konsistent bleibt. Das Thumbnail wird separat in 1280×720 exportiert, hochkontrastig und mit großer, gut lesbarer Typografie, weil es auf kleinen mobilen Vorschaubildern funktionieren muss.",
+                "en": "Export runs at 1080p (or 4K when warranted) in H.264, 25 or 50fps matching the source footage, because changing frame rate in post causes stutter or unnecessary interpolation artifacts. Audio is normalized to -14 LUFS, YouTube's reference loudness target, so the platform doesn't auto-duck the volume and it stays consistent against other channels. The thumbnail is exported separately at 1280×720, high-contrast with large, legible type, because it has to read clearly at small mobile preview sizes."
+              },
+              "chips": [
+                "1080p/4K",
+                "-14 LUFS",
+                "Thumbnail 1280×720"
+              ]
+            },
+            {
+              "id": "Track 03 · Struktur & Retention",
+              "title": {
+                "de": "Aufbau für Verweildauer, nicht nur für den Klick",
+                "en": "Structure built for retention, not just the click"
+              },
+              "text": {
+                "de": "Die ersten 15 Sekunden enthalten immer den stärksten Aussagepunkt der Episode (den sogenannten Hook), weil YouTube Analytics zeigt, dass der größte Zuschauerabfall in genau diesem Fenster passiert. Danach folgt eine klare Kapitelstruktur, jedes Kapitel beantwortet eine einzelne, im Titel angedeutete Frage, statt offen zu mäandern. Über YouTube Studio wird die Audience-Retention-Kurve jeder Episode geprüft: Einbrüche an bestimmten Zeitstempeln zeigen, welche Abschnitte zu lang oder zu redundant waren, und fließen direkt in den Schnitt der nächsten Episode ein.",
+                "en": "The first 15 seconds always carry the episode's strongest point (the hook), because YouTube Analytics consistently shows the steepest audience drop happens exactly in that window. After that comes a clear chapter structure, each chapter answers one specific question hinted at in the title, instead of wandering openly. The audience retention curve for every episode gets checked in YouTube Studio: drops at specific timestamps reveal which sections ran too long or felt redundant, and that directly informs how the next episode gets cut."
+              },
+              "chips": [
+                "Hook",
+                "Retention Curve",
+                "YouTube Studio"
+              ]
+            },
+            {
+              "id": "Track 04 · Algorithmus & Veröffentlichung",
+              "title": {
+                "de": "Wie der Empfehlungsalgorithmus funktioniert und wie ich danach plane",
+                "en": "How the recommendation algorithm works, and how I plan around it"
+              },
+              "text": {
+                "de": "YouTubes Algorithmus priorisiert Click-Through-Rate (wie viele Zuschauer auf das Thumbnail klicken, wenn sie es sehen) und durchschnittliche Wiedergabedauer, beide Werte zusammen entscheiden, wie oft ein Video weiter vorgeschlagen wird. Veröffentlichungszeiten richten sich nach den Aktivitätsspitzen der Zielgruppe in der Golfregion und der Levante (typischerweise Abendstunden nach lokaler Zeit), nicht nach einer pauschalen Faustregel. Titel und Beschreibung folgen einem festen Muster: Schlüsselwort vorne, klare Erwartung, keine Clickbait-Übertreibung, weil ein Erwartungsbruch die Watch-Time im Nachhinein senkt und damit die Reichweite des nächsten Videos schwächt.",
+                "en": "YouTube's algorithm prioritizes click-through rate (how many viewers click the thumbnail when they see it) and average view duration, together those two numbers determine how often a video keeps getting surfaced. Publish times are set around the audience's actual activity peaks in the Gulf region and the Levant (typically evening hours local time), not a generic rule of thumb. Titles and descriptions follow a fixed pattern: keyword up front, a clear and accurate expectation, no clickbait exaggeration, because a broken expectation lowers watch-time after the fact and weakens how far the next video reaches."
+              },
+              "chips": [
+                "CTR",
+                "Watch Time",
+                "Publish Timing"
+              ]
+            },
+            {
+              "id": "Track 05 · Wettbewerbsanalyse",
+              "title": {
+                "de": "Benchmarking gegenüber ähnlichen Kanälen",
+                "en": "Benchmarking against similar channels"
+              },
+              "text": {
+                "de": "Die eigene Performance wird regelmäßig gegen vergleichbare arabischsprachige Fußballkanäle benchmarkt, unter anderem über die Insights in Facebook Business Suite, die Reichweite und Interaktion im Vergleich zu ähnlichen Seiten zeigen. Stärken liegen meist in der inhaltlichen Tiefe und der visuellen Qualität, während andere Kanäle oft auf reine Veröffentlichungsfrequenz setzen, daraus ergibt sich die bewusste Entscheidung, auf Qualität statt Quantität zu setzen statt täglich zu posten.",
+                "en": "Performance gets benchmarked regularly against comparable Arabic-language football channels, including through the insights in Facebook Business Suite, which show reach and engagement relative to similar pages. Strengths usually show up in content depth and visual quality, while other channels often lean on raw publishing frequency, which is what drives the deliberate choice to prioritize quality over quantity instead of posting daily."
+              },
+              "chips": [
+                "Benchmarking",
+                "Facebook Business Suite"
+              ]
+            }
+          ]
         },
         {
           "id": "football-social",
           "title": {
-            "de": "Kurzform: TikTok & Facebook",
-            "en": "Short-form: TikTok & Facebook"
+            "de": "AI-Klon-Reels (Englisch, Hochformat)",
+            "en": "AI Clone Reels (English, Vertical)"
           },
           "summary": {
-            "de": "Vertikale Kurzclips und Match-Reaktionen mit hoher Reichweite auf TikTok und Facebook.",
-            "en": "Vertical short clips and match reactions with high reach on TikTok and Facebook."
+            "de": "Kurzform-Taktikclips auf Englisch, vorgetragen von einem AI-Klon meiner selbst, Bild via HeyGen, Stimme via ElevenLabs, geschnitten in Premiere Pro und After Effects. Wie das YouTube-Format ein Hobbyprojekt aus Leidenschaft für Content-Produktion, kein kommerzieller Auftrag.",
+            "en": "Short-form tactical clips in English, presented by an AI clone of myself, face via HeyGen, voice via ElevenLabs, edited in Premiere Pro and After Effects. Like the YouTube format, this is a hobby project driven by a passion for content production, not a commercial assignment."
           },
-          "cover": "assets/work-brand.jpg",
+          "cover": "assets/uploads/gallery/football-colorgrade/cover-ai-clone-reels.jpg",
           "chips": [
-            "TikTok",
-            "Facebook",
-            "Reels"
+            "HeyGen",
+            "ElevenLabs",
+            "Premiere Pro",
+            "After Effects"
           ],
           "body": {
-            "de": "Platzhalter. Hier kommen deine reichweitenstärksten Kurzclips hinein. Ersetze oder ergänze über die Inhalts-Verwaltung.",
-            "en": "Placeholder. Your highest-reach short clips go here. Replace or extend via the content manager."
+            "de": "Beispiel: ein 9:16-Clip über Enzo Marescas Taktik, präsentiert vom AI-Klon für ein englischsprachiges Kurzform-Publikum auf TikTok, Reels und Shorts.",
+            "en": "Example: a 9:16 clip on Enzo Maresca's tactics, presented by the AI clone for an English-speaking short-form audience on TikTok, Reels and Shorts."
           },
+          "video": "https://www.youtube.com/embed/zmD-jQdIhkk",
           "link": {
             "url": "https://www.tiktok.com/@saleemrisheh",
             "label_de": "TikTok @saleemrisheh ↗",
             "label_en": "TikTok @saleemrisheh ↗"
-          }
+          },
+          "tracks": [
+            {
+              "id": "Track 01 · Der AI-Klon",
+              "title": {
+                "de": "Kein Auftritt vor der Kamera, ein Klon meiner selbst",
+                "en": "Not a camera appearance, a clone of myself"
+              },
+              "text": {
+                "de": "Wichtig vorab: Die Person, die in diesen Clips spricht, bin technisch nicht ich live vor der Kamera, sondern ein AI-generierter Klon meines Gesichts und meiner Stimme. Das Gesicht entsteht über HeyGen aus einem kurzen Referenzvideo von mir, die Plattform erzeugt daraus eine fotorealistische, lippensynchrone Video-Persona für beliebigen neuen Text. Die Stimme wird separat über ElevenLabs geklont, ein eigenes Stimmenmodell aus aufgenommenen Sprachproben, das jeden neuen Skripttext in meiner Stimme synthetisiert. Beide Klone werden anschließend in der Post zusammengeführt.",
+                "en": "Important context up front: the person speaking in these clips isn't, technically, me live on camera, it's an AI-generated clone of my face and voice. The face is built through HeyGen from a short reference video of me, the platform generates a photorealistic, lip-synced video persona from that for any new script text. The voice is cloned separately through ElevenLabs, a dedicated voice model trained on recorded speech samples that synthesizes any new script in my voice. Both clones get combined together afterward in post."
+              },
+              "chips": [
+                "HeyGen",
+                "Face Clone"
+              ]
+            },
+            {
+              "id": "Track 02 · Warum ein Klon",
+              "title": {
+                "de": "Der technische Grund: Tempo und Skalierung",
+                "en": "The technical reason: speed and scale"
+              },
+              "text": {
+                "de": "Kurzform-Plattformen verlangen hohe Veröffentlichungsfrequenz, um in der Empfehlungslogik relevant zu bleiben. Ein Klon-Workflow entkoppelt die Produktionszeit von Drehterminen, Skripte lassen sich schreiben und vertonen, ohne dass jedes Mal ein neuer Dreh mit Kamera, Licht und Ton nötig ist. Das ist eine bewusste technische Entscheidung für Konsistenz und Tempo, kein Ersatz für die echte Präsenz in den Querformat-Dokumentationen, wo ich tatsächlich selbst vor der Kamera stehe.",
+                "en": "Short-form platforms demand high publishing frequency to stay relevant in the recommendation logic. A clone workflow decouples production time from filming sessions, scripts can be written and voiced without a fresh shoot involving camera, lighting and sound every time. That's a deliberate technical choice for consistency and speed, not a replacement for the real, in-person presence in the widescreen documentaries, where I genuinely stand in front of the camera myself."
+              },
+              "chips": [
+                "Production Speed",
+                "Consistency"
+              ]
+            },
+            {
+              "id": "Track 03 · Stimme: ElevenLabs",
+              "title": {
+                "de": "Wie die Stimmklonung funktioniert",
+                "en": "How the voice clone actually works"
+              },
+              "text": {
+                "de": "ElevenLabs trainiert aus einigen Minuten saubereren Sprachaufnahmen ein Modell, das Tonfall, Sprechrhythmus und Akzentfärbung erfasst. Jeder neue Skripttext wird dann text-to-speech über dieses Modell erzeugt, statt jede Zeile selbst einzusprechen. Entscheidend ist die Nachbearbeitung: Tempo, Betonung und Pausen werden manuell pro Satz angepasst, eine unbearbeitete Sprachsynthese klingt monoton, das Nachjustieren ist der Schritt, der den Unterschied zwischen „hörbar synthetisch“ und „klingt wie ein echtes Voiceover“ ausmacht.",
+                "en": "ElevenLabs trains a model from a few minutes of clean voice recordings, capturing tone, speech rhythm and accent character. Every new script line then gets generated as text-to-speech through that model, instead of recording each line live. The decisive part is the post-processing: pacing, emphasis and pauses get manually adjusted per sentence, an unedited synthesis output sounds flat, that manual tuning is what separates “audibly synthetic” from “sounds like a real voiceover.”"
+              },
+              "chips": [
+                "ElevenLabs",
+                "Voice Clone",
+                "TTS"
+              ]
+            },
+            {
+              "id": "Track 04 · Schnitt: Premiere & After Effects",
+              "title": {
+                "de": "Vom HeyGen-Render zum fertigen vertikalen Clip",
+                "en": "From HeyGen render to finished vertical clip"
+              },
+              "text": {
+                "de": "Der HeyGen-Export kommt als flacher Talking-Head-Clip, in Premiere Pro wird er in das 9:16-Format eingepasst, mit Taktiktafeln, Statistik-Einblendungen und B-Roll aus dem Spielmaterial kombiniert. After Effects übernimmt die Bewegtgrafiken: animierte Pfeile für Laufwege, eingeblendete Spielerstatistiken, Lower Thirds. Untertitel werden grundsätzlich fest eingebrannt, weil ein Großteil der Kurzform-Zuschauer mit ausgeschaltetem Ton scrollt, ohne eingebrannte Untertitel würde die Kernaussage in genau diesem Konsumverhalten verloren gehen.",
+                "en": "The HeyGen export comes out as a flat talking-head clip, in Premiere Pro it gets fit into the 9:16 frame, combined with tactic boards, stat overlays and B-roll from match footage. After Effects handles the motion graphics: animated arrows for player runs, on-screen stat callouts, lower thirds. Subtitles are always burned in, because a large share of short-form viewers scroll with sound off, without burned-in captions the core point would get lost entirely in that exact viewing behavior."
+              },
+              "chips": [
+                "Premiere Pro",
+                "After Effects",
+                "Burned-in Captions"
+              ]
+            },
+            {
+              "id": "Track 05 · Plattform-Specs",
+              "title": {
+                "de": "Auflösung, Framerate und Audio je Plattform",
+                "en": "Resolution, frame rate and audio per platform"
+              },
+              "text": {
+                "de": "Export erfolgt durchgehend in 1080×1920 (9:16), H.264, 30 fps, dem von TikTok, Instagram Reels und YouTube Shorts gemeinsam unterstützten Standard, damit eine einzige Exportdatei auf allen drei Plattformen ohne Qualitätsverlust funktioniert. Audio wird auf -16 bis -14 LUFS normalisiert, abgestimmt auf mobile Lautsprecher-Wiedergabe, der häufigsten Wiedergabeumgebung für dieses Format. Die ersten 1-2 Sekunden enthalten immer eine visuelle oder textliche Kernaussage, da auf diesen Plattformen die Wischgeschwindigkeit, mit der ein Zuschauer weiterscrollt, der entscheidende Frühindikator für den Algorithmus ist.",
+                "en": "Export runs consistently at 1080×1920 (9:16), H.264, 30fps, the standard shared by TikTok, Instagram Reels and YouTube Shorts, so a single export file works across all three without quality loss. Audio is normalized to -16 to -14 LUFS, tuned for mobile speaker playback, the most common listening environment for this format. The first 1-2 seconds always carry a visual or text-based core message, because on these platforms the scroll-away speed is the earliest signal the algorithm reads."
+              },
+              "chips": [
+                "1080×1920",
+                "30fps",
+                "Mobile Audio"
+              ]
+            },
+            {
+              "id": "Track 06 · Wettbewerbsanalyse",
+              "title": {
+                "de": "Was ähnliche Konten richtig und falsch machen",
+                "en": "What similar accounts get right and wrong"
+              },
+              "text": {
+                "de": "Vergleichbare englischsprachige Taktik-Kurzclips analysiere ich regelmäßig über die TikTok- und Reels-eigenen Analytics: Profile mit hoher Bindung kombinieren meist eine klare visuelle Marke (Wiedererkennbares Intro, feste Farbgebung) mit kurzen, einzelfokussierten Aussagen statt mehrerer Punkte pro Clip. Häufige Schwäche bei ähnlichen Kanälen ist ein zu langer Einstieg vor dem eigentlichen Taktikpunkt, genau das fließt als bewusste Gegenmaßnahme in Track 05 oben ein.",
+                "en": "I analyze comparable English-language tactical short clips regularly through TikTok's and Reels' own analytics: high-retention accounts usually combine a clear visual brand (a recognizable intro, consistent color treatment) with short, single-focus statements instead of cramming several points into one clip. A common weakness among similar accounts is a slow wind-up before the actual tactical point lands, which is exactly the deliberate countermeasure built into Track 05 above."
+              },
+              "chips": [
+                "TikTok Analytics",
+                "Reels Analytics",
+                "Benchmarking"
+              ]
+            }
+          ]
         }
       ]
     }

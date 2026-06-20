@@ -1,0 +1,58 @@
+{
+  "order": 10,
+  "title_de": "Chelsea News Bot",
+  "title_en": "Chelsea News Bot",
+  "summary_de": "Vollautomatische Nachrichten-Pipeline für Chelsea-News: 8 Quellen, KI-Textproduktion und ein selbst entwickelter Design-Engine, die jede Meldung wie ein handgemachtes Grafik-Design aussehen lässt, veröffentlicht ohne manuellen Eingriff auf Telegram.",
+  "summary_en": "A fully automated news pipeline for Chelsea coverage: 8 sources, AI-written copy and a self-built design engine that makes every post look hand-designed, published without manual intervention on Telegram.",
+  "cover": "assets/uploads/gallery/automation/cover-chelsea-news-bot.jpg",
+  "chips": ["n8n", "Gemini API", "Python", "Google Sheets", "Telegram API"],
+  "body_de": "Ein Hobbyprojekt, kein kommerzieller Dienst: gebaut, weil manuelles Nachrichten-Publishing zu viel Zeit gekostet hat, die ich lieber in Inhalt statt in Routinearbeit stecke.",
+  "body_en": "A hobby project, not a commercial service: built because manual news publishing was eating up time I'd rather spend on content than on repetitive routine work.",
+  "gallery": [
+    { "image": "assets/uploads/gallery/automation/news.jpg", "aspect_ratio": "auto", "size": "1" }
+  ],
+  "link_url": "",
+  "link_label": "",
+  "tracks": [
+    {
+      "id": "Track 01 · Problem",
+      "title_de": "Warum Automatisierung statt manuellem Publishing",
+      "title_en": "Why automation instead of manual publishing",
+      "text_de": "Acht Nachrichtenquellen gleichzeitig zu verfolgen (football.london, Sky Sports, The Guardian, ESPN und weitere), Artikel zu verfassen, ein Bild zu gestalten und es zu veröffentlichen, hat manuell pro Meldung deutlich zu lange gedauert, und war nicht rund um die Uhr leistbar. Der Bot übernimmt genau diese Kette, damit Veröffentlichungen schneller und regelmäßiger erscheinen, ohne dass ich ständig erreichbar sein muss.",
+      "text_en": "Tracking eight news sources at once (football.london, Sky Sports, The Guardian, ESPN and others), writing the copy, designing the image and publishing it manually took far too long per story, and wasn't sustainable around the clock. The bot takes over exactly that chain, so posts go out faster and more consistently without me needing to be available at all hours.",
+      "chips": ["8 Sources", "Time Savings"]
+    },
+    {
+      "id": "Track 02 · Aufnahme & Dedupe",
+      "title_de": "Mehrquellen-Erfassung und Duplikat-Schutz",
+      "title_en": "Multi-source intake and duplicate protection",
+      "text_de": "n8n fragt alle acht Quellen parallel ab statt sequenziell, das hält die Latenz zwischen Veröffentlichung und Erfassung niedrig. Jede neue Meldung wird gegen ein Verlaufsprotokoll in Google Sheets geprüft, bevor sie weiterverarbeitet wird, ohne diesen Schritt würde dieselbe Nachricht von mehreren Quellen mehrfach veröffentlicht werden, was Glaubwürdigkeit kostet.",
+      "text_en": "n8n polls all eight sources in parallel rather than sequentially, which keeps the lag between a story breaking and the bot catching it low. Every new story gets checked against a history log in Google Sheets before moving forward, without that step the same story picked up from multiple sources would get posted multiple times, which costs credibility.",
+      "chips": ["n8n", "Google Sheets", "Deduplication"]
+    },
+    {
+      "id": "Track 03 · Textproduktion",
+      "title_de": "Redaktionelle Richtlinie statt freiem Generieren",
+      "title_en": "An editorial policy, not free-form generation",
+      "text_de": "Gemini verfasst den Artikeltext nicht frei, sondern nach einer vorab festgelegten redaktionellen Richtlinie (Tonfall, Länge, was ausgelassen wird), damit das Ergebnis konsistent bleibt und nicht von Meldung zu Meldung im Stil schwankt. Diese Richtlinie ist der eigentliche Qualitätsfilter, das Modell liefert nur die Ausführung innerhalb fester Grenzen.",
+      "text_en": "Gemini doesn't write the copy freely, it follows a pre-defined editorial policy (tone, length, what to leave out), so the output stays consistent instead of drifting in style from story to story. That policy is the real quality filter, the model only handles execution within fixed boundaries.",
+      "chips": ["Gemini API", "Editorial Policy"]
+    },
+    {
+      "id": "Track 04 · Design Engine",
+      "title_de": "Ein eigener Template-Engine statt Text-auf-Bild",
+      "title_en": "A custom template engine instead of text-on-image",
+      "text_de": "Statt Text simpel über ein Hintergrundbild zu legen, läuft jede Meldung durch einen selbst gebauten Python-Engine, der den Text in ein vordefiniertes visuelles Layout einsetzt, inklusive Typografie, Hierarchie und Markenfarben. Der Unterschied ist sichtbar: das Ergebnis sieht aus wie eine von Hand in Photoshop gestaltete Grafik, nicht wie automatisch generierter Text auf einem Foto.",
+      "text_en": "Instead of simply overlaying text on a background image, every story runs through a custom-built Python engine that places the text into a predefined visual layout, including typography, hierarchy and brand colors. The difference is visible: the result looks like a graphic hand-designed in Photoshop, not like auto-generated text dropped on a photo.",
+      "chips": ["Python", "Custom Template Engine"]
+    },
+    {
+      "id": "Track 05 · Veröffentlichung",
+      "title_de": "Automatische Veröffentlichung auf Telegram",
+      "title_en": "Automatic publishing to Telegram",
+      "text_de": "Das fertige Design wird über die Telegram API direkt veröffentlicht, ohne weiteren manuellen Schritt. Telegram wurde als Kanal gewählt, weil das Publikum dort Nachrichtenupdates in Echtzeit erwartet, eine Verzögerung durch manuelles Posten würde den eigentlichen Vorteil (Aktualität) wieder aufheben.",
+      "text_en": "The finished design publishes directly through the Telegram API, no further manual step needed. Telegram was chosen as the channel because that audience expects real-time news updates, any delay from manual posting would cancel out the actual advantage of automation, which is timeliness.",
+      "chips": ["Telegram API"]
+    }
+  ]
+}

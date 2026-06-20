@@ -1,8 +1,35 @@
 {
+  "ai": {
+    "id": "ai",
+    "eyebrow_de": "01 · KI & Generative",
+    "eyebrow_en": "01 · AI & Generative",
+    "title_de": "KI & Generative Produktion",
+    "title_en": "AI & Generative Production",
+    "intro_de": "Markenfiguren und visuelle Konzepte der nächsten Generation, gebaut mit KI-Pipelines und Prompt Engineering.",
+    "intro_en": "Next-generation brand characters and visual concepts, built with AI pipelines and prompt engineering.",
+    "items": [
+      "julia-kallas",
+      "motion-showcase",
+      "orion-flooring",
+      "chunky-rhino"
+    ]
+  },
+  "motion": {
+    "id": "motion",
+    "eyebrow_de": "02 · Motion & Video",
+    "eyebrow_en": "02 · Motion & Video",
+    "title_de": "Motion & Videoproduktion",
+    "title_en": "Motion & Video Production",
+    "intro_de": "Strategisches Visual Storytelling, vom Schnitt über Motion Graphics bis zum Color Grading, gebaut für Aufmerksamkeit und Reichweite.",
+    "intro_en": "Strategic visual storytelling, from edit through motion graphics to color grading, built for attention and reach.",
+    "items": [
+      "motion-showcase"
+    ]
+  },
   "brand": {
     "id": "brand",
-    "eyebrow_de": "01 · Brand & Social",
-    "eyebrow_en": "01 · Brand & Social",
+    "eyebrow_de": "03 · Brand & Social",
+    "eyebrow_en": "03 · Brand & Social",
     "title_de": "Social Media & Brand Identity",
     "title_en": "Social Media & Brand Identity",
     "intro_de": "Markenidentitäten, Logos und maßgeschneiderte visuelle Systeme für Social-Media-Kanäle, von Start-ups bis Content Creators.",
@@ -16,24 +43,24 @@
       "zahlen-gmbh"
     ]
   },
-  "ai": {
-    "id": "ai",
-    "eyebrow_de": "02 · AI & Video",
-    "eyebrow_en": "02 · AI & Video",
-    "title_de": "AI-gestützte Video- & Generative Produktion",
-    "title_en": "AI-Driven Video & Generative Production",
-    "intro_de": "Von der KI-Persona bis zum fertigen Werbespot: generative Workflows, Motion und Videoproduktion, die echte Reichweite liefern.",
-    "intro_en": "From AI persona to finished ad: generative workflows, motion and video production that deliver real reach.",
+  "automation": {
+    "id": "automation",
+    "eyebrow_de": "04 · KI-Automatisierung",
+    "eyebrow_en": "04 · AI Automation",
+    "title_de": "KI-Automatisierung",
+    "title_en": "AI Automation",
+    "intro_de": "Selbst gebaute Bots und Workflows, die Publishing und Community-Interaktion automatisieren, von der Nachrichten-Pipeline bis zur Persona-Antwort in Echtzeit.",
+    "intro_en": "Self-built bots and workflows that automate publishing and community interaction, from the news pipeline to persona replies in real time.",
     "items": [
-      "julia-kallas",
-      "chunky-rhino",
-      "orion-flooring"
+      "chelsea-news-bot",
+      "chelsea-bot",
+      "julia-kallas-bot"
     ]
   },
   "football": {
     "id": "football",
-    "eyebrow_de": "03 · Eigenprojekte",
-    "eyebrow_en": "03 · Personal Projects",
+    "eyebrow_de": "05 · Proof · Reichweite",
+    "eyebrow_en": "05 · Proof · Reach",
     "title_de": "Eigenprojekte · Football Content",
     "title_en": "Personal Projects · Football Content",
     "intro_de": "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",
