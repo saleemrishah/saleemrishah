@@ -357,5 +357,4 @@ body.modal-open{overflow:hidden}
 .wm-cmp-line{position:absolute;top:0;bottom:0;left:-1px;width:2px;background:var(--teal);box-shadow:0 0 0 1px rgba(0,0,0,.3)}
 .wm-cmp-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;
   background:var(--teal);color:#0B0E12;display:flex;align-items:center;justify-content:center;font-size:.85rem;
-  box-shadow:0 4px 14px rgba(0,0,0,.4);border:2px solid var(--bg-2)}
-.wm-cmp-caption{color:var(--mut);font-size:.84rem;text-align:center;margin:-10px 0 20px}
+  box-shadow:0 4px 14px rgba(0,0,0,.4);border:2px solid va
