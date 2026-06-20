@@ -25,6 +25,18 @@
     it.chips = Array.isArray(raw.chips) ? raw.chips : [];
     if (raw.body_de || raw.body_en) it.body = { de: raw.body_de || '', en: raw.body_en || raw.body_de || '' };
     if (raw.video) it.video = raw.video;
+    if (raw.compare && raw.compare.before && raw.compare.after) {
+      it.compare = {
+        before: raw.compare.before,
+        after: raw.compare.after,
+        label_before_de: raw.compare.label_before_de || 'Vorher',
+        label_before_en: raw.compare.label_before_en || 'Before',
+        label_after_de: raw.compare.label_after_de || 'Nachher',
+        label_after_en: raw.compare.label_after_en || 'After',
+        caption_de: raw.compare.caption_de || '',
+        caption_en: raw.compare.caption_en || ''
+      };
+    }
     if (Array.isArray(raw.gallery) && raw.gallery.length) {
       it.gallery = raw.gallery.map(function (g) {
         if (typeof g === 'string') return { src: g, ar: 'auto', size: '1' };
@@ -203,6 +215,29 @@
       '" title="Video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
   }
 
+  var cmpIdSeq = 0;
+  function compareHTML(it) {
+    if (!it.compare) return '';
+    var c = it.compare;
+    var uid = 'cmp-' + (++cmpIdSeq);
+    var labelBefore = '<span class="only-de">' + c.label_before_de + '</span><span class="only-en">' + c.label_before_en + '</span>';
+    var labelAfter = '<span class="only-de">' + c.label_after_de + '</span><span class="only-en">' + c.label_after_en + '</span>';
+    var html = '<div class="wm-compare" id="' + uid + '" data-compare>' +
+      '<img class="wm-cmp-before" src="' + img(c.before) + '" alt="">' +
+      '<img class="wm-cmp-after" src="' + img(c.after) + '" alt="">' +
+      '<span class="wm-cmp-tag wm-cmp-tag--before">' + labelBefore + '</span>' +
+      '<span class="wm-cmp-tag wm-cmp-tag--after">' + labelAfter + '</span>' +
+      '<div class="wm-cmp-handle" data-cmp-handle>' +
+        '<div class="wm-cmp-line"></div>' +
+        '<div class="wm-cmp-grip">↔</div>' +
+      '</div>' +
+    '</div>';
+    if (c.caption_de || c.caption_en) {
+      html += '<p class="wm-cmp-caption">' + bi({ de: c.caption_de, en: c.caption_en }) + '</p>';
+    }
+    return html;
+  }
+
   function galleryHTML(it) {
     if (!it.gallery || !it.gallery.length) return '';
     return '<div class="wm-gallery">' +
@@ -249,6 +284,7 @@
       h += '<div class="' + coverCls + '"><img src="' + img(it.cover) + '" alt=""></div>';
     }
     if (it.summary) h += '<p class="lead">' + bi(it.summary) + '</p>';
+    h += compareHTML(it);
     if (it.body) h += '<div class="wm-text">' + bi(it.body) + '</div>';
     h += chipsHTML(it.chips);
     h += galleryHTML(it);
@@ -263,56 +299,4 @@
   var lastFocus = null;
 
   function syncLang() {
-    /* After filling modal, re-apply language to new data-en elements */
-    var lang = document.documentElement.classList.contains('en') ? 'en' : 'de';
-    modalBody.querySelectorAll('[data-en]').forEach(function (el) {
-      if (!el.hasAttribute('data-de')) el.setAttribute('data-de', el.innerHTML);
-      el.innerHTML = el.getAttribute(lang === 'en' ? 'data-en' : 'data-de');
-    });
-  }
-
-  function openWork(id) {
-    var it = byId[id];
-    if (!it) return;
-    modalBody.innerHTML = buildModal(it);
-    syncLang();
-    modal.hidden = false;
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('modal-open');
-    lastFocus = document.activeElement;
-    var closeBtn = modal.querySelector('.wm-close');
-    if (closeBtn) closeBtn.focus();
-    modalBody.scrollTop = 0;
-  }
-
-  function closeWork() {
-    modal.hidden = true;
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('modal-open');
-    modalBody.innerHTML = '';
-    if (lastFocus && lastFocus.focus) lastFocus.focus();
-  }
-
-  mount.addEventListener('click', function (e) {
-    var card = e.target.closest('[data-work]');
-    if (card) openWork(card.getAttribute('data-work'));
-  });
-
-  modal.addEventListener('click', function (e) {
-    if (e.target.hasAttribute('data-close')) closeWork();
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && !modal.hidden) closeWork();
-  });
-
-  /* If user switches language while modal open, re-sync */
-  document.querySelectorAll('.lang-switch button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      if (!modal.hidden) setTimeout(syncLang, 0);
-    });
-  });
-  } /* end init */
-
-  boot();
-})();
+    /* After filling modal, re-apply
