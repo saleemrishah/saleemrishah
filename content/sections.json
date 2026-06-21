@@ -44,8 +44,8 @@
   },
   "automation": {
     "id": "automation",
-    "eyebrow_de": "04 · KI-Automatisierung",
-    "eyebrow_en": "04 · AI Automation",
+    "eyebrow_de": "02 · KI-Automatisierung",
+    "eyebrow_en": "02 · AI Automation",
     "title_de": "KI-Automatisierung",
     "title_en": "AI Automation",
     "intro_de": "Selbst gebaute Bots und Workflows, die Publishing und Community-Interaktion automatisieren, von der Nachrichten-Pipeline bis zur Persona-Antwort in Echtzeit.",
@@ -58,8 +58,8 @@
   },
   "football": {
     "id": "football",
-    "eyebrow_de": "05 · Proof · Reichweite",
-    "eyebrow_en": "05 · Proof · Reach",
+    "eyebrow_de": "04 · Proof · Reichweite",
+    "eyebrow_en": "04 · Proof · Reach",
     "title_de": "Eigenprojekte · Football Content",
     "title_en": "Personal Projects · Football Content",
     "intro_de": "Seit Jahren produziere ich arabischsprachigen Fußball-Content in dokumentarischer Qualität: Skript, Schnitt, Thumbnails, Animationen und Publishing, alles aus einer Hand. Mein laufender Praxisbeweis für Full-Stack-Produktion mit Millionenreichweite.",

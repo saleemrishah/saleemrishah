@@ -14,7 +14,7 @@
      On failure (e.g. local open without a server) fall back to
      data/work.json then window.WORK_DATA.
      ============================================================ */
-  var SECTION_ORDER = ['brand', 'ai', 'automation', 'football'];
+  var SECTION_ORDER = ['ai', 'automation', 'brand', 'football'];
 
   /* Converts a CMS item (flat fields) into the shape init expects */
   function shapeItem(raw, slug) {
