@@ -1,16 +1,12 @@
 {
-  "order": 30,
-  "title_de": "Brand Identity für eine Physiotherapie-Privatpraxis",
-  "title_en": "Brand Identity for a Private Physiotherapy Practice",
-  "summary_de": "Eine ganzheitliche Markenidentität für eine moderne Privatpraxis für Physiotherapie und Personal Training. Im Zentrum steht ein abstraktes, fließend konstruiertes Logo, das die kollaborative Beziehung zwischen Therapeut und Patient symbolisiert.",
   "summary_en": "A holistic brand identity for a modern private physiotherapy and personal training practice. At its center is an abstract, fluidly constructed logo that symbolizes the collaborative relationship between therapist and patient.",
-  "cover": "assets/uploads/physio-brand-cover.png",
-  "chips": ["Illustrator", "Photoshop", "Brand Identity", "Logo Design"],
-  "body_de": "Für diese moderne Privatpraxis für Physiotherapie und Personal Training war die Aufgabe eine ganzheitliche Markenidentität, die sich bewusst von sterilen, klinischen Designs abhebt.",
   "body_en": "For this modern private physiotherapy and personal training practice, the brief was a holistic brand identity that deliberately stands apart from sterile, clinical design.",
-  "gallery": [],
-  "link_url": "",
-  "link_label": "",
+  "chips": [
+    "Illustrator",
+    "Photoshop",
+    "Brand Identity",
+    "Logo Design"
+  ],
   "tracks": [
     {
       "id": "Track 01 · Brief",
@@ -26,7 +22,9 @@
       "title_en": "Logo development",
       "text_de": "Zwei untrennbar fließend verbundene, abstrakte Figuren symbolisieren die kollaborative Beziehung zwischen Therapeut und Patient während des Heilungsprozesses.",
       "text_en": "Two inseparably, fluidly connected, abstract figures symbolize the collaborative relationship between therapist and patient during the healing process.",
-      "chips": ["Illustrator"]
+      "chips": [
+        "Illustrator"
+      ]
     },
     {
       "id": "Track 03 · Farbe & Typografie",
@@ -42,7 +40,24 @@
       "title_en": "From practice sign to business card",
       "text_de": "Konsistente Anwendung über Praxisschild, Visitenkarte und digitale Touchpoints. Das Ergebnis: ein modernes, vertrauensvolles Corporate Design mit warmer, einladender Ausstrahlung, ohne an fachlicher Seriosität zu verlieren.",
       "text_en": "Consistent application across the practice sign, business card and digital touchpoints. The result: a modern, trustworthy corporate design with a warm, welcoming character that never loses professional seriousness.",
-      "chips": ["Photoshop"]
+      "chips": [
+        "Photoshop"
+      ]
     }
-  ]
+  ],
+  "title_de": "Brand Identity für eine Physiotherapie-Privatpraxis",
+  "link_url": "",
+  "order": 30,
+  "link_label": "",
+  "title_en": "Brand Identity for a Private Physiotherapy Practice",
+  "gallery": [
+    {
+      "aspect_ratio": "auto",
+      "size": "2",
+      "image": "assets/uploads/11.jpg"
+    }
+  ],
+  "cover": "assets/uploads/physio-brand-cover.png",
+  "summary_de": "Eine ganzheitliche Markenidentität für eine moderne Privatpraxis für Physiotherapie und Personal Training. Im Zentrum steht ein abstraktes, fließend konstruiertes Logo, das die kollaborative Beziehung zwischen Therapeut und Patient symbolisiert.",
+  "body_de": "Für diese moderne Privatpraxis für Physiotherapie und Personal Training war die Aufgabe eine ganzheitliche Markenidentität, die sich bewusst von sterilen, klinischen Designs abhebt."
 }
