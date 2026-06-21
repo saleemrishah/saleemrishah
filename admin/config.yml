@@ -5,8 +5,11 @@
 # ============================================================
 
 backend:
-  name: git-gateway
+  name: github
+  repo: saleemrishah/saleemrishah
   branch: main
+  base_url: https://www.saleemrishah.com
+  auth_endpoint: api/auth
 
 # Image upload folder used by the CMS
 media_folder: "assets/uploads"
