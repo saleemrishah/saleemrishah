@@ -52,6 +52,11 @@ collections:
         file: "content/site/section-visual-football.json"
         fields:
           - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended. Appears as the first card in the Football section." }
+      - name: "section_visual_automation"
+        label: "Automation — Feature Card"
+        file: "content/site/section-visual-automation.json"
+        fields:
+          - { name: "feature_image", label: "Feature card image (square design)", widget: "image", required: false, hint: "Square image recommended. Appears as the first card in the Automation section." }
 
   # ---- Section: Identity (logo + favicon) ----
   - name: "identity"
@@ -396,12 +401,4 @@ collections:
             default: "auto"
             options: ["auto", "1:1", "4:3", "3:4", "16:9", "9:16", "wide"]
             hint: "auto = natural image shape (recommended for mixed content). wide = ultra-wide screenshot (no cropping)."
-          - name: "size"
-            label: "Width in grid"
-            widget: "select"
-            required: false
-            default: "1"
-            options: ["1", "2"]
-            hint: "2 = takes double width. Good for landscape/panoramic images."
-      - { name: "link_url", label: "External link — URL (optional)", widget: "string", required: false }
-      - { name: "link_label", label: "External link — label (optional)", widget: "string", required: false }
+         
