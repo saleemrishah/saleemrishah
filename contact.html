@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body data-title-de="Kontakt — Saleem Rishah" data-title-en="Contact — Saleem Rishah">
 
@@ -61,8 +60,9 @@
           </div>
         </div>
 
-        <form name="kontakt" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html">
-          <input type="hidden" name="form-name" value="kontakt">
+        <form name="kontakt" method="POST" action="https://formspree.io/f/xnjkadjz">
+          <input type="hidden" name="_next" value="https://www.saleemrishah.com/danke.html">
+          <input type="text" name="_gotcha" style="display:none">
           <p style="display:none"><label>Bot-Feld: <input name="bot-field"></label></p>
           <label><span data-en="Name">Name</span>
             <input type="text" name="name" required autocomplete="name" placeholder="Max Mustermann" data-en-placeholder="Jane Doe">
@@ -96,16 +96,5 @@
 
 <script src="assets/branding.js"></script>
 <script src="assets/main.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on('init', function (user) {
-      if (!user) {
-        window.netlifyIdentity.on('login', function () {
-          document.location.href = '/admin/';
-        });
-      }
-    });
-  }
-</script>
 </body>
 </html>
