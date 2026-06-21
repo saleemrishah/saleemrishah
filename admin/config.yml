@@ -19,7 +19,8 @@ public_folder: "assets/uploads"
 locale: "en"
 
 # Publish mode
-publish_mode: editorial_workflow
+# simple = every save writes straight to main, no draft branches, no "in review" limbo
+publish_mode: simple
 
 # Local backend: use npx decap-server on localhost (no deploy needed)
 local_backend: true
