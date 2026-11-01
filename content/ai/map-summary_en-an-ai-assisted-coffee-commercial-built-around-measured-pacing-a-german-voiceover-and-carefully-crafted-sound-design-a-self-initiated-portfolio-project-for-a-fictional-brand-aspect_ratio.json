@@ -1,0 +1,64 @@
+{
+  "summary_en": "An AI-assisted coffee commercial built around measured pacing, a German voiceover and carefully crafted sound design. A self-initiated portfolio project for a fictional brand.",
+  "aspect_ratio": "9:16",
+  "body_en": "The idea\nYour phone is already demanding attention before your first coffee is ready. MORGENKANTE turns that familiar moment into a simple everyday story: take a moment for yourself before taking on the day.\n\nThe creative approach\nThe spot was designed to appeal to a broad audience without rapid cuts or distracting effects. Clear visual storytelling, subtle text animation and the sounds of brewing coffee set the pace. Sound design connects the scenes and brings the morning routine to life.\n\nMy role\nConcept development, visual development of the fictional brand, AI-assisted image and video production, and creation of the German AI voiceover. I handled editing and sound design in Premiere Pro, using a text-animation MOGRT I had previously created in After Effects.",
+  "chips": [
+    "ChatGPT",
+    "Kling",
+    "ElevenLabs",
+    "Premiere Pro",
+    "After Effects (MOGRT)"
+  ],
+  "tracks": [
+    {
+      "id": "1",
+      "title_de": "Konzept & visuelle Richtung",
+      "title_en": "Concept & visual direction",
+      "text_de": "Das Smartphone macht schon Stress, bevor der erste Kaffee fertig ist. Aus diesem Alltagsmoment entwickelte ich einen klassischen Kaffeespot für die fiktive Marke MORGENKANTE. Die kreative Entscheidung: eine verständliche Geschichte, ruhiges Tempo und ein klarer Produktfokus für ein breites Publikum.",
+      "text_en": "Your phone is already demanding attention before your first coffee is ready. I developed this everyday moment into a classic coffee commercial for the fictional brand MORGENKANTE. The creative direction focused on a clear story, measured pacing and a strong product presence for a broad audience.",
+      "chips": [
+        "Concept Development",
+        "Art Direction"
+      ]
+    },
+    {
+      "id": "2",
+      "title_de": "KI-Bilder, Bewegung & Stimme",
+      "title_en": "AI imagery, motion & voice",
+      "text_de": "Ich entwickelte die visuellen Grundlagen der Marke und die Szenenbilder mit ChatGPT und animierte ausgewählte Bilder mit Kling. Dabei standen eine wiedererkennbare Figur, konsistente Verpackung und zusammenhängende Bildfolgen im Fokus. Die deutsche KI-Sprecherstimme gestaltete ich mit ElevenLabs passend zum alltäglichen, leicht humorvollen Ton.",
+      "text_en": "I developed the brand visuals and scene images with ChatGPT, then animated selected images with Kling. The focus was on a recognizable character, consistent packaging and coherent visual sequences. I created the German AI voiceover with ElevenLabs to match the conversational, lightly humorous tone.",
+      "chips": [
+        "ChatGPT",
+        "Kling",
+        "ElevenLabs"
+      ]
+    },
+    {
+      "id": "3",
+      "title_de": "Schnitt & Sounddesign",
+      "title_en": "Editing & sound design",
+      "text_de": "In Premiere Pro führte ich die generierten Szenen, Sprecherstimme und Geräusche zu einem zusammenhängenden Spot zusammen. Das Sounddesign trägt den Rhythmus und macht die Kaffeezubereitung spürbar. Dezente Textanimationen aus einer selbst erstellten After-Effects-MOGRT ergänzen die Bilder, ohne vom Produkt abzulenken.",
+      "text_en": "In Premiere Pro, I brought the generated scenes, voiceover and sound effects together into a cohesive commercial. Sound design carries the rhythm and gives the coffee-making sequence a tactile quality. Subtle text animations from a MOGRT I had previously created in After Effects support the imagery without distracting from the product.",
+      "chips": [
+        "Premiere Pro",
+        "After Effects (MOGRT)",
+        "Sound Design"
+      ]
+    }
+  ],
+  "title_de": "MORGENKANTE – Erst Kaffee. Dann der Rest.",
+  "media_width": "medium",
+  "order": 10,
+  "title_en": "MORGENKANTE – Coffee First. Everything Else Later.",
+  "gallery": [
+    {
+      "aspect_ratio": "auto",
+      "size": "2",
+      "image": "assets/uploads/exec-9adcf104-4009-45e0-a4b2-3711324f13a8.png"
+    }
+  ],
+  "cover": "assets/uploads/exec-9adcf104-4009-45e0-a4b2-3711324f13a8.png",
+  "summary_de": "Ein KI-gestützter Kaffeespot mit ruhigem Erzählrhythmus, deutscher Sprecherstimme und gezieltem Sounddesign. Ein selbst initiiertes Portfolio-Projekt für eine fiktive Marke.",
+  "video": "https://player.vimeo.com/video/1241870606",
+  "body_de": "Die Idee\nDas Smartphone fordert schon Aufmerksamkeit, bevor der erste Kaffee fertig ist. MORGENKANTE macht daraus eine kleine Alltagsgeschichte: erst einen Moment für sich finden, dann in den Tag starten.\n\nDie Gestaltung\nDer Spot sollte ein breites Publikum ansprechen und ohne hektische Schnitte oder dominante Effekte funktionieren. Nachvollziehbare Bildfolgen, dezente Textanimationen und die Geräusche der Kaffeezubereitung bestimmen den Rhythmus. Das Sounddesign verbindet die Szenen und macht den morgendlichen Ablauf erlebbar.\n\nMein Beitrag\nKonzept, visuelle Entwicklung der fiktiven Marke, KI-gestützte Bild- und Videoproduktion sowie Gestaltung der deutschen KI-Sprecherstimme. Schnitt und Sounddesign entstanden in Premiere Pro. Für die Textanimationen nutzte ich eine selbst erstellte After-Effects-MOGRT innerhalb von Premiere Pro."
+}
